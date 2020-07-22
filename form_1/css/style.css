@@ -1,0 +1,23 @@
+h1 {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.container {
+	background-color: #FFF8DC;
+	margin-top: 50px;
+	border-radius: 10px;
+	padding: 20px;
+	width: 800px;
+}
+
+textarea[id=hasilE1] , textarea[id=hasilE2] , textarea[id=hasilE3] {
+	font-family: calibri;
+	height: 90px;
+}
+
+label[for=radio1] , label[for=radio2] , label[for=radio3] , label[for=radio4] , label[for=radio5] , label[for=radio6] {
+	font-family: calibri;
+	font-size: 16px;
+}
