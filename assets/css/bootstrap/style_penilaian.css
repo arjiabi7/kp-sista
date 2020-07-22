@@ -1,0 +1,25 @@
+body {
+	background-color: #FFF8DC;
+}
+h1 {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.container {
+	background-color: #228B22;
+	margin-top: 50px;
+	border-radius: 10px;
+	padding: 20px;
+	width: 800px;
+	color: white;
+}
+textarea[id=catatansaran] {
+	height: 100px;
+}
+button[type=submit] {
+	margin-top: 10px;
+}
+.form-check-inline input[id=radio1] , label[for=radio1] {
+	margin-top: 5px;
+}
