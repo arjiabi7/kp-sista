@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <h1><b>FORM EVALUASI DAN PENILAIAN SEMINAR TA - II</b></h1>
-      <form method="">
+      <form method="post" action="http://localhost/sistakp/index.php/cetakpdf_evaluasi_seminar">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="dosenR1" class="font-weight-bold">Dosen Reviewer 1</label>
@@ -155,7 +155,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Tambah</button>
+        <button type="submit" class="btn btn-success">Export</button>
 
       </form>
       <script type="text/javascript">
