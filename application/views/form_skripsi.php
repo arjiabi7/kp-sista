@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <h1><b>FORM SIDANG SKRIPSI</b></h1>
-      <form method="">
+      <form method="post" action="http://localhost/sistakp/index.php/cetakpdf_penilaian_sidang">
         <div class="form-group">
           <label for="nama">Nama Lengkap</label>
           <input type="text" class="form-control" id="nama">
@@ -120,7 +120,7 @@
           <textarea class="form-control" id="catatansaran" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-primary">Cetak</button>
       </form>
       <script type="text/javascript">
         function Angkasaja(evt) {

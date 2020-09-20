@@ -155,7 +155,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Export</button>
+        <button type="submit" class="btn btn-success">Cetak</button>
 
       </form>
       <script type="text/javascript">
