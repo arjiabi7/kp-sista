@@ -1,0 +1,7 @@
+------Sebagai admin--------
+email 	: dikaarji@sista.com
+pass 	: sista12345
+
+------Sebagai Member-------
+email	 : testUser@sista.com
+pass	 : sista12345	
