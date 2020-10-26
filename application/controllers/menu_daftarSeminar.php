@@ -31,9 +31,9 @@ class menu_daftarSeminar extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_daftarTA');
+			$this->load->view('menu_daftarSeminar');
 		}
     }
     }
-}
+
 ?>

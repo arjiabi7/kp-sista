@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<br><center><h2>Halaman Pendaftaran Seminar</h2></center><br>
-	<div class="col-xl-8 order-xl-1">
+	<div class="col-xl-8 order-xl-1 center">
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row align-items-center">

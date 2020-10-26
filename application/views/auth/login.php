@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>SISTA - login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Sistem Informasi Tugas Akhir</title>
   <!-- Favicon -->
   <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -82,7 +81,8 @@
           </div>
           <div class="row mt-3">
             <div class="col-12 text-center">
-              <a href="forgot_password"><?php echo lang('login_forgot_password');?></a>
+              <a href="regis" class="text-white">Registrasi</a><br>
+              <a href="forgot_password" class="text-white"><?php echo lang('login_forgot_password');?></a>
             </div>
           </div>
         </div>

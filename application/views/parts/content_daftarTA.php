@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<br><center><h2>Halaman Pendaftaran TA II</h2></center><br>
-	<div class="col-xl-8 order-xl-1">
+	<div class="col-xl-8 order-xl-1 center">
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row align-items-center">
@@ -62,6 +62,7 @@
 	                      	<center><label class="form-control-label" for="input-city">UNTUK MENGISI FORM, SILAHKAN KLIK TOMBOL DIBAWAH INI.</label> <br>
 	                       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-single-copy-04"></i><span class="nav-link-text">ISI FORM</span></button></center>
 					        <!-- Modal -->
+					        <form action="<?php echo base_url(). 'menu_daftarTA/tambah_aksi'; ?>" method="post">
 					        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 					        <div class="modal-dialog" role="document">
 					            <div class="modal-content">
@@ -76,13 +77,13 @@
 					            	<div class="col-lg-8">
 	                     				 <div class="form-group">
 			                       	 		<label class="form-control-label" for="input-city">Email</label>
-			                       	 		<input type="email" id="input-city" class="form-control" placeholder="Silahkan isi Email..." required>
+			                       	 		<input type="email" name="email" id="input-city" class="form-control" placeholder="Silahkan isi Email..." required>
 			                      		</div>
 			                   		 </div>
 			                   		 <div class="col-lg-3">
 	                     				 <div class="form-group">
 	                     				 	<label class="form-control-label" for="input-city">Semester</label>
-			                       	 		<select class="form-control" id="pilihSemester">
+			                       	 		<select class="form-control" name="Semester" id="pilihSemester">
 									    		<option>-</option>
 									      		<option>8</option>
 											    <option>10</option>
@@ -95,13 +96,13 @@
 					                <div class="col-lg-8">
 	                     				 <div class="form-group">
 			                       	 		<label class="form-control-label" for="input-city">NIM</label>
-			                       	 		<input type="text" id="input-city" class="form-control" placeholder="Silahkan isi NIM..." required>
+			                       	 		<input type="text" name="NIM" id="input-city" class="form-control" placeholder="Silahkan isi NIM..." required>
 			                      		</div>
 			                      		</div>
 			                      	<div class="col-lg-3">
 	                     				 <div class="form-group">
 			                       	 		<label class="form-control-label" for="input-city">Peminatan</label>
-			                       	 		<select class="form-control" id="pilihJurusan">
+			                       	 		<select class="form-control" name="" id="pilihJurusan">
 									    		<option>-</option>
 									      		<option>AIG</option>
 											    <option>DSE</option>
@@ -145,6 +146,7 @@
 					            </div>
 					        </div>
 					        </div>
+					    </form>
 	                      </div>
 	                    </div>
 	                  </div>

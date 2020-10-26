@@ -50,7 +50,7 @@ $this->load->view('parts/nav');
               <span aria-hidden="true">×</span>
             </button>
           </form>
-          <!-------------->
+          <!--------
               <br>
               <h6 class="h2 text-white d-inline-block mb-0">Home</h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
@@ -60,11 +60,26 @@ $this->load->view('parts/nav');
                   <li class="breadcrumb-item active" aria-current="page">Default</li>
                 </ol>
               </nav>
+              ------>
             </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+
+            <div class="col-lg-6 text-right">
+                <div class="container">
+              <div class="dropdown">
+
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text">Hai, <?=@$_SESSION['identity'];?>! </span></button>
+                
+                <div class="dropdown-menu">
+                 
+              <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth"><i class="ni ni-cloud-upload-96 text-warning"></i>Login Sebagai Admin</a>
+              <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i>Logout</a>
+                  
+                </div>
+              </div>
+              </div>
             </div>
+            
           </div>
           <!-- Card stats -->
           

@@ -22,7 +22,7 @@ class menu_daftarTA extends CI_Controller
     }
 
 	function index(){
-        
+       // $data['daftar_ta2'] = $this->m_data->tampil_data()->result();
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -35,5 +35,5 @@ class menu_daftarTA extends CI_Controller
 		}
     }
     }
-}
+
 ?>

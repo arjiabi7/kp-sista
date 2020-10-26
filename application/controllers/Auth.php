@@ -62,6 +62,10 @@ class Auth extends CI_Controller
 	/**
 	 * Log the user in
 	 */
+	public function regis(){
+		$this->load->view('registrasi');
+    }
+    
 	public function login()
 	{
 		$this->data['title'] = $this->lang->line('login_heading');
