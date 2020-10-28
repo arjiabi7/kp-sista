@@ -1,6 +1,13 @@
 <div class="container-fluid">
 	<br><center><h2>Halaman Pendaftaran Seminar</h2></center><br>
 	<div class="col-xl">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">Seminar</li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Daftar Seminar</a></li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Step 1</a></li>
+			</ol>
+		</nav>
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row align-items-center">

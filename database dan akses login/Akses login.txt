@@ -1,5 +1,5 @@
 ------Sebagai admin--------
-email 	: dikaarji@sista.com
+NIM : 3411171107
 pass 	: sista12345
 
 ------Sebagai Member-------

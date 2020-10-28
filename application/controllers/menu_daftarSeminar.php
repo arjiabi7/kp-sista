@@ -21,7 +21,7 @@ class menu_daftarSeminar extends CI_Controller
 		$this->lang->load('auth');
     }
 
-	function index(){
+	function daftarSeminar(){
         
           if (!$this->ion_auth->logged_in())
 		{
@@ -34,6 +34,21 @@ class menu_daftarSeminar extends CI_Controller
 			$this->load->view('menu_daftarSeminar');
 		}
     }
+
+    function jadwal(){
+        
+          if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('menu_jadwalSeminar');
+		}
     }
+    
+}
 
 ?>

@@ -39,9 +39,9 @@
                 <div class="dropdown">
                   <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SEMINAR</span></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Seminar</span></a>
+                    <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Seminar</span></a>
                     <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
+                      <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
                  
                     <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Rekap Hasil Seminar</a>
@@ -52,7 +52,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                      <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSidang/daftarSidang"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Sidang</span></a>
                     <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
+                      <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSidang/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
                  
                     <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Rekap Hasil Seminar</a>
