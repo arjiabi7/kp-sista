@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2020 at 10:33 AM
+-- Generation Time: Oct 28, 2020 at 05:23 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -60,9 +60,65 @@ CREATE TABLE `login_attempts` (
 --
 
 INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(1, '::1', 'admin@admin', 1602831739),
-(2, '::1', 'dika@123', 1602831943),
-(5, '::1', 'dika@123', 1602836487);
+(11, '::1', 'admin', 1603855180),
+(12, '::1', 'admin', 1603855186),
+(13, '::1', 'dikaarji@sista.com', 1603855502);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_data_mhsw`
+--
+
+CREATE TABLE `tbl_data_mhsw` (
+  `nim` varchar(10) NOT NULL,
+  `nama_lengkap` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `no_hp` varchar(13) NOT NULL,
+  `semester` varchar(2) NOT NULL,
+  `jk` varchar(2) NOT NULL,
+  `peminatan` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_data_mhsw`
+--
+
+INSERT INTO `tbl_data_mhsw` (`nim`, `nama_lengkap`, `email`, `no_hp`, `semester`, `jk`, `peminatan`) VALUES
+('3411171107', 'Dika Arji', 'dikaarji@sista.com', '08928932', '7', 'L', 'DSE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_seminar`
+--
+
+CREATE TABLE `tbl_seminar` (
+  `kd_seminar` varchar(10) NOT NULL,
+  `nim` varchar(10) NOT NULL,
+  `peminatan` varchar(3) NOT NULL,
+  `ta_aktif` varchar(10) NOT NULL,
+  `no_sk_ta_pembimbing` varchar(10) NOT NULL,
+  `nid_r1` varchar(10) NOT NULL,
+  `nid_r2` varchar(10) NOT NULL,
+  `judul_skripsi` varchar(50) NOT NULL,
+  `hari_ajuan_seminar` varchar(10) NOT NULL,
+  `tgl_ajuan_seminar` varchar(10) NOT NULL,
+  `jam_ajuan_seminar` varchar(10) NOT NULL,
+  `hari_seminar` varchar(10) NOT NULL,
+  `tgl_seminar` varchar(10) NOT NULL,
+  `jam_seminar` varchar(10) NOT NULL,
+  `tempat_seminar` varchar(10) NOT NULL,
+  `status_seminar` varchar(10) NOT NULL,
+  `lulus_review` varchar(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_seminar`
+--
+
+INSERT INTO `tbl_seminar` (`kd_seminar`, `nim`, `peminatan`, `ta_aktif`, `no_sk_ta_pembimbing`, `nid_r1`, `nid_r2`, `judul_skripsi`, `hari_ajuan_seminar`, `tgl_ajuan_seminar`, `jam_ajuan_seminar`, `hari_seminar`, `tgl_seminar`, `jam_seminar`, `tempat_seminar`, `status_seminar`, `lulus_review`) VALUES
+('s23', '3411171107', 'DSE', 'genap 2020', 'sdsd', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
 
 -- --------------------------------------------------------
 
@@ -86,6 +142,7 @@ CREATE TABLE `users` (
   `created_on` int(11) UNSIGNED NOT NULL,
   `last_login` int(11) UNSIGNED DEFAULT NULL,
   `active` tinyint(1) UNSIGNED DEFAULT NULL,
+  `nim` varchar(10) NOT NULL,
   `first_name` varchar(50) DEFAULT NULL,
   `last_name` varchar(50) DEFAULT NULL,
   `company` varchar(100) DEFAULT NULL,
@@ -96,10 +153,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$j8ow8y9DsIwnGTGKOREGX.HbAg5Za9JONQvHZTi2o2cC7m393qTPe', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1602836187, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, 'd4c801ca0d2e152d2130ddc7e8647474aa249ebd', '$2y$10$44Z4JwoKBvg6xqKcXLBdPeiz/8A9i1sYYaSVFr.b8d0JW6rIEJGE.', 1602832500, 1602837094, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
-(3, '::1', NULL, '$2y$10$DDBDRC4Z414KXRNLmkLNrOUBrFww.oW274FNXc57Krd55O0zu136C', 'testuser@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602835015, 1602836209, 1, 'test', 'user', 'Unjani', '083112692355');
+INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `nim`, `first_name`, `last_name`, `company`, `phone`) VALUES
+(1, '127.0.0.1', 'administrator', '$2y$12$j8ow8y9DsIwnGTGKOREGX.HbAg5Za9JONQvHZTi2o2cC7m393qTPe', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, '', 'Admin', 'istrator', 'ADMIN', '0'),
+(2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1603887298, 1, '3411171107', 'Dika', 'Arji', 'Unjani', '081902060468'),
+(3, '::1', NULL, '$2y$10$DDBDRC4Z414KXRNLmkLNrOUBrFww.oW274FNXc57Krd55O0zu136C', 'testuser@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602835015, 1602836209, 1, '', 'test', 'user', 'Unjani', '083112692355');
 
 -- --------------------------------------------------------
 
@@ -141,6 +198,18 @@ ALTER TABLE `login_attempts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_data_mhsw`
+--
+ALTER TABLE `tbl_data_mhsw`
+  ADD PRIMARY KEY (`nim`);
+
+--
+-- Indexes for table `tbl_seminar`
+--
+ALTER TABLE `tbl_seminar`
+  ADD PRIMARY KEY (`kd_seminar`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -173,7 +242,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
