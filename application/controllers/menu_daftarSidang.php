@@ -3,7 +3,7 @@
 /**
  * 
  */
-class Home extends CI_Controller
+class menu_daftarSidang extends CI_Controller
 {
 	
 	function __construct() {
@@ -21,7 +21,7 @@ class Home extends CI_Controller
 		$this->lang->load('auth');
     }
 
-	function index(){
+	function daftarSidang(){
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -30,10 +30,9 @@ class Home extends CI_Controller
 		
 		else
 		{
-			$this->load->view('home');
+			$this->load->view('menu_daftarSidang');
 		}
     }
 
-    
 }
 ?>

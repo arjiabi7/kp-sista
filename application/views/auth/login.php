@@ -57,7 +57,7 @@
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
 
                     </div>
-                    <?php echo form_input($identity);?>
+                    <?php echo form_input($nim);?>
                   </div>
                 </div>
                 <div class="form-group">

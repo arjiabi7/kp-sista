@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<br><center><h2>Halaman Pendaftaran Seminar</h2></center><br>
-	<div class="col-xl-8 order-xl-1 center">
+	<div class="col-xl">
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row align-items-center">
@@ -78,98 +78,277 @@
 					                </button>
 					            </div>
 					            <div class="modal-body">
-					            	<div class="row">
-					            	<div class="col-lg-8">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Judul Skripsi</label>
-			                       	 		<input type="email" id="input-city" class="form-control" placeholder="Silahkan isi Judul..." required>
-			                      		</div>
-			                   		 </div>
-			                   		 <div class="col-lg-3">
-	                     				 <div class="form-group">
-	                     				 	<label class="form-control-label" for="input-city">Semester</label>
-			                       	 		<select class="form-control" id="pilihSemester">
-									    		<option>-</option>
-									      		<option>8</option>
-											    <option>10</option>
-											    <option>12</option>
-											</select>
-										</div>
-			                   		 </div>
+					            	<div class="data-mahasiswa text-center">
+					            		<h5>Data Mahasiswa</h5>
+					            		<hr style="width: 140px;">
+						            	<div class="row">
+				                   		  <div class="col-lg-12">
+		                     				<div class="form-group">
+				                       	 		<label class="form-control-label" for="nama_mhs">Nama Lengkap</label>
+				                       	 		<input type="text" id="nama_mhs" class="form-control" required readonly>
+				                      		</div>
+				                   		 </div>
+				                   		</div>
+						            	<div class="row">
+						            	<div class="col-lg-6">
+				                      		<div class="form-group">
+				                       	 		<label class="form-control-label" for="email">Email</label>
+				                       	 		<input type="email" name="email" id="email" class="form-control" required readonly>
+				                      		</div>
+				                   		 </div>
+				                   		 <div class="col-lg-6">
+		                     				 <div class="form-group">
+		                     				 	<label class="form-control-label" for="nim">NIM</label>
+				                       	 		<input type="text" name="NIM" id="nim" class="form-control" required readonly>
+											</div>
+				                   		 </div>
+				                   		</div>
+				                   		<div class="row">
+				                   		 <div class="col-lg-6">
+				                      		<div class="form-group">
+				                       	 		<label class="form-control-label" for="no_hp">No. HP</label>
+				                       	 		<input type="text" id="no_hp" class="form-control" required readonly>
+				                      		</div>
+				                   		 </div>
+				                   		 <div class="col-lg-6">
+		                     				 <div class="form-group">
+				                       	 		<label class="form-control-label" for="semester">Semester</label>
+				                       	 		<select class="form-control" name="Semester" id="semester" readonly>
+										    		<option>-</option>
+										      		<option>8</option>
+												    <option>10</option>
+												    <option>12</option>
+												</select>
+				                      		</div>
+				                   		 </div>
+				                   		</div>
+				                   		<div class="row">
+						                <div class="col-lg-6">
+		                     				 <div class="form-group">
+				                       	 		<label class="form-control-label" for="jenis_kelamin">Jenis Kelamin</label>
+				                       	 		<select class="form-control" name="jenis_kelamin" id="jenis_kelamin" readonly>
+										    		<option>-</option>
+										      		<option>Laki - Laki</option>
+												    <option>Perempuan</option>
+												</select>
+				                      		</div>
+				                      	</div>
+				                      	<div class="col-lg-6">
+		                     				 <div class="form-group">
+				                       	 		<label class="form-control-label" for="peminatan">Peminatan</label>
+				                       	 		<select class="form-control" name="" id="peminatan" required readonly>
+										    		<option>-</option>
+										      		<option>AIG</option>
+												    <option>DSE</option>
+												</select>
+				                      		</div>
+				                   		 </div>
+				                   		</div>
 			                   		</div>
-			                   		<div class="row">
-					                <div class="col-lg-8">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">NIM</label>
-			                       	 		<input type="text" id="input-city" class="form-control" placeholder="Silahkan isi NIM..." required>
-			                      		</div>
-			                      		</div>
-			                      	<div class="col-lg-3">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Peminatan</label>
-			                       	 		<select class="form-control" id="pilihJurusan">
-									    		<option>-</option>
-									      		<option>AIG</option>
-											    <option>DSE</option>
-											</select>
-			                      		</div>
-			                   		 </div>
+			                   		<div class="data-akademik text-center">
+					            		<br><h5>Data Akademik</h5>
+					            		<hr style="width: 140px;">
+						            	<div class="row">
+							            	<div class="col-lg-6">
+			                     				 <div class="form-group">
+					                       	 		<label class="form-control-label" for="jml_sks1">Jumlah SKS sudah lulus</label>
+					                       	 		<input type="text" name="jml_sks1" id="jml_sks1" class="form-control" required readonly>
+					                      		</div>
+					                   		</div>
+					                   		<div class="col-lg-6">
+			                     				 <div class="form-group">
+			                     				 	<label class="form-control-label" for="jml_sks2">Jumlah SKS sedang diambil</label>
+					                       	 		<input type="text" name="jml_sks2" id="jml_sks2" class="form-control" required readonly>
+												</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		 	<div class="col-lg-6">
+				                      			<div class="form-group">
+				                       	 			<label class="form-control-label" for="nilai_e">Jumlah nilai E</label>
+				                       	 			<input type="text" id="nilai_e" class="form-control" required readonly>
+				                      			</div>
+				                   			</div>
+				                   			<div class="col-lg-6">
+		                     					<div class="form-group">
+				                       	 			<label class="form-control-label" for="nilai_d">Jumlah nilai D</label>
+				                       	 			<input type="text" id="nilai_d" class="form-control" required readonly>
+				                      			</div>
+				                   			</div>
+				                   		</div>
+				                   		<div class="row">
+							                <div class="col-lg-6 center">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="ipk_smntr">IPK sementara</label>
+					                       	 		<input type="text" id="ipk_smntr" class="form-control" required readonly>
+					                      		</div>
+					                      	</div>
+				                   		</div>
 			                   		</div>
-			                   		<div class="row">
-			                   		 <div class="col-lg-8">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Nama Lengkap</label>
-			                       	 		<input type="text" id="input-city" class="form-control" placeholder="Silahkan isi Nama Lengkap..." required>
-			                      		</div>
-			                   		 </div>
-			                   		
-			                   		</div>
-			                   		<div class="row">
-			                   		  <div class="col-lg-8">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">No. HP yang aktif (Whatsapp)</label>
-			                       	 		<input type="text" id="input-city" class="form-control" placeholder="Silahkan isi Nomor HandPhone" required>
-			                      		</div>
-			                   		 </div>
-			                   		 
-			                   		</div>
-			                   		<div class="dropdown-divider"></div>
-			                   		<h6 class="heading-small text-muted mb-4">Berkas</h6>
-			                   		<div class="row">
-			                   		 <div class="col-lg-6">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Berkas Bimbingan</label>
-			                       	 		<input type="file" class="form-control-file" id="contohupload1">
-			                      		</div>
-			                   		 </div>
-			                   		 <div class="col-lg-4">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Naskah Skripsi</label>
-			                       	 		<input type="file" class="form-control-file" id="contohupload2">
-			                      		</div>
-			                   		 </div>
-			                   		</div>
-			                   		<div class="row">
-			                   		 <div class="col-lg-6">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Bukti Persetujuan Pembimbing</label>
-			                       	 		<input type="file" class="form-control-file" id="contohupload1">
-			                      		</div>
-			                   		 </div>
-			                   		 <div class="col-lg-6">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Sertifikat Seminar Nasional</label>
-			                       	 		<input type="file" class="form-control-file" id="contohupload1">
-			                      		</div>
-			                   		 </div>
-			                   		 </div>
-			                   		 <div class="row">
-			                   		 <div class="col-lg-8">
-	                     				 <div class="form-group">
-			                       	 		<label class="form-control-label" for="input-city">Berkas Bebas Tunggakan</label>
-			                       	 		<input type="file" class="form-control-file" id="contohupload2">
-			                      		</div>
-			                   		 </div>
+
+			                   		<div class="data-tugas-akhir text-center">
+					            		<br><h5>Data Tugas Akhir</h5>
+					            		<hr style="width: 140px;">
+						            	<div class="row">
+							            	<div class="col-lg-12">
+			                     				 <div class="form-group">
+			                     				 	<label class="form-control-label" for="judul_ta">Judul Tugas Akhir</label>
+												    <textarea class="form-control text-center" id="judul_ta" required></textarea>
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+					                   		<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="kd_pem1">Kode Pembimbing 1</label>
+					                       	 		<select class="form-control" name="kd_pem1" id="kd_pem1" required>
+											    		<option>-</option>
+											      		<option>AGK</option>
+													    <option>AIH</option>
+													    <option>FKI</option>
+													    <option>FRU</option>
+													    <option>HAY</option>
+													    <option>ISR</option>
+													    <option>PNS</option>
+													    <option>RDI</option>
+													    <option>RZK</option>
+													    <option>SGO</option>
+													    <option>WNI</option>
+													    <option>YHC</option>
+													    <option>THP</option>
+													    <option>FZR</option>
+													    <option>ECD</option>
+													    <option>ADK</option>
+													    <option>EKP</option>
+													    <option>GNA</option>
+													</select>
+					                      		</div>
+					                   		 </div>
+					                   		<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="kd_pem2">Kode Pembimbing 2</label>
+					                       	 		<select class="form-control" name="kd_pem2" id="kd_pem2" required>
+											    		<option>-</option>
+											      		<option>AGK</option>
+													    <option>AIH</option>
+													    <option>FKI</option>
+													    <option>FRU</option>
+													    <option>HAY</option>
+													    <option>ISR</option>
+													    <option>PNS</option>
+													    <option>RDI</option>
+													    <option>RZK</option>
+													    <option>SGO</option>
+													    <option>WNI</option>
+													    <option>YHC</option>
+													    <option>THP</option>
+													    <option>FZR</option>
+													    <option>ECD</option>
+													    <option>ADK</option>
+													    <option>EKP</option>
+													    <option>GNA</option>
+													</select>
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+							                <div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="izin_seminar_p1">Izin Maju Seminar (P1)</label>
+					                       	 		<select class="form-control" name="izin_p1" id="izin_seminar_p1" required>
+											    		<option>-</option>
+											      		<option>Ya</option>
+													    <option>Tidak</option>
+													</select>
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_izin_seminar_p1">Bukti Izin (P1)</label>
+				                       	 			<input type="file" class="form-control-file" id="input_izin_seminar_p1">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="izin_seminar_p2">Izin Maju Seminar (P2)</label>
+					                       	 		<select class="form-control" name="izin_p2" id="izin_seminar_p2" required>
+											    		<option>-</option>
+											      		<option>Ya</option>
+													    <option>Tidak</option>
+													</select>
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_izin_seminar_p2">Bukti Izin (P2)</label>
+				                       	 			<input type="file" class="form-control-file" id="input_izin_seminar_p2">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		 	<div class="col-lg-6">
+				                      			<div class="form-group">
+				                       	 			<label class="form-control-label" for="jml_bimbi1">Jumlah Bimbingan (P1)</label>
+				                       	 			<input type="text" id="jml_bimbi1" class="form-control" required>
+				                      			</div>
+				                   			</div>
+				                   			<div class="col-lg-6">
+		                     					<div class="form-group">
+				                       	 			<label class="form-control-label" for="jml_bimbi2">Jumlah Bimbingan (P2)</label>
+				                       	 			<input type="text" id="jml_bimbi2" class="form-control" required>
+				                      			</div>
+				                   			</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="pembayaran">Pelunasan Pembayaran Kuliah</label>
+					                       	 		<select class="form-control" name="pembayaran" id="pembayaran" required>
+											    		<option>-</option>
+											      		<option>Ya</option>
+													    <option>Tidak</option>
+													</select>
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_lunas">Bukti Pelunasan</label>
+				                       	 			<input type="file" class="form-control-file" id="input_lunas">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+							            	<div class="col-lg-12">
+			                     				 <div class="form-group">
+			                     				 	<label class="form-control-label" for="isi_matkul">Tulis Mata Kuliah Yang diambil Selain TA2</label>
+												    <textarea class="form-control text-center" id="isi_matkul" required></textarea>
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan Tugas Akhir (pdf)</label>
+				                       	 			<input type="file" class="form-control-file" id="input_laporan">
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_khs">Scan KHS</label>
+				                       	 			<input type="file" class="form-control-file" id="input_khs">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+							            	<div class="col-lg-12 center">
+			                     				 <div class="form-group">
+			                     				 	<label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
+				                       	 			<input type="file" class="form-control-file" id="input_sertifikat">
+					                      		</div>
+					                   		</div>
+				                   		</div>
 			                   		</div>
 					            </div>
 					            <div class="modal-footer">

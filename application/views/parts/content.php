@@ -1,4 +1,70 @@
-<div class="container-fluid">
-<marquee width="1500" height="40"><h2>SELAMAT DATANG DI SISTEM INFORMASI TUGAS AKHIR (SISTA)</h2></marquee>
 
+	
+
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
+	<title>Tutorial Membuat Carousel Dengan Bootstrap 4 - www.malasngoding.com</title> 
+</head> 
+<body> 
+ 
+	<div class="container-fluid pt-5">
+ 
+ <br><center>
+ <div class="col-md-8 col-md-offset-2">
+		<div class="bd-example">
+			<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="<?php echo base_url();?>assets/img/carousel/banner3.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+
+							<!-- <h5>Selamat Datang di SISTA !</h5>
+							-->
+							
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="<?php echo base_url();?>assets/img/carousel/banner4.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							
+						</div>
+					</div>
+					
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Hai, <?=@$_SESSION['nim'];?> !</h1>
+    <p class="lead">Selamat datang di SISTA, dengan menggunakan aplikasi ini anda dapat lebih mudah untuk melakukan proses pelaksanaan Tugas Akhir. Selamat Mencoba!</p>
+    <hr class="my-4">
+    <p>&copy;2020 SISTA</p>
+  </div>
 </div>
+ </div>
+ </center>
+
+	</div>
+ 
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/popper.js"></script>
+</body> 
+</html>
