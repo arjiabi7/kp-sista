@@ -20,7 +20,6 @@
 				<ol class="carousel-indicators">
 					<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -50,12 +49,61 @@
 				</a>
 			</div>
 		</div>
-		<div class="jumbotron jumbotron-fluid">
+		<div class="jumbotron jumbotron-fluid bg-dark text-white">
   <div class="container">
     <h1 class="display-4">Hai, <?=@$_SESSION['nim'];?> !</h1>
     <p class="lead">Selamat datang di SISTA, dengan menggunakan aplikasi ini anda dapat lebih mudah untuk melakukan proses pelaksanaan Tugas Akhir. Selamat Mencoba!</p>
+    <div class="col-xl-12">
+    	<button type="button" class="btn btn-icon btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+    		<i class="ni ni-hat-3"></i>
+    		<span class="nav-link-text">Profile</span>
+    	</button>
+	<div class="row">
+	  <div class="col-lg-12">
+	    <div class="collapse multi-collapse" id="multiCollapseExample2">
+	      <div class="card card-body bg-dark border-0">
+	        <form>
+		        <table style="font-family: courier;">
+		        	<tr>
+		        		<td style="width: 130px;">Nama Lengkap</td>
+		        		<td style="width: 30px;">:</td>
+		        		<td>Arji Dika</td>
+		        	</tr>
+		        	<tr>
+		        		<td>NIM</td>
+		        		<td>:</td>
+		        		<td>3411171133</td>
+		        	</tr>
+		        	<tr>
+		        		<td>Status</td>
+		        		<td>:</td>
+		        		<td>Aktif</td>
+		        	</tr>
+		        	<tr>
+		        		<td>Prodi</td>
+		        		<td>:</td>
+		        		<td>Informatika</td>
+		        	</tr>
+		        	<tr>
+		        		<td>Program</td>
+		        		<td>:</td>
+		        		<td>Reguler</td>
+		        	</tr>
+		        	<tr>
+		        		<td>Jumlah SKS</td>
+		        		<td>:</td>
+		        		<td>18</td>
+		        	</tr>
+		        </table>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      
+        </div>
     <hr class="my-4">
-    <p>&copy;2020 SISTA</p>
+    
   </div>
 </div>
  </div>
