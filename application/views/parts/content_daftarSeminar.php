@@ -184,13 +184,13 @@
 				                   			</div>
 				                   		</div>
 				                   		<div class="row">
-							                <div class="col-lg-6 center">
+							                <div class="col-lg-12 center">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="ipk_smntr">IPK sementara</label>
 					                       	 		<input type="text" id="ipk_smntr" class="form-control" required readonly>
 					                      		</div>
 					                      	</div>
-				                   		</div>
+					                    </div>
 			                   		</div>
 
 			                   		<div class="data-tugas-akhir text-center">
@@ -337,7 +337,7 @@
 				                   		<div class="row">
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan Tugas Akhir (pdf)</label>
+					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan TA (pdf)</label>
 				                       	 			<input type="file" class="form-control-file" id="input_laporan">
 					                      		</div>
 					                      	</div>
@@ -349,10 +349,10 @@
 					                   		</div>
 				                   		</div>
 				                   		<div class="row">
-							            	<div class="col-lg-12 center">
+							            	<div class="col-lg-6">
 			                     				 <div class="form-group">
-			                     				 	<label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
-				                       	 			<input type="file" class="form-control-file" id="input_sertifikat">
+			                     				 	<center><label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
+				                       	 			<input type="file" class="form-control-file" id="input_sertifikat"></center>
 					                      		</div>
 					                   		</div>
 				                   		</div>

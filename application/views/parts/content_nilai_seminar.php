@@ -3,8 +3,34 @@
 	<div class="col-xl">
 	          <div class="card">
 	            <div class="card-header">
-	              <div class="row pl-3">
-	                 <h3 class="mb-0 h3">Form Penilaian Seminar</h3>
+	              <div class="row align-items-center">
+	                <div class="col-8">
+	                  <h3 class="mb-0 h3">Tata Cara Daftar TA II</h3>
+	                </div>
+	                <div class="col-4 text-right">
+	                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#pertanyaan"><i class="ni ni-send"></i><span class="nav-link-text">Pertanyaan?</span></button>
+	                  <div class="modal fade" id="pertanyaan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				        <div class="modal-dialog" role="document">
+				            <div class="modal-content">
+				            <div class="modal-header">
+				                <h5 class="modal-title" id="exampleModalLongTitle">Pertanyaan</h5>
+				                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				                <span aria-hidden="true">&times;</span>
+				                </button>
+				            </div>
+				            <div class="modal-body">
+				            	<div class="form-group text-center">
+			                       	 		<label class="form-control-label" for="input-city">Silahkan hubungi Koordinator TA II</label>
+			                      		</div>
+				            </div>
+				            <div class="modal-footer">
+				                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				                
+				            </div>
+				            </div>
+				        </div>
+				        </div>
+	                </div>
 	              </div>
 	            </div>
 	            <div class="card-body">
