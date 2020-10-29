@@ -67,7 +67,7 @@
 		        	<tr>
 		        		<td style="width: 130px;">Nama Lengkap</td>
 		        		<td style="width: 30px;">:</td>
-		        		<td> <?=$this->ion_auth->user()->row()->first_name;?>  <?=$this->ion_auth->user()->row()->last_name;?></td>
+		        		<td> <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>NIM</td>
@@ -77,22 +77,22 @@
 		        	<tr>
 		        		<td>Status</td>
 		        		<td>:</td>
-		        		<td>Aktif</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->status;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Prodi</td>
 		        		<td>:</td>
-		        		<td>Informatika</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->prodi;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Program</td>
 		        		<td>:</td>
-		        		<td>Reguler</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->program;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Jumlah SKS</td>
 		        		<td>:</td>
-		        		<td>18</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->sks;?></td>
 		        	</tr>
 		        </table>
 	        </form>

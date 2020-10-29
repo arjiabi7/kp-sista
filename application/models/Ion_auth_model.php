@@ -911,8 +911,9 @@ class Ion_auth_model extends CI_Model
 		$this->trigger_events('extra_where');
 
 		$query = $this->db->select($this->identity_column . ', nim , email, id, password, active, last_login')
-						  ->join('tbl_data_mhsw','tbl_data_mhsw.nim = users.nim','inner')
+						
 						  ->where('nim',$this->db->escape_str($identity))
+						  
 						  ->limit(1)
 						  ->order_by('id', 'desc')
 
@@ -984,6 +985,26 @@ class Ion_auth_model extends CI_Model
 		$this->set_error('login_unsuccessful');
 
 		return FALSE;
+	}
+
+	function gabung_tabel(){
+			$query = $this->db->select('*, tbl_data_mhsw.nama_lengkap as nama_lengkap_mhsw, tbl_data_mhsw.peminatan as peminatan_mhsw, tbl_data_mhsw.sks as sks_mhsw, tbl_data_mhsw.nim as nim_mhsw , tbl_data_mhsw.email as email_mhsw, tbl_data_mhsw.status as status_mhsw, tbl_data_mhsw.program as program_mhsw, tbl_data_mhsw.prodi as prodi_mhsw')
+								->from('users')
+								->join('tbl_data_mhsw','users.nim = tbl_data_mhsw.nim')
+
+						 		
+								->get();
+								return $query;
+
+
+	}
+
+	function gabung_tabel_userSeminar(){
+		$query = $this->db->select('*, tbl_data_mhsw.nama_lengkap as nama_lengkap_mhsw,')
+							->from('tbl_seminar')
+							->join('tbl_data_mhsw','tbl_seminar.nim = tbl_data_mhsw.nim')
+							->get();
+							return $query;
 	}
 
 	/**
