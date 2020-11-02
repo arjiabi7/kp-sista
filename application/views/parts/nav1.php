@@ -24,12 +24,10 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <a class="navbar-brand" href="javascript:void(0)">
           <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">
-         
         </a>
-     
                 <a href="<?php echo base_url();?>index.php/Home">
                 <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> HOME</span></button>
                 </a>

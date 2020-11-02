@@ -29,13 +29,13 @@
   <a class="navbar-brand" href="javascript:void(0)">
     <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">       
   </a> 
-  <a href="<?php echo base_url();?>index.php/Home">
+  <a href="<?php echo base_url();?>index.php/menu_daftarTA_koordinator">
     <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data TA2</span></button>
   </a>
-  <a href="<?php echo base_url();?>index.php/menu_daftarTA">
+  <a href="<?php echo base_url();?>index.php/menu_daftarSeminar_koordinator">
     <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data Seminar</span></button>
   </a>
-  <a href="<?php echo base_url();?>index.php/menu_daftarTA">
+  <a href="<?php echo base_url();?>index.php/menu_daftarSidang_koordinator">
     <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data Sidang</span></button>
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,11 +43,9 @@
     </ul>
     <div class="dropdown">
       <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=@$_SESSION['identity'];?> </span></button>        
-      <div class="dropdown-menu">         
-        <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth"><i class="ni ni-circle-08 text-warning"></i> Profile</a>
-        <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i> Logout</a>
-        </div>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i> Logout</a>
+      </div>
     </div>
   </div>
   </div>

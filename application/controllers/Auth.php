@@ -82,10 +82,18 @@ class Auth extends CI_Controller
 
 			if ($this->ion_auth->login($this->input->post('nim'), $this->input->post('password'), $remember))
 			{
-				//if the login is successful
-				//redirect them back to the home page
-				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				redirect('Home', 'refresh');
+				if ($this->ion_auth->is_admin()) {
+					//if the login is successful
+					//redirect them back to the home page
+					$this->session->set_flashdata('message', $this->ion_auth->messages());
+					redirect('Home_koordinator', 'refresh');
+				}else if (!$this->ion_auth->is_mahasiswa()) {
+					$this->session->set_flashdata('message', $this->ion_auth->messages());
+					redirect('Home', 'refresh');
+				}else if (!$this->ion_auth->is_dosen()) {
+					$this->session->set_flashdata('message', $this->ion_auth->messages());
+					redirect('Menu_nilaiSeminar', 'refresh');
+				}
 			}
 			else
 			{

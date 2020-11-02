@@ -89,13 +89,13 @@
 					            		<h5>Data Mahasiswa</h5>
 					            		<hr style="width: 140px;">
 						            	<div class="row">
-				                   		  	<div class="col-lg-8">
+				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="nama_mhs">Nama Lengkap</label>
 					                       	 		<input type="text" id="nama_mhs" class="form-control" required readonly>
 					                      		</div>
 				                   		 	</div>
-				                   		 	<div class="col-lg-4">
+				                   		 	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="nim">NIM</label>
 				                       	 			<input type="text" name="NIM" id="nim" class="form-control" required readonly>
@@ -256,6 +256,86 @@
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_izin_sidang_p2">Bukti Izin (P2)</label>
 				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_p2">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+							                <div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="izin_sidang_r1">Izin Maju Sidang (R1)</label>
+					                       	 		<select class="form-control" name="izin_sidang_r1" id="izin_sidang_r1" required>
+											    		<option>-</option>
+											      		<option>Ya</option>
+													    <option>Tidak</option>
+													</select>
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_izin_sidang_r1">Bukti Izin (R1)</label>
+				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_r1">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="izin_sidang_r2">Izin Maju Sidang (R2)</label>
+					                       	 		<select class="form-control" name="izin_sidang_r2" id="izin_sidang_r2" required>
+											    		<option>-</option>
+											      		<option>Ya</option>
+													    <option>Tidak</option>
+													</select>
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_izin_sidang_r2">Bukti Izin (R2)</label>
+				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_r2">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-12">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="link_seminar">Link Video Seminar</label>
+					                       	 		<input type="text" name="link_seminar" id="link_seminar" class="form-control" required>
+					                      		</div>
+					                      	</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="surat_perpus">Bebas Pinjam Perpus</label>
+					                       	 		<input type="file" class="form-control-file" id="surat_perpus">
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_khs">KHS</label>
+				                       	 			<input type="file" class="form-control-file" id="input_khs">
+					                      		</div>
+					                   		</div>
+				                   		</div>
+				                   		<div class="row">
+				                   		  	<div class="col-lg-12">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="keterangan_nilai_kosong">Keterangan Nilai Masih Kosong</label>
+					                       	 		<textarea class="form-control text-center" id="keterangan_nilai_kosong" required></textarea>
+					                      		</div>
+					                      	</div>
+				                   		</div>
+				                   		<div class="row">
+							                <div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan TA (pdf)</label>
+					                       	 		<input type="file" class="form-control-file" id="input_laporan">
+					                      		</div>
+					                      	</div>
+					                      	<div class="col-lg-6">
+			                     				<div class="form-group">
+					                       	 		<label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
+				                       	 			<input type="file" class="form-control-file" id="input_sertifikat">
 					                      		</div>
 					                   		</div>
 				                   		</div>

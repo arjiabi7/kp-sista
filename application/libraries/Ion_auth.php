@@ -396,6 +396,24 @@ class Ion_auth
 		return $this->ion_auth_model->in_group($admin_group, $id);
 	}
 
+	public function is_mahasiswa($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_mahasiswa');
+
+		$mahasiswa_group = $this->config->item('mahasiswa_group', 'ion_auth');
+
+		return $this->ion_auth_model->in_group($mahasiswa_group, $id);
+	}
+
+	public function is_dosen($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_dosen');
+
+		$dosen_group = $this->config->item('dosen_group', 'ion_auth');
+
+		return $this->ion_auth_model->in_group($dosen_group, $id);
+	}
+
 	/**
 	 * Check the compatibility with the server
 	 *

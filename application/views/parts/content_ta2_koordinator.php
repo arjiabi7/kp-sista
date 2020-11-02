@@ -11,6 +11,7 @@
 </head> 
 <body> 
 	<div class="container-fluid p-5">
+		<h3>Data TA2</h3>
  		<div class="card">
  			<div class="table-responsive text-center">
  				<table class="table table-striped">
