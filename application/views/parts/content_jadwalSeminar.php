@@ -40,19 +40,19 @@
 				<tr>
 					<td style="width: 200px">NAMA</td>
 					<td>:</td>
-					<td>Dika Arji</td>
+					<td> <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?></td>
 					
 				</tr>
 				<tr>
 					<td>PEMINATAN</td>
 					<td>:</td>
-					<td>DSE</td>
+					                        <td> <?=$this->ion_auth->gabung_tabel()->row()->peminatan;?></td>
 
 				</tr>
 				<tr>
 					<td>JUDUL</td>
 					<td>:</td>
-					<td>MEMBUAT SISTEM INFORMASI TUGAS AKHIR</td>
+					                        <td> <?=$this->ion_auth->gabung_tabel_userSeminar()->row()->judul_skripsi;?></td>
 
 				</tr>
 			</table>

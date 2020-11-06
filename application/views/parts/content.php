@@ -55,17 +55,17 @@
 						        	<tr>
 						        		<td style="width: 130px;">Nama Lengkap</td>
 						        		<td style="width: 30px;">:</td>
-						        		<td>Arji Dika</td>
+						        		<td> <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?></td>
 						        	</tr>
 						        	<tr>
 						        		<td>NIM</td>
 						        		<td>:</td>
-						        		<td>3411171133</td>
+						        		<td> <?=$this->ion_auth->gabung_tabel()->row()->nim;?></td>
 						        	</tr>
 						        	<tr>
 						        		<td>Status</td>
 						        		<td>:</td>
-						        		<td>Aktif</td>
+						        		                        <td> <?=$this->ion_auth->gabung_tabel()->row()->status;?></td>
 						        	</tr>
 						        	<tr>
 						        		<td>Prodi</td>
