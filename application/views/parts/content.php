@@ -51,7 +51,7 @@
 		</div>
 		<div class="jumbotron jumbotron-fluid bg-dark text-white">
   <div class="container">
-    <h1 class="display-4">Hai, <?=@$_SESSION['nim'];?> !</h1>
+    <h1 class="display-4">Hai, <?=$this->ion_auth->user()->row()->first_name;?>!</h1>
     <p class="lead">Selamat datang di SISTA, dengan menggunakan aplikasi ini anda dapat lebih mudah untuk melakukan proses pelaksanaan Tugas Akhir. Selamat Mencoba!</p>
     <div class="col-xl-12">
     	<button type="button" class="btn btn-icon btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
@@ -67,32 +67,32 @@
 		        	<tr>
 		        		<td style="width: 130px;">Nama Lengkap</td>
 		        		<td style="width: 30px;">:</td>
-		        		<td>Arji Dika</td>
+		        		<td> <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>NIM</td>
 		        		<td>:</td>
-		        		<td>3411171133</td>
+		        		<td> <?=$this->ion_auth->user()->row()->nim;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Status</td>
 		        		<td>:</td>
-		        		<td>Aktif</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->status;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Prodi</td>
 		        		<td>:</td>
-		        		<td>Informatika</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->prodi;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Program</td>
 		        		<td>:</td>
-		        		<td>Reguler</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->program;?></td>
 		        	</tr>
 		        	<tr>
 		        		<td>Jumlah SKS</td>
 		        		<td>:</td>
-		        		<td>18</td>
+		        		<td><?=$this->ion_auth->gabung_tabel()->row()->sks;?></td>
 		        	</tr>
 		        </table>
 	        </form>

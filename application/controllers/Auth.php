@@ -71,7 +71,7 @@ class Auth extends CI_Controller
 		$this->data['title'] = $this->lang->line('login_heading');
 
 		// validate form input
-		$this->form_validation->set_rules('nim', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
+		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
 
 		if ($this->form_validation->run() === TRUE)
@@ -80,7 +80,7 @@ class Auth extends CI_Controller
 			// check for "remember me"
 			$remember = (bool)$this->input->post('remember');
 
-			if ($this->ion_auth->login($this->input->post('nim'), $this->input->post('password'), $remember))
+			if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
 			{
 				if ($this->ion_auth->is_admin()) {
 					//if the login is successful
@@ -109,11 +109,11 @@ class Auth extends CI_Controller
 			// set the flash data error message if there is one
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
-			$this->data['nim'] = [
-				'name' => 'nim',
-				'id' => 'nim',
+			$this->data['identity'] = [
+				'name' => 'identity',
+				'id' => 'identity',
 				'type' => 'text',
-				'value' => $this->form_validation->set_value('nim'),
+				'value' => $this->form_validation->set_value('identity'),
 			];
 
 			$this->data['password'] = [
