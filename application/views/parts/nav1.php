@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html style="position: relative;">
 
 <head>
   <meta charset="utf-8">
@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
   <a class="navbar-brand" href="javascript:void(0)">
           <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">
         </a>
@@ -68,7 +68,7 @@
     </ul>
     <div class="dropdown">
 
-                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=$this->ion_auth->user()->row()->first_name;?></span></button>
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=@$_SESSION['identity'];?> </span></button>
                
                 <div class="dropdown-menu">
                  

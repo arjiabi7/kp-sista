@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html style="position: relative;">
 
 <head>
   <meta charset="utf-8">
@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
   <div class="container-fluid">
   <a class="navbar-brand" href="javascript:void(0)">
     <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">       

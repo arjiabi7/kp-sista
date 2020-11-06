@@ -22,10 +22,6 @@ class Home extends CI_Controller
     }
 
 	function index(){
-		$user = $this->ion_auth->user();
-        $email = $user->email; 
-
-        $data['email']= $email;
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page

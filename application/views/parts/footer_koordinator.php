@@ -15,10 +15,11 @@
 -->
 
       <!-- Footer -->
-      <footer class="bg-dark pt-0 mt-3" style="width: 100%; height: 70px; position: absolute;">
+      <footer class="bg-dark" style="width: 100%; height: 100px; position: absolute; bottom: 0;">
+        <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+            <ul class="nav nav-footer justify-content-lg-end">
               <li class="nav-item text-muted">
                 <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">&copy;2020 SISTA</a>
               </li>
@@ -36,6 +37,7 @@
               </li>
             </ul>
           </div>
+        </div>
         </div>
       </footer>
     </div>

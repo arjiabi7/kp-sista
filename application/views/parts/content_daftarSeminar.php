@@ -1,5 +1,5 @@
-<div class="container-fluid">
-	<br><center><h2>Halaman Pendaftaran Seminar</h2></center><br>
+<body class="mt-5" style="margin-bottom: 100px;">
+<div class="container-fluid pb-5 pt-5">
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
@@ -400,3 +400,4 @@
 	          </div>
 	        </div>
 </div>
+</body>

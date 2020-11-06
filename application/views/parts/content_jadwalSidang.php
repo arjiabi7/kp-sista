@@ -9,9 +9,9 @@
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
 	<title>Jadwal Sidang & Plot Penguji</title> 
 </head>
-<body>
+<body class="mt-3" style="margin-bottom: 100px;">
 	<center>
-	<div class="container-fluid pt-5">
+	<div class="container-fluid pt-5 pb-5">
 		<br>
 		<div class="col-md-8 col-md-offset-2">
 		<nav aria-label="breadcrumb">

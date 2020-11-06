@@ -51,13 +51,13 @@
                   <div id="infoMessage"><?php echo $message;?></div>
 
                   <?php echo form_open("auth/login");?>
-                  NIM
+                  Email
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
 
                     </div>
-                    <?php echo form_input($identity);?>
+                    <?php echo form_input($nim);?>
                   </div>
                 </div>
                 <div class="form-group">

@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
 	<title>Tutorial Membuat Carousel Dengan Bootstrap 4 - www.malasngoding.com</title> 
 </head> 
-<body> 
+<body class="mt-5"> 
 	<div class="container-fluid p-5">
 		<h3>Data TA2</h3>
  		<div class="card">
@@ -46,10 +46,9 @@
  						<td><a href="#">KHS.txt</a></td>
  						<td><a href="#">KRS.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  					<tr>
@@ -67,110 +66,9 @@
  						<td><a href="#">KHS.txt</a></td>
  						<td><a href="#">KRS.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
-						</td>
- 					</tr><tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr><tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr><tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr><tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr><tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  					<tr>
@@ -188,10 +86,9 @@
  						<td><a href="#">KHS.txt</a></td>
  						<td><a href="#">KRS.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  					<tr>
@@ -209,73 +106,9 @@
  						<td><a href="#">KHS.txt</a></td>
  						<td><a href="#">KRS.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>144</td>
- 						<td>3.9</td>
- 						<td>0</td>
- 						<td>0</td>
- 						<td>Sistem Pendukung Keputusan blabla...</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td><a href="#">KRS.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  				</table>

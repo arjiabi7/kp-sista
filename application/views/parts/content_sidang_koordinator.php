@@ -1,6 +1,3 @@
-
-	
-
 <html> 
 <head> 
 	<meta charset="utf-8"> 
@@ -9,7 +6,7 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
 	<title>Tutorial Membuat Carousel Dengan Bootstrap 4 - www.malasngoding.com</title> 
 </head> 
-<body>
+<body class="mt-5">
 	<div class="container-fluid p-5">
 		<h3>Data Sidang</h3>
  		<div class="card">
@@ -48,10 +45,9 @@
  						<td><a href="#">Laporan.txt</a></td>
  						<td><a href="#">Sertifikat.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  					<tr>
@@ -70,10 +66,29 @@
  						<td><a href="#">Laporan.txt</a></td>
  						<td><a href="#">Sertifikat.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
+						</td>
+ 					</tr><tr>
+ 						<td>Arji Abiyoga</td>
+ 						<td>3411171133</td>
+ 						<td>WNI</td>
+ 						<td>ADK</td>
+ 						<td>WNI</td>
+ 						<td>ADK</td>
+ 						<td><a href="#">Izin.txt</a></td>
+ 						<td><a href="">http://</a></td>
+ 						<td><a href="#">Pelunasan.txt</a></td>
+ 						<td><a href="#">Bebas.txt</a></td>
+ 						<td><a href="#">KHS.txt</a></td>
+ 						<td>Belum ambil</td>
+ 						<td><a href="#">Laporan.txt</a></td>
+ 						<td><a href="#">Sertifikat.txt</a></td>
+ 						<td>
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+						  Tidak</button>
 						</td>
  					</tr>
  					<tr>
@@ -92,10 +107,9 @@
  						<td><a href="#">Laporan.txt</a></td>
  						<td><a href="#">Sertifikat.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  					<tr>
@@ -114,98 +128,9 @@
  						<td><a href="#">Laporan.txt</a></td>
  						<td><a href="#">Sertifikat.txt</a></td>
  						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
+ 						<button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
+						  Setuju</button><button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
 						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">Izin.txt</a></td>
- 						<td><a href="">http://</a></td>
- 						<td><a href="#">Pelunasan.txt</a></td>
- 						<td><a href="#">Bebas.txt</a></td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td>Belum ambil</td>
- 						<td><a href="#">Laporan.txt</a></td>
- 						<td><a href="#">Sertifikat.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">Izin.txt</a></td>
- 						<td><a href="">http://</a></td>
- 						<td><a href="#">Pelunasan.txt</a></td>
- 						<td><a href="#">Bebas.txt</a></td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td>Belum ambil</td>
- 						<td><a href="#">Laporan.txt</a></td>
- 						<td><a href="#">Sertifikat.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">Izin.txt</a></td>
- 						<td><a href="">http://</a></td>
- 						<td><a href="#">Pelunasan.txt</a></td>
- 						<td><a href="#">Bebas.txt</a></td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td>Belum ambil</td>
- 						<td><a href="#">Laporan.txt</a></td>
- 						<td><a href="#">Sertifikat.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
-						</td>
- 					</tr>
- 					<tr>
- 						<td>Arji Abiyoga</td>
- 						<td>3411171133</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td>WNI</td>
- 						<td>ADK</td>
- 						<td><a href="#">Izin.txt</a></td>
- 						<td><a href="">http://</a></td>
- 						<td><a href="#">Pelunasan.txt</a></td>
- 						<td><a href="#">Bebas.txt</a></td>
- 						<td><a href="#">KHS.txt</a></td>
- 						<td>Belum ambil</td>
- 						<td><a href="#">Laporan.txt</a></td>
- 						<td><a href="#">Sertifikat.txt</a></td>
- 						<td>
- 						<div class="row ml-1"><button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-						  Setuju</button><span class="ml-1 mr-1">|</span> <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-						  Tidak</button>
-						</div>
 						</td>
  					</tr>
  				</table>
