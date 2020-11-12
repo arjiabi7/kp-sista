@@ -79,12 +79,6 @@
               </form>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-12 text-center">
-              <a href="regis" class="text-white">Registrasi</a><br>
-              <a href="forgot_password" class="text-white"><?php echo lang('login_forgot_password');?></a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

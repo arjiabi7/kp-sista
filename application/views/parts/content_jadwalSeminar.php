@@ -62,13 +62,13 @@
 				<tr>
 					<td style="width: 200px">HARI</td>
 					<td style="width: 10px">:</td>
-					<td>SELASA</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->hari_seminar;?></td></td>
 
 				</tr>
 				<tr>
 					<td style="width: 200px">TANGGAL</td>
 					<td style="width: 10px">:</td>
-					<td>20 NOVEMBER 2020</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->tgl_seminar;?></td></td>
 
 				</tr>
 				<tr>

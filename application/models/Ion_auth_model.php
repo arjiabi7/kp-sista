@@ -989,10 +989,9 @@ class Ion_auth_model extends CI_Model
 
 	function gabung_tabel(){
 			$query = $this->db->select('*')
-								->from('users')
-								->join('tbl_data_mhsw','users.nim = tbl_data_mhsw.nim')
-
-						 		
+								->from('tbl_data_mhsw')
+								->join('users','tbl_data_mhsw.nim = users.nim')
+								->where('tbl_data_mhsw.nim',$_SESSION['nim'])
 								->get();
 								return $query;
 
@@ -1002,7 +1001,8 @@ class Ion_auth_model extends CI_Model
 	function gabung_tabel_userSeminar(){
 		$query = $this->db->select('*')
 							->from('tbl_seminar')
-							->join('tbl_data_mhsw','tbl_seminar.nim = tbl_data_mhsw.nim')
+							->join('users','tbl_seminar.nim = users.nim')
+							->where('tbl_seminar.nim',$_SESSION['nim'])
 							->get();
 							return $query;
 	}

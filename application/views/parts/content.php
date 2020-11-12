@@ -10,7 +10,7 @@
 	<title>Tutorial Membuat Carousel Dengan Bootstrap 4 - www.malasngoding.com</title> 
 </head> 
 <body class="mt-5" style="margin-bottom: 100px;"> 
- 	<div class="container-fluid pt-5">
+ 	<div class="container-fluid pb-5">
  	<br><center>
 	<div class="col-md-8 col-md-offset-2">
 		<div class="bd-example">
@@ -65,7 +65,7 @@
 						        	<tr>
 						        		<td>Status</td>
 						        		<td>:</td>
-						        		                        <td> <?=$this->ion_auth->gabung_tabel()->row()->status;?></td>
+						        		<td> <?=$this->ion_auth->gabung_tabel()->row()->status;?></td>
 						        	</tr>
 						        	<tr>
 						        		<td>Prodi</td>

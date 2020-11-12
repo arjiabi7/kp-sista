@@ -37,23 +37,26 @@
                 <div class="dropdown">
                   <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SEMINAR</span></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/jadwal"><i class="ni ni-send text-warning"></i> Pengajuan Seminar</a>
+                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Seminar</span></a>
                     <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
                  
                     <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Rekap Hasil Seminar</a>
+                      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Unduh Hasil Seminar</a>
                   </div>
                 </div>
                  <div class="dropdown">
                     <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SIDANG</span></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                     <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/jadwal"><i class="ni ni-send text-warning"></i> Pengajuan Sidang</a>
+                    <div class="dropdown-divider"></div>
                      <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSidang/daftarSidang"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Sidang</span></a>
                     <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSidang/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
-                 
                     <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Rekap Hasil Seminar</a>
+                      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Unduh Hasil Sidang</a>
                     </div>
                   </div>
               
@@ -71,11 +74,7 @@
                 <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=@$_SESSION['identity'];?> </span></button>
                
                 <div class="dropdown-menu">
-                 
-              <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth"><i class="ni ni-circle-08 text-warning"></i> Profile</a>
-              <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i> Logout</a>
-                 
                 </div>
               </div>
   </div>

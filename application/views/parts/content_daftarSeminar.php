@@ -259,42 +259,6 @@
 					                   		</div>
 				                   		</div>
 				                   		<div class="row">
-							                <div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="izin_seminar_p1">Izin Maju Seminar (P1)</label>
-					                       	 		<select class="form-control" name="izin_p1" id="izin_seminar_p1" required>
-											    		<option>-</option>
-											      		<option>Ya</option>
-													    <option>Tidak</option>
-													</select>
-					                      		</div>
-					                      	</div>
-					                      	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="input_izin_seminar_p1">Bukti Izin (P1)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_izin_seminar_p1">
-					                      		</div>
-					                   		</div>
-				                   		</div>
-				                   		<div class="row">
-				                   		  	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="izin_seminar_p2">Izin Maju Seminar (P2)</label>
-					                       	 		<select class="form-control" name="izin_p2" id="izin_seminar_p2" required>
-											    		<option>-</option>
-											      		<option>Ya</option>
-													    <option>Tidak</option>
-													</select>
-					                      		</div>
-					                      	</div>
-					                      	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="input_izin_seminar_p2">Bukti Izin (P2)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_izin_seminar_p2">
-					                      		</div>
-					                   		</div>
-				                   		</div>
-				                   		<div class="row">
 				                   		 	<div class="col-lg-6">
 				                      			<div class="form-group">
 				                       	 			<label class="form-control-label" for="jml_bimbi1">Jumlah Bimbingan (P1)</label>
