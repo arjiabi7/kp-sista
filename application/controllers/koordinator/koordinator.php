@@ -3,7 +3,7 @@
 /**
  * 
  */
-class menu_daftarSidang extends CI_Controller
+class koordinator extends CI_Controller
 {
 	
 	function __construct() {
@@ -21,7 +21,7 @@ class menu_daftarSidang extends CI_Controller
 		$this->lang->load('auth');
     }
 
-	function daftarSidang(){
+	function daftar_TA2(){
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -30,13 +30,12 @@ class menu_daftarSidang extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_daftarSidang');
+			$this->load->view('koordinator/home_koordinator');
 		}
     }
 
-     function jadwal(){
-        
-          if (!$this->ion_auth->logged_in())
+    function daftar_seminar_koordinator(){
+    	   if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');
@@ -44,9 +43,23 @@ class menu_daftarSidang extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_jadwalSidang');
+			$this->load->view('koordinator/menu_daftarSeminar_koordinator');
 		}
     }
 
+    function daftar_sidang_koordinator(){
+    	 if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('koordinator/menu_daftarSidang_koordinator');
+		}
+    }
+
+    
 }
 ?>

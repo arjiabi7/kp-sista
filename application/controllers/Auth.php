@@ -86,10 +86,10 @@ class Auth extends CI_Controller
 					//if the login is successful
 					//redirect them back to the home page
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
-					redirect('Home_koordinator', 'refresh');
+					redirect('koordinator/koordinator/daftar_TA2', 'refresh');
 				}else if (!$this->ion_auth->is_mahasiswa()) {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
-					redirect('Home', 'refresh');
+					redirect('mahasiswa/Home', 'refresh');
 				}else if (!$this->ion_auth->is_dosen()) {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
 					redirect('Menu_nilaiSeminar', 'refresh');

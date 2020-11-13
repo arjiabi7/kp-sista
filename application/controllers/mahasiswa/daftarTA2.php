@@ -3,7 +3,7 @@
 /**
  * 
  */
-class Home extends CI_Controller
+class daftarTA2 extends CI_Controller
 {
 	
 	function __construct() {
@@ -22,6 +22,7 @@ class Home extends CI_Controller
     }
 
 	function index(){
+       // $data['daftar_ta2'] = $this->m_data->tampil_data()->result();
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -30,10 +31,9 @@ class Home extends CI_Controller
 		
 		else
 		{
-			$this->load->view('home');
+			$this->load->view('mahasiswa/menu_daftarTA');
 		}
     }
+    }
 
-    
-}
 ?>

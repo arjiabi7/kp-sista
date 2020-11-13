@@ -3,7 +3,7 @@
 /**
  * 
  */
-class menu_daftarTA extends CI_Controller
+class sidang extends CI_Controller
 {
 	
 	function __construct() {
@@ -21,8 +21,7 @@ class menu_daftarTA extends CI_Controller
 		$this->lang->load('auth');
     }
 
-	function index(){
-       // $data['daftar_ta2'] = $this->m_data->tampil_data()->result();
+	function daftarSidang(){
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -31,9 +30,23 @@ class menu_daftarTA extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_daftarTA');
+			$this->load->view('mahasiswa/menu_daftarSidang');
 		}
     }
+
+     function jadwal(){
+        
+          if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('mahasiswa/menu_jadwalSidang');
+		}
     }
 
+}
 ?>

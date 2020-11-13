@@ -3,7 +3,7 @@
 /**
  * 
  */
-class menu_daftarTA_koordinator extends CI_Controller
+class pembimbing extends CI_Controller
 {
 	
 	function __construct() {
@@ -21,7 +21,7 @@ class menu_daftarTA_koordinator extends CI_Controller
 		$this->lang->load('auth');
     }
 
-	function index(){
+	function penilaian_seminar(){
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -30,7 +30,7 @@ class menu_daftarTA_koordinator extends CI_Controller
 		
 		else
 		{
-			$this->load->view('home_koordinator');
+			$this->load->view('menu_nilaiSeminar');
 		}
     }
     }

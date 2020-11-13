@@ -3,7 +3,7 @@
 /**
  * 
  */
-class menu_daftarSidang_koordinator extends CI_Controller
+class Home extends CI_Controller
 {
 	
 	function __construct() {
@@ -30,9 +30,10 @@ class menu_daftarSidang_koordinator extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_daftarSidang_koordinator');
+			$this->load->view('mahasiswa/home');
 		}
     }
 
+    
 }
 ?>

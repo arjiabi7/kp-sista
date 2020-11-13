@@ -29,13 +29,13 @@
   <a class="navbar-brand" href="javascript:void(0)">
     <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">       
   </a> 
-  <a href="<?php echo base_url();?>index.php/menu_daftarTA_koordinator">
+  <a href="<?php echo base_url();?>index.php/koordinator/koordinator/daftar_TA2">
     <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data TA2</span></button>
   </a>
-  <a href="<?php echo base_url();?>index.php/menu_daftarSeminar_koordinator">
+  <a href="<?php echo base_url();?>index.php/koordinator/koordinator/daftar_seminar_koordinator">
     <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data Seminar</span></button>
   </a>
-  <a href="<?php echo base_url();?>index.php/menu_daftarSidang_koordinator">
+  <a href="<?php echo base_url();?>index.php/koordinator/koordinator/daftar_sidang_koordinator">
     <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data Sidang</span></button>
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">

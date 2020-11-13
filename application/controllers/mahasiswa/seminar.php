@@ -3,7 +3,7 @@
 /**
  * 
  */
-class menu_daftarSeminar extends CI_Controller
+class seminar extends CI_Controller
 {
 	
 	function __construct() {
@@ -31,7 +31,7 @@ class menu_daftarSeminar extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_daftarSeminar');
+			$this->load->view('mahasiswa/menu_daftarSeminar');
 		}
     }
 
@@ -45,7 +45,20 @@ class menu_daftarSeminar extends CI_Controller
 		
 		else
 		{
-			$this->load->view('menu_jadwalSeminar');
+			$this->load->view('mahasiswa/menu_jadwalSeminar');
+		}
+    }
+
+    function rekap_nilai_seminar(){
+    	 if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('mahasiswa/content_nilai_seminar');
 		}
     }
     
