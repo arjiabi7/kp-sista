@@ -32,7 +32,7 @@
 					<th>NIM</th>
 					
 					<th style="width: 10px">:</th>
-					<th> <?=@$_SESSION['identity'];?></th>
+					<th> <?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nim;?></th>
 			
 				</tr>
 			

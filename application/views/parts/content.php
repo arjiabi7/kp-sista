@@ -39,7 +39,7 @@
 		</div>
 		<div class="jumbotron jumbotron-fluid bg-dark text-white">
   		<div class="container-fluid">
-    		<h1 class="display-4">Hai, <?=@$_SESSION['nim'];?> !</h1>
+    		<h1 class="display-4">Hai, <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?> !</h1>
     		<p class="lead">Selamat datang di SISTA, dengan menggunakan aplikasi ini anda dapat lebih mudah untuk melakukan proses pelaksanaan Tugas Akhir. Selamat Mencoba!</p>
     		<div class="col-xl-12">
     			<button type="button" class="btn btn-icon btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">

@@ -910,9 +910,9 @@ class Ion_auth_model extends CI_Model
 
 		$this->trigger_events('extra_where');
 
-		$query = $this->db->select($this->identity_column . ', nim , email, id, password, active, last_login')
+		$query = $this->db->select($this->identity_column . ' , email, id, password, active, last_login')
 						
-						  ->where('nim',$this->db->escape_str($identity))
+						  ->where('email',$this->db->escape_str($identity))
 						  
 						  ->limit(1)
 						  ->order_by('id', 'desc')
@@ -990,8 +990,8 @@ class Ion_auth_model extends CI_Model
 	function gabung_tabel(){
 			$query = $this->db->select('*')
 								->from('tbl_data_mhsw')
-								->join('users','tbl_data_mhsw.nim = users.nim')
-								->where('tbl_data_mhsw.nim',$_SESSION['nim'])
+								->join('users','tbl_data_mhsw.email = users.email')
+								->where('tbl_data_mhsw.email',$_SESSION['email'])
 								->get();
 								return $query;
 
@@ -1001,8 +1001,17 @@ class Ion_auth_model extends CI_Model
 	function gabung_tabel_userSeminar(){
 		$query = $this->db->select('*')
 							->from('tbl_seminar')
-							->join('users','tbl_seminar.nim = users.nim')
-							->where('tbl_seminar.nim',$_SESSION['nim'])
+							->join('users','tbl_seminar.email = users.email')
+							->where('tbl_seminar.email',$_SESSION['email'])
+							->get();
+							return $query;
+	}
+
+	function gabung_tabel_userKoordinator(){
+		$query = $this->db->select('*')
+							->from('tbl_data_koordinator')
+							->join('users','tbl_data_koordinator.email = users.email')
+							->where('tbl_data_koordinator.email',$_SESSION['email'])
 							->get();
 							return $query;
 	}

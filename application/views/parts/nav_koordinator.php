@@ -42,7 +42,7 @@
     <ul class="navbar-nav mr-auto">
     </ul>
     <div class="dropdown">
-      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=@$_SESSION['identity'];?> </span></button>        
+      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"><?=$this->ion_auth->gabung_tabel_userKoordinator()->row()->nama_koordinator;?></span></button>        
       <div class="dropdown-menu">
         <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i> Logout</a>
       </div>
