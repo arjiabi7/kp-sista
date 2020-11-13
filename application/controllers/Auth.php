@@ -71,7 +71,7 @@ class Auth extends CI_Controller
 		$this->data['title'] = $this->lang->line('login_heading');
 
 		// validate form input
-		$this->form_validation->set_rules('nim', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
+		$this->form_validation->set_rules('email', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
 
 		if ($this->form_validation->run() === TRUE)
@@ -80,19 +80,25 @@ class Auth extends CI_Controller
 			// check for "remember me"
 			$remember = (bool)$this->input->post('remember');
 
-			if ($this->ion_auth->login($this->input->post('nim'), $this->input->post('password'), $remember))
+			if ($this->ion_auth->login($this->input->post('email'), $this->input->post('password'), $remember))
 			{
 				if ($this->ion_auth->is_admin()) {
 					//if the login is successful
 					//redirect them back to the home page
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
-					redirect('koordinator/koordinator/daftar_TA2', 'refresh');
-				}else if (!$this->ion_auth->is_mahasiswa()) {
+					redirect('auth', 'refresh');
+				}else if ($this->ion_auth->is_Mahasiswa()) {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
 					redirect('mahasiswa/Home', 'refresh');
-				}else if (!$this->ion_auth->is_dosen()) {
+				}else if ($this->ion_auth->is_koordinator()) {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
-					redirect('Menu_nilaiSeminar', 'refresh');
+					redirect('koordinator/koordinator/daftar_TA2', 'refresh');
+				}else if ($this->ion_auth->is_pembimbing()) {
+					$this->session->set_flashdata('message', $this->ion_auth->messages());
+					redirect('pembimbing/pembimbing/penilaian_seminar', 'refresh');
+				}else if ($this->ion_auth->is_penguji()) {
+					$this->session->set_flashdata('message', $this->ion_auth->messages());
+					redirect('penguji/penguji/penilaian_seminar', 'refresh');
 				}
 			}
 			else
@@ -109,11 +115,11 @@ class Auth extends CI_Controller
 			// set the flash data error message if there is one
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
-			$this->data['nim'] = [
-				'name' => 'nim',
-				'id' => 'nim',
+			$this->data['email'] = [
+				'name' => 'email',
+				'id' => 'email',
 				'type' => 'text',
-				'value' => $this->form_validation->set_value('nim'),
+				'value' => $this->form_validation->set_value('email'),
 			];
 
 			$this->data['password'] = [

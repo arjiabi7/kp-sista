@@ -134,6 +134,10 @@ $config['site_title']                 = "Example.com";       // Site Title, exam
 $config['admin_email']                = "admin@example.com"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['admin_group']                = 'admin';             // Default administrators group, use name
+$config['Mahasiswa_group']			  = 'Mahasiswa';
+$config['koordinator_group']				  = 'koordinator';
+$config['pembimbing_group']				  = 'pembimbing';
+$config['penguji_group']				  = 'penguji';
 $config['identity']                   = 'email';
 
              												/* You can use any unique column in your table as identity column.

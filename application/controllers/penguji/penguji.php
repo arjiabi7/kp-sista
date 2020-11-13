@@ -3,7 +3,7 @@
 /**
  * 
  */
-class pembimbing extends CI_Controller
+class penguji extends CI_Controller
 {
 	
 	function __construct() {
@@ -30,7 +30,7 @@ class pembimbing extends CI_Controller
 		
 		else
 		{
-			$this->load->view('pembimbing/menu_nilaiSeminar');
+			$this->load->view('penguji/menu_nilaiSeminar');
 		}
     }
     }

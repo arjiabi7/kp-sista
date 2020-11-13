@@ -396,23 +396,40 @@ class Ion_auth
 		return $this->ion_auth_model->in_group($admin_group, $id);
 	}
 
-	public function is_mahasiswa($id = FALSE)
+	public function is_Mahasiswa($id = FALSE)
 	{
-		$this->ion_auth_model->trigger_events('is_mahasiswa');
+		$this->ion_auth_model->trigger_events('is_Mahasiswa');
 
-		$mahasiswa_group = $this->config->item('mahasiswa_group', 'ion_auth');
+		$Mahasiswa_group = $this->config->item('Mahasiswa_group', 'ion_auth');
 
-		return $this->ion_auth_model->in_group($mahasiswa_group, $id);
+		return $this->ion_auth_model->in_group($Mahasiswa_group, $id);
 	}
 
-	public function is_dosen($id = FALSE)
+	public function is_koordinator($id = FALSE)
 	{
-		$this->ion_auth_model->trigger_events('is_dosen');
+		$this->ion_auth_model->trigger_events('is_koordinator');
 
-		$dosen_group = $this->config->item('dosen_group', 'ion_auth');
+		$koordinator_group = $this->config->item('koordinator_group', 'ion_auth');
 
-		return $this->ion_auth_model->in_group($dosen_group, $id);
+		return $this->ion_auth_model->in_group($koordinator_group, $id);
 	}
+	public function is_pembimbing($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_pembimbing');
+
+		$pembimbing_group = $this->config->item('pembimbing_group', 'ion_auth');
+
+		return $this->ion_auth_model->in_group($pembimbing_group, $id);
+	}
+	public function is_penguji($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_penguji');
+
+		$penguji_group = $this->config->item('penguji_group', 'ion_auth');
+
+		return $this->ion_auth_model->in_group($penguji_group, $id);
+	}
+
 
 	/**
 	 * Check the compatibility with the server

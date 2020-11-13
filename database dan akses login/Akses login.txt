@@ -2,6 +2,18 @@
 email 	: dikaarji@sista.com
 pass 	: sista12345
 
-------Sebagai Member-------
-email	 : testUser@sista.com
-pass	 : sista12345	
+------Sebagai Mahasiswa-------
+email	 : sista@unjani.com
+pass	 : 123123123
+
+----Sebagai koordinator------
+email : koordinator@sista.com
+pass : 123123123
+
+-----sebagai pembimbing------
+email : pembimbing@sista.com
+pass : 123123123
+
+-----sebagai penguji--------
+email : penguji@sista.com
+pass : 123123123	

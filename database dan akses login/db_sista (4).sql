@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2020 at 09:27 AM
+-- Generation Time: Nov 13, 2020 at 10:27 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -42,7 +42,10 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 (1, 'admin', 'Administrator'),
 (2, 'members', 'General User'),
 (4, 'Mahasiswa', 'General User'),
-(5, 'Dosen', 'General User');
+(5, 'Dosen', 'General User'),
+(6, 'pembimbing', ''),
+(7, 'koordinator', ''),
+(8, 'penguji', '');
 
 -- --------------------------------------------------------
 
@@ -66,7 +69,7 @@ CREATE TABLE `login_attempts` (
 CREATE TABLE `tbl_data_koordinator` (
   `id` int(11) NOT NULL,
   `kd_koordinator` varchar(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `nama_koordinator` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -75,7 +78,8 @@ CREATE TABLE `tbl_data_koordinator` (
 --
 
 INSERT INTO `tbl_data_koordinator` (`id`, `kd_koordinator`, `email`, `nama_koordinator`) VALUES
-(1, 'K0001', 'dikaarji@sista.com', 'Dika dan Arji');
+(1, 'K0001', 'dikaarji@sista.com', 'Dika dan Arji'),
+(2, 'K0002', 'koordinator@sista.com', 'Nyoba Koordinator');
 
 -- --------------------------------------------------------
 
@@ -131,7 +135,7 @@ INSERT INTO `tbl_data_penguji` (`kd_penguji`, `nim`, `password`) VALUES
 CREATE TABLE `tbl_seminar` (
   `kd_seminar` varchar(10) NOT NULL,
   `nim` varchar(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `peminatan` varchar(3) NOT NULL,
   `ta_aktif` varchar(10) NOT NULL,
   `no_sk_ta_pembimbing` varchar(10) NOT NULL,
@@ -155,7 +159,7 @@ CREATE TABLE `tbl_seminar` (
 
 INSERT INTO `tbl_seminar` (`kd_seminar`, `nim`, `email`, `peminatan`, `ta_aktif`, `no_sk_ta_pembimbing`, `nid_r1`, `nid_r2`, `judul_skripsi`, `hari_ajuan_seminar`, `tgl_ajuan_seminar`, `jam_ajuan_seminar`, `hari_seminar`, `tgl_seminar`, `jam_seminar`, `tempat_seminar`, `status_seminar`, `lulus_review`) VALUES
 ('reer32', '3411171100', 'sista@unjani.com', 'DSE', '2020', 'gdfgfd', '435453', '34535', 'Masi kala jao', 'senin', '27', '1900', 'selasa', '28', '1800', 'r29', 'lulus', '2020'),
-('s23', '3411171133', 'arjiabiyoga99@gmail.', 'DSE', 'genap 2020', 'sdsd', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
+('s23', '3411171133', 'arjiabiyoga99@gmail.com', 'DSE', 'genap 2020', 'sdsd', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
 
 -- --------------------------------------------------------
 
@@ -190,10 +194,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$j8ow8y9DsIwnGTGKOREGX.HbAg5Za9JONQvHZTi2o2cC7m393qTPe', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605255991, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
+(1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
 (5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605255814, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123');
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605257665, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605259299, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
+(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605259176, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
+(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605259633, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
 
@@ -212,10 +219,13 @@ CREATE TABLE `users_groups` (
 --
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
-(19, 1, 1),
+(21, 1, 5),
 (20, 2, 1),
 (12, 5, 4),
-(18, 8, 4);
+(18, 8, 4),
+(24, 9, 6),
+(26, 10, 7),
+(28, 11, 8);
 
 --
 -- Indexes for dumped tables
@@ -284,31 +294,31 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `tbl_data_koordinator`
 --
 ALTER TABLE `tbl_data_koordinator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users_groups`
 --
 ALTER TABLE `users_groups`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
