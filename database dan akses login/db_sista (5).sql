@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2020 at 10:27 AM
+-- Generation Time: Nov 13, 2020 at 07:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -59,6 +59,30 @@ CREATE TABLE `login_attempts` (
   `login` varchar(100) NOT NULL,
   `time` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_data_akademik`
+--
+
+CREATE TABLE `tbl_data_akademik` (
+  `id` int(11) NOT NULL,
+  `nim` varchar(10) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `jumlah_sks_lulus` varchar(3) NOT NULL,
+  `jumlah_sks_proses` varchar(3) NOT NULL,
+  `jumlah_nilai_D` varchar(2) NOT NULL,
+  `jumlah_nilai_E` varchar(2) NOT NULL,
+  `ipk_sementara` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_data_akademik`
+--
+
+INSERT INTO `tbl_data_akademik` (`id`, `nim`, `email`, `jumlah_sks_lulus`, `jumlah_sks_proses`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk_sementara`) VALUES
+(1, '3411171100', 'sista@unjani.com', '130', '16', '2', '0', '3.3');
 
 -- --------------------------------------------------------
 
@@ -164,6 +188,44 @@ INSERT INTO `tbl_seminar` (`kd_seminar`, `nim`, `email`, `peminatan`, `ta_aktif`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_verifikasi_daftarta2`
+--
+
+CREATE TABLE `tbl_verifikasi_daftarta2` (
+  `id` int(11) NOT NULL,
+  `nama_lengkap` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `nim` varchar(10) NOT NULL,
+  `no_hp` varchar(13) NOT NULL,
+  `semester` varchar(2) NOT NULL,
+  `jk` varchar(2) NOT NULL,
+  `peminatan` varchar(3) NOT NULL,
+  `jumlah_sks_proses` varchar(3) NOT NULL,
+  `jumlah_sks_lulus` varchar(3) NOT NULL,
+  `ipk` varchar(5) NOT NULL,
+  `jumlah_nilai_D` varchar(2) NOT NULL,
+  `jumlah_nilai_E` varchar(2) NOT NULL,
+  `judul_skripsi` varchar(100) NOT NULL,
+  `pembimbing_1` varchar(10) NOT NULL,
+  `pembimbing_2` varchar(10) NOT NULL,
+  `khs` varchar(10) NOT NULL,
+  `krs` varchar(10) NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_verifikasi_daftarta2`
+--
+
+INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`) VALUES
+(1, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'asdsad', 'ADK', 'ADK', 'odik13.jpg', 'odik13.jpg', ''),
+(2, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'percobaan ke 2', 'ECD', 'ECD', 'dddddd.jpg', 'dddddd.jpg', ''),
+(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'lagi lagiii', 'THP', 'ECD', '18380426_1', '18380426_1', ''),
+(4, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'multitple', 'ISR', 'YHC', '44b11342c6', '44b11342c6', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -197,9 +259,9 @@ INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activ
 (1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
 (5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605257665, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605283540, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
 (9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605259299, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
-(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605259176, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
+(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605282132, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
 (11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605259633, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
@@ -244,6 +306,12 @@ ALTER TABLE `login_attempts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_data_akademik`
+--
+ALTER TABLE `tbl_data_akademik`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_data_koordinator`
 --
 ALTER TABLE `tbl_data_koordinator`
@@ -266,6 +334,12 @@ ALTER TABLE `tbl_data_penguji`
 --
 ALTER TABLE `tbl_seminar`
   ADD PRIMARY KEY (`kd_seminar`);
+
+--
+-- Indexes for table `tbl_verifikasi_daftarta2`
+--
+ALTER TABLE `tbl_verifikasi_daftarta2`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -303,10 +377,22 @@ ALTER TABLE `login_attempts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
+-- AUTO_INCREMENT for table `tbl_data_akademik`
+--
+ALTER TABLE `tbl_data_akademik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `tbl_data_koordinator`
 --
 ALTER TABLE `tbl_data_koordinator`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbl_verifikasi_daftarta2`
+--
+ALTER TABLE `tbl_verifikasi_daftarta2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`

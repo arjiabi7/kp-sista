@@ -1,4 +1,13 @@
 <body class="mt-5" style="margin-bottom: 100px;">
+	<?php 
+        if(isset($error))
+        {
+            echo "ERROR UPLOAD : <br/>";
+            print_r($error);
+            echo "<hr/>";
+        }
+        ?>
+         <?php echo form_open("mahasiswa/daftarTA2/tambah", array('enctype'=>'multipart/form-data')); ?>
 <div class="container-fluid pb-5 pt-5">
 	<div class="col-xl">
 	          <div class="card">
@@ -36,9 +45,11 @@
 	                      	<center><label class="form-control-label" for="input-city">UNTUK MENGISI FORM, SILAHKAN KLIK TOMBOL DIBAWAH INI.</label> <br>
 	                       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-single-copy-04"></i><span class="nav-link-text">ISI FORM</span></button></center>
 					        <!-- Modal -->
-					        <form action="<?php echo base_url(). 'menu_daftarTA/tambah_aksi'; ?>" method="post">
+					        
+					        	
 					        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 					        <div class="modal-dialog" role="document">
+					        	
 					            <div class="modal-content">
 					            <div class="modal-header">
 					                <h5 class="modal-title" id="exampleModalLongTitle">Silahkan isi dengan benar</h5>
@@ -46,7 +57,9 @@
 					                <span aria-hidden="true">&times;</span>
 					                </button>
 					            </div>
+
 					            <div class="modal-body">
+					            	
 					            	<div class="data-mahasiswa text-center">
 					            		<h5>Data Mahasiswa</h5>
 					            		<hr style="width: 140px;">
@@ -54,7 +67,7 @@
 				                   		  <div class="col-lg-12">
 		                     				<div class="form-group">
 				                       	 		<label class="form-control-label" for="nama_mhs">Nama Lengkap</label>
-				                       	 		<input type="text" id="nama_mhs" class="form-control" required readonly>
+				                       	 		<input type="text" id="nama_lengkap" name="nama_lengkap" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		</div>
@@ -62,13 +75,13 @@
 						            	<div class="col-lg-6">
 				                      		<div class="form-group">
 				                       	 		<label class="form-control-label" for="email">Email</label>
-				                       	 		<input type="email" name="email" id="email" class="form-control" required readonly>
+				                       	 		<input type="email" name="email" id="email" value="<?=$this->ion_auth->gabung_tabel()->row()->email;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		 <div class="col-lg-6">
 		                     				 <div class="form-group">
 		                     				 	<label class="form-control-label" for="nim">NIM</label>
-				                       	 		<input type="text" name="NIM" id="nim" class="form-control" required readonly>
+				                       	 		<input type="text" name="nim" id="nim" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>" class="form-control" required readonly>
 											</div>
 				                   		 </div>
 				                   		</div>
@@ -76,18 +89,13 @@
 				                   		 <div class="col-lg-6">
 				                      		<div class="form-group">
 				                       	 		<label class="form-control-label" for="no_hp">No. HP</label>
-				                       	 		<input type="text" id="no_hp" class="form-control" required readonly>
+				                       	 		<input type="text" id="no_hp" name="no_hp" value="<?=$this->ion_auth->gabung_tabel()->row()->no_hp;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		 <div class="col-lg-6">
 		                     				 <div class="form-group">
 				                       	 		<label class="form-control-label" for="semester">Semester</label>
-				                       	 		<select class="form-control" name="Semester" id="semester" readonly>
-										    		<option>-</option>
-										      		<option>8</option>
-												    <option>10</option>
-												    <option>12</option>
-												</select>
+				                       	 		<input type="text" name="semester" id="semester" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		</div>
@@ -95,21 +103,13 @@
 						                <div class="col-lg-6">
 		                     				 <div class="form-group">
 				                       	 		<label class="form-control-label" for="jenis_kelamin">Jenis Kelamin</label>
-				                       	 		<select class="form-control" name="jenis_kelamin" id="jenis_kelamin" readonly>
-										    		<option>-</option>
-										      		<option>Laki - Laki</option>
-												    <option>Perempuan</option>
-												</select>
+				                       	 		<input type="text" id="jk" name="jk" value="<?=$this->ion_auth->gabung_tabel()->row()->jk;?>" class="form-control" required readonly>
 				                      		</div>
 				                      	</div>
 				                      	<div class="col-lg-6">
 		                     				 <div class="form-group">
 				                       	 		<label class="form-control-label" for="peminatan">Peminatan</label>
-				                       	 		<select class="form-control" name="" id="peminatan" required readonly>
-										    		<option>-</option>
-										      		<option>AIG</option>
-												    <option>DSE</option>
-												</select>
+				                       	 		<input type="text" id="peminatan" name="peminatan" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		</div>
@@ -121,13 +121,13 @@
 							            	<div class="col-lg-6">
 			                     				 <div class="form-group">
 					                       	 		<label class="form-control-label" for="jml_sks1">Jumlah SKS sudah lulus</label>
-					                       	 		<input type="text" name="jml_sks1" id="jml_sks1" class="form-control" required readonly>
+					                       	 		<input type="text" name="jumlah_sks_lulus" id="jumlah_sks_lulus"  value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_sks_lulus;?>" class="form-control" required readonly>
 					                      		</div>
 					                   		</div>
 					                   		<div class="col-lg-6">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="jml_sks2">Jumlah SKS sedang diambil</label>
-					                       	 		<input type="text" name="jml_sks2" id="jml_sks2" class="form-control" required readonly>
+					                       	 		<input type="text" name="jumlah_sks_proses" id="jumlah_sks_proses" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_sks_proses;?>" class="form-control" required readonly>
 												</div>
 					                   		</div>
 				                   		</div>
@@ -135,13 +135,13 @@
 				                   		 	<div class="col-lg-6">
 				                      			<div class="form-group">
 				                       	 			<label class="form-control-label" for="nilai_e">Jumlah nilai E</label>
-				                       	 			<input type="text" id="nilai_e" class="form-control" required readonly>
+				                       	 			<input type="text" name="jumlah_nilai_E" id="jumlah_nilai_E" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_nilai_E;?>" class="form-control" required readonly>
 				                      			</div>
 				                   			</div>
 				                   			<div class="col-lg-6">
 		                     					<div class="form-group">
 				                       	 			<label class="form-control-label" for="nilai_d">Jumlah nilai D</label>
-				                       	 			<input type="text" id="nilai_d" class="form-control" required readonly>
+				                       	 			<input type="text" name="jumlah_nilai_D" id="jumlah_nilai_D" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_nilai_D;?>" class="form-control" required readonly>
 				                      			</div>
 				                   			</div>
 				                   		</div>
@@ -149,7 +149,7 @@
 							                <div class="col-lg-6 center">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="ipk_smntr">IPK sementara</label>
-					                       	 		<input type="text" id="ipk_smntr" class="form-control" required readonly>
+					                       	 		<input type="text" id="ipk" name="ipk" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->ipk_sementara;?>" class="form-control" required readonly>
 					                      		</div>
 					                      	</div>
 				                   		</div>
@@ -162,7 +162,7 @@
 							            	<div class="col-lg-12">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="judul_ta">Judul Tugas Akhir</label>
-												    <textarea class="form-control text-center" id="judul_ta" required></textarea>
+												    <textarea class="form-control text-center" name="judul_skripsi" id="judul_skripsi" required></textarea>
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -170,7 +170,7 @@
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_pem1">Kode Pembimbing 1</label>
-					                       	 		<select class="form-control" name="kd_pem1" id="kd_pem1" required>
+					                       	 		<select class="form-control" name="pembimbing_1" id="pembimbing_1" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -196,7 +196,7 @@
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_pem2">Kode Pembimbing 2</label>
-					                       	 		<select class="form-control" name="kd_pem2" id="kd_pem2" required>
+					                       	 		<select class="form-control" name="pembimbing_2" id="pembimbing_2" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -220,7 +220,7 @@
 					                      		</div>
 					                   		</div>
 				                   		</div>
-				                   		<div class="row">
+				                   		<!-- <div class="row">
 							                <div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_peng1">Kode Penguji 1</label>
@@ -273,31 +273,32 @@
 													</select>
 					                      		</div>
 					                   		</div>
-				                   		</div>
+				                   		</div> -->
 				                   		<div class="row">
 				                   		  	<div class="col-lg-6">
 		                     					<div class="form-group">
 				                       	 			<label class="form-control-label" for="input_khs">Scan KHS</label>
-				                       	 			<input type="file" class="form-control-file" id="input_khs">
+				                       	 			<input type="file" name="khs" class="form-control-file" id="khs">
 				                      			</div>
 				                   		 	</div>
 				                   			<div class="col-lg-6">
 		                     					<div class="form-group">
 				                       	 			<label class="form-control-label" for="input_krs">Screenshot KRS</label>
-				                       	 			<input type="file" class="form-control-file" id="input_krs">
+				                       	 			<input type="file" name="krs" class="form-control-file" id="krs">
 				                      			</div>
 				                   		 	</div>
 				                   		</div>
 			                   		</div>
 					            </div>
 					            <div class="modal-footer">
-					                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <button type="button" class="btn btn-warning">Kirim</button>
+					                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+					                <input type="submit"  name="submit" value="Simpan">
 					            </div>
 					            </div>
+					       
 					        </div>
 					        </div>
-					    </form>
+					   <?php echo form_close(); ?>
 	                      </div>
 	                    </div>
 	                  </div>
