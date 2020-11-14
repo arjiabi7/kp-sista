@@ -74,13 +74,13 @@
 				<tr>
 					<td style="width: 200px">JAM</td>
 					<td style="width: 10px">:</td>
-					<td>08.00 AM</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->jam_seminar;?></td>
 
 				</tr>
 				<tr>
 					<td style="width: 200px">TEMPAT</td>
 					<td style="width: 10px">:</td>
-					<td>R.1-3</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->tempat_seminar;?></td>
 
 				</tr>
 				</table>
@@ -90,13 +90,13 @@
 				<tr>
 					<td style="width: 200px">REVIEWER 1</td>
 					<td style="width: 10px">:</td>
-					<td>HAY</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nid_r1;?></td>
 
 				</tr>
 				<tr>
 					<td style="width: 200px">REVIEWER 2</td>
 					<td style="width: 10px">:</td>
-					<td>FZR</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nid_r2;?></td>
 
 				</tr>
 				

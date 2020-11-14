@@ -1045,6 +1045,17 @@ class Ion_auth_model extends CI_Model
 
 	}
 
+	function gabung_tabel_userVerifikasiDaftarTA(){
+			$query = $this->db->select('*')
+								->from('tbl_verifikasi_daftarta2')
+								->join('users','tbl_verifikasi_daftarta2.email = users.email')
+								->where('tbl_verifikasi_daftarta2.email',$_SESSION['email'])
+								->get();
+								return $query;
+
+
+	}
+
 	/**
 	 * Verifies if the session should be rechecked according to the configuration item recheck_timer. If it does, then
 	 * it will check if the user is still active

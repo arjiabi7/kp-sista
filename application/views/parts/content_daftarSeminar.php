@@ -1,4 +1,13 @@
 <body class="mt-5" style="margin-bottom: 100px;">
+	<?php 
+        if(isset($error))
+        {
+            echo "ERROR UPLOAD : <br/>";
+            print_r($error);
+            echo "<hr/>";
+        }
+        ?>
+         <?php echo form_open("mahasiswa/seminar/daftarSeminar", array('enctype'=>'multipart/form-data')); ?>
 <div class="container-fluid pb-5 pt-5">
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">
@@ -92,7 +101,7 @@
 				                   		  <div class="col-lg-12">
 		                     				<div class="form-group">
 				                       	 		<label class="form-control-label" for="nama_mhs">Nama Lengkap</label>
-				                       	 		<input type="text" id="nama_mhs" class="form-control" required readonly>
+				                       	 		<input type="text" id="nama_lengkap" name="nama_lengkap" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		</div>
@@ -100,13 +109,13 @@
 						            	<div class="col-lg-6">
 				                      		<div class="form-group">
 				                       	 		<label class="form-control-label" for="email">Email</label>
-				                       	 		<input type="email" name="email" id="email" class="form-control" required readonly>
+				                       	 		<input type="email" name="email" id="email" value="<?=$this->ion_auth->gabung_tabel()->row()->email;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		 <div class="col-lg-6">
 		                     				 <div class="form-group">
 		                     				 	<label class="form-control-label" for="nim">NIM</label>
-				                       	 		<input type="text" name="NIM" id="nim" class="form-control" required readonly>
+				                       	 		<input type="text" name="nim" id="nim" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>" class="form-control" required readonly>
 											</div>
 				                   		 </div>
 				                   		</div>
@@ -114,18 +123,13 @@
 				                   		 <div class="col-lg-6">
 				                      		<div class="form-group">
 				                       	 		<label class="form-control-label" for="no_hp">No. HP</label>
-				                       	 		<input type="text" id="no_hp" class="form-control" required readonly>
+				                       	 		<input type="text" id="no_hp" name="no_hp" value="<?=$this->ion_auth->gabung_tabel()->row()->no_hp;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		 <div class="col-lg-6">
 		                     				 <div class="form-group">
 				                       	 		<label class="form-control-label" for="semester">Semester</label>
-				                       	 		<select class="form-control" name="Semester" id="semester" readonly>
-										    		<option>-</option>
-										      		<option>8</option>
-												    <option>10</option>
-												    <option>12</option>
-												</select>
+				                       	 		<input type="text" id="semester" name="semester" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		</div>
@@ -133,21 +137,13 @@
 						                <div class="col-lg-6">
 		                     				 <div class="form-group">
 				                       	 		<label class="form-control-label" for="jenis_kelamin">Jenis Kelamin</label>
-				                       	 		<select class="form-control" name="jenis_kelamin" id="jenis_kelamin" readonly>
-										    		<option>-</option>
-										      		<option>Laki - Laki</option>
-												    <option>Perempuan</option>
-												</select>
+				                       	 		<input type="text" id="jk" name="jk" value="<?=$this->ion_auth->gabung_tabel()->row()->jk;?>" class="form-control" required readonly>
 				                      		</div>
 				                      	</div>
 				                      	<div class="col-lg-6">
 		                     				 <div class="form-group">
 				                       	 		<label class="form-control-label" for="peminatan">Peminatan</label>
-				                       	 		<select class="form-control" name="" id="peminatan" required readonly>
-										    		<option>-</option>
-										      		<option>AIG</option>
-												    <option>DSE</option>
-												</select>
+				                       	 		<input type="text" id="peminatan" name="peminatan" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>" class="form-control" required readonly>
 				                      		</div>
 				                   		 </div>
 				                   		</div>
@@ -159,13 +155,13 @@
 							            	<div class="col-lg-6">
 			                     				 <div class="form-group">
 					                       	 		<label class="form-control-label" for="jml_sks1">Jumlah SKS sudah lulus</label>
-					                       	 		<input type="text" name="jml_sks1" id="jml_sks1" class="form-control" required readonly>
+					                       	 		<input type="text" name="jumlah_sks_lulus" id="jumlah_sks_lulus"  value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_sks_lulus;?>" class="form-control" required readonly>
 					                      		</div>
 					                   		</div>
 					                   		<div class="col-lg-6">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="jml_sks2">Jumlah SKS sedang diambil</label>
-					                       	 		<input type="text" name="jml_sks2" id="jml_sks2" class="form-control" required readonly>
+					                       	 		<input type="text" name="jumlah_sks_proses" id="jumlah_sks_proses" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_sks_proses;?>" class="form-control" required readonly>
 												</div>
 					                   		</div>
 				                   		</div>
@@ -173,13 +169,13 @@
 				                   		 	<div class="col-lg-6">
 				                      			<div class="form-group">
 				                       	 			<label class="form-control-label" for="nilai_e">Jumlah nilai E</label>
-				                       	 			<input type="text" id="nilai_e" class="form-control" required readonly>
+				                       	 			<input type="text" name="jumlah_nilai_E" id="jumlah_nilai_E" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_nilai_E;?>" class="form-control" required readonly>
 				                      			</div>
 				                   			</div>
 				                   			<div class="col-lg-6">
 		                     					<div class="form-group">
 				                       	 			<label class="form-control-label" for="nilai_d">Jumlah nilai D</label>
-				                       	 			<input type="text" id="nilai_d" class="form-control" required readonly>
+				                       	 			<input type="text" name="jumlah_nilai_D" id="jumlah_nilai_D" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_nilai_D;?>" class="form-control" required readonly>
 				                      			</div>
 				                   			</div>
 				                   		</div>
@@ -187,7 +183,7 @@
 							                <div class="col-lg-12 center">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="ipk_smntr">IPK sementara</label>
-					                       	 		<input type="text" id="ipk_smntr" class="form-control" required readonly>
+					                       	 		<input type="text" id="ipk" name="ipk" value="<?=$this->ion_auth->gabung_tabel_userAkademik()->row()->ipk_sementara;?>" class="form-control" required readonly>
 					                      		</div>
 					                      	</div>
 					                    </div>
@@ -200,7 +196,7 @@
 							            	<div class="col-lg-12">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="judul_ta">Judul Tugas Akhir</label>
-												    <textarea class="form-control text-center" id="judul_ta" required></textarea>
+												    <textarea class="form-control text-center" id="judul_skripsi" name="judul_skripsi" required></textarea>
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -208,7 +204,7 @@
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_pem1">Kode Pembimbing 1</label>
-					                       	 		<select class="form-control" name="kd_pem1" id="kd_pem1" required>
+					                       	 		<select class="form-control" name="pembimbing_1" id="pembimbing_1" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -234,7 +230,7 @@
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_pem2">Kode Pembimbing 2</label>
-					                       	 		<select class="form-control" name="kd_pem2" id="kd_pem2" required>
+					                       	 		<select class="form-control" name="pembimbing_2" id="pembimbing_2" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -262,13 +258,13 @@
 				                   		 	<div class="col-lg-6">
 				                      			<div class="form-group">
 				                       	 			<label class="form-control-label" for="jml_bimbi1">Jumlah Bimbingan (P1)</label>
-				                       	 			<input type="text" id="jml_bimbi1" class="form-control" required>
+				                       	 			<input type="text" id="jml_bimbingan1" name="jml_bimbingan1" class="form-control" required>
 				                      			</div>
 				                   			</div>
 				                   			<div class="col-lg-6">
 		                     					<div class="form-group">
 				                       	 			<label class="form-control-label" for="jml_bimbi2">Jumlah Bimbingan (P2)</label>
-				                       	 			<input type="text" id="jml_bimbi2" class="form-control" required>
+				                       	 			<input type="text" id="jml_bimbingan2" name="jml_bimbingan2" class="form-control" required>
 				                      			</div>
 				                   			</div>
 				                   		</div>
@@ -276,17 +272,17 @@
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="pembayaran">Pelunasan Pembayaran Kuliah</label>
-					                       	 		<select class="form-control" name="pembayaran" id="pembayaran" required>
+					                       	 		<select class="form-control" name="pelunasan" id="pelunasan" required>
 											    		<option>-</option>
-											      		<option>Ya</option>
-													    <option>Tidak</option>
+											      		<option>Lunas</option>
+													    <option>Belum Lunas</option>
 													</select>
 					                      		</div>
 					                      	</div>
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_lunas">Bukti Pelunasan</label>
-				                       	 			<input type="file" class="form-control-file" id="input_lunas">
+				                       	 			<input type="file" class="form-control-file" name="bukti_lunas" id="bukti_lunas" value="Bukti_lunas">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -294,7 +290,7 @@
 							            	<div class="col-lg-12">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="isi_matkul">Tulis Mata Kuliah Yang diambil Selain TA2</label>
-												    <textarea class="form-control text-center" id="isi_matkul" required></textarea>
+												    <textarea class="form-control text-center" id="matkul_sedang_diambil" name="matkul_sedang_diambil" required></textarea>
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -302,13 +298,13 @@
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan TA (pdf)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_laporan">
+				                       	 			<input type="file" class="form-control-file" name="draft_laporan" id="draft_laporan" value="Draft_Laporan">
 					                      		</div>
 					                      	</div>
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_khs">Scan KHS</label>
-				                       	 			<input type="file" class="form-control-file" id="input_khs">
+				                       	 			<input type="file" class="form-control-file" name="khs" id="khs">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -316,7 +312,7 @@
 							            	<div class="col-lg-6">
 			                     				 <div class="form-group">
 			                     				 	<center><label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
-				                       	 			<input type="file" class="form-control-file" id="input_sertifikat"></center>
+				                       	 			<input type="file" class="form-control-file" name="sertifikat" id="sertifikat"></center>
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -324,7 +320,7 @@
 					            </div>
 					            <div class="modal-footer">
 					                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <button type="button" class="btn btn-warning">Kirim</button>
+					                <input type="submit"  name="submit" value="Simpan">
 					            </div>
 					            </div>
 					        </div>
@@ -332,7 +328,7 @@
 	                      </div>
 	                    </div>
 	                  </div>
-	               
+	                 <?php echo form_close(); ?>
 	                </div>
 	                <hr class="my-4" />
 	                <!-- Description -->

@@ -2,16 +2,17 @@
 /**
  * 
  */
-class upload_daftarTA2 extends CI_Model
+class upload_daftarSeminar extends CI_Model
 {
-	public function upload(){
-    $config['upload_path'] = './upload_daftarTA2/';
+	
+		public function upload(){
+    $config['upload_path'] = './upload_daftarSeminar/';
     $config['allowed_types'] = 'jpg|png|jpeg|pdf';
     $config['max_size']  = '2048';
     $config['remove_space'] = TRUE;
   
     $this->load->library('upload', $config); // Load konfigurasi uploadnya
-    if($this->upload->do_upload('khs') && $this->upload->do_upload('krs')){ // Lakukan upload dan Cek jika proses upload berhasil
+    if($this->upload->do_upload('bukti_lunas') && $this->upload->do_upload('draft_laporan')  && $this->upload->do_upload('khs')  && $this->upload->do_upload('sertifikat')){ // Lakukan upload dan Cek jika proses upload berhasil
       // Jika berhasil :
       $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
 
@@ -43,11 +44,17 @@ class upload_daftarTA2 extends CI_Model
 			'judul_skripsi' => $this->input->post('judul_skripsi'),
 			'pembimbing_1' => $this->input->post('pembimbing_1'),
 			'pembimbing_2' => $this->input->post('pembimbing_2'),
+			'jml_bimbingan1' => $this->input->post('jml_bimbingan1'),
+			'jml_bimbingan2' => $this->input->post('jml_bimbingan2'),
+			'pelunasan' => $this->input->post('pelunasan'),
+			'bukti_lunas' => $this->upload->data('file_name'),
+			'matkul_sedang_diambil' => $this->input->post('pembimbing_2'),
+			'draft_laporan' => $this->upload->data('file_name'),
 			'khs' => $this->upload->data("file_name"),
-			'krs' => $this->upload->data("file_name")
+			'sertifikat' => $this->upload->data("file_name")
     );
     
-    $this->db->insert('tbl_verifikasi_daftarta2', $data);
+    $this->db->insert('tbl_verifikasi_seminar', $data);
   }
 }
 ?>

@@ -48,6 +48,7 @@ class daftarTA2 extends CI_Controller
          // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
         $this->upload_daftarTA2->save($upload);
         
+        
         redirect('mahasiswa/daftarTA2'); // Redirect kembali ke halaman awal / halaman view data
       }else{ // Jika proses upload gagal
       	redirect('mahasiswa/Home');

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2020 at 03:57 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Generation Time: Nov 14, 2020 at 06:47 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -58,13 +59,6 @@ CREATE TABLE `login_attempts` (
   `login` varchar(100) NOT NULL,
   `time` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(27, '::1', 'arjiabi@ymail.com', 1605339132);
 
 -- --------------------------------------------------------
 
@@ -140,42 +134,21 @@ INSERT INTO `tbl_data_mhsw` (`nim`, `nama_lengkap`, `email`, `no_hp`, `semester`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_data_pembimbing`
---
-
-CREATE TABLE `tbl_data_pembimbing` (
-  `id` int(11) NOT NULL,
-  `kd_pembimbing` varchar(10) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `nama_pembimbing` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tbl_data_pembimbing`
---
-
-INSERT INTO `tbl_data_pembimbing` (`id`, `kd_pembimbing`, `email`, `nama_pembimbing`) VALUES
-(1, 'HAY', 'pembimbing@sista.com', 'Nyoba pembimbing');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_data_penguji`
 --
 
 CREATE TABLE `tbl_data_penguji` (
-  `id` int(11) NOT NULL,
-  `kd_penguji` varchar(10) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `nama_penguji` varchar(30) NOT NULL
+  `kd_penguji` varchar(3) NOT NULL,
+  `nim` varchar(14) NOT NULL,
+  `password` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_data_penguji`
 --
 
-INSERT INTO `tbl_data_penguji` (`id`, `kd_penguji`, `email`, `nama_penguji`) VALUES
-(1, 'HAY', 'penguji@sista.com', 'Nyoba penguji');
+INSERT INTO `tbl_data_penguji` (`kd_penguji`, `nim`, `password`) VALUES
+('HAY', '3411171134', '123123123');
 
 -- --------------------------------------------------------
 
@@ -184,7 +157,7 @@ INSERT INTO `tbl_data_penguji` (`id`, `kd_penguji`, `email`, `nama_penguji`) VAL
 --
 
 CREATE TABLE `tbl_seminar` (
-  `kd_seminar` varchar(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `nim` varchar(10) NOT NULL,
   `email` varchar(30) NOT NULL,
   `peminatan` varchar(3) NOT NULL,
@@ -208,9 +181,9 @@ CREATE TABLE `tbl_seminar` (
 -- Dumping data for table `tbl_seminar`
 --
 
-INSERT INTO `tbl_seminar` (`kd_seminar`, `nim`, `email`, `peminatan`, `ta_aktif`, `no_sk_ta_pembimbing`, `nid_r1`, `nid_r2`, `judul_skripsi`, `hari_ajuan_seminar`, `tgl_ajuan_seminar`, `jam_ajuan_seminar`, `hari_seminar`, `tgl_seminar`, `jam_seminar`, `tempat_seminar`, `status_seminar`, `lulus_review`) VALUES
-('reer32', '3411171100', 'sista@unjani.com', 'DSE', '2020', 'gdfgfd', '435453', '34535', 'Masi kala jao', 'senin', '27', '1900', 'selasa', '28', '1800', 'r29', 'lulus', '2020'),
-('s23', '3411171133', 'arjiabiyoga99@gmail.com', 'DSE', 'genap 2020', 'sdsd', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
+INSERT INTO `tbl_seminar` (`id`, `nim`, `email`, `peminatan`, `ta_aktif`, `no_sk_ta_pembimbing`, `nid_r1`, `nid_r2`, `judul_skripsi`, `hari_ajuan_seminar`, `tgl_ajuan_seminar`, `jam_ajuan_seminar`, `hari_seminar`, `tgl_seminar`, `jam_seminar`, `tempat_seminar`, `status_seminar`, `lulus_review`) VALUES
+(1, '3411171100', 'sista@unjani.com', 'DSE', '2020', 'gdfgfd', '435453', '34535', 'Masi kala jao', 'senin', '27', '1900', 'selasa', '28', '1800', 'r29', 'lulus', '2020'),
+(2, '3411171133', 'arjiabiyoga99@gmail.com', 'DSE', 'genap 2020', 'sdsd', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
 
 -- --------------------------------------------------------
 
@@ -245,12 +218,52 @@ CREATE TABLE `tbl_verifikasi_daftarta2` (
 --
 
 INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`) VALUES
-(1, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'asdsad', 'ADK', 'ADK', 'odik13.jpg', 'odik13.jpg', ''),
-(2, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'percobaan ke 2', 'ECD', 'ECD', 'dddddd.jpg', 'dddddd.jpg', ''),
-(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'lagi lagiii', 'THP', 'ECD', '18380426_1', '18380426_1', ''),
-(4, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'multitple', 'ISR', 'YHC', '44b11342c6', '44b11342c6', ''),
-(5, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'asdasdasd', 'AGK', 'AGK', 'CamScanner', 'CamScanner', ''),
-(6, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'coba arji', 'WNI', 'EKP', 'Workshop_o', 'Workshop_o', '');
+(11, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'tester', 'ECD', 'FZR', '18380426_1', '18380426_1', 'Lulus'),
+(12, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'coba pdf', 'FZR', 'ECD', 'Panduan_Pe', 'Panduan_Pe', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_verifikasi_seminar`
+--
+
+CREATE TABLE `tbl_verifikasi_seminar` (
+  `id` int(11) NOT NULL,
+  `nama_lengkap` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `nim` varchar(10) NOT NULL,
+  `no_hp` varchar(13) NOT NULL,
+  `semester` varchar(2) NOT NULL,
+  `jk` varchar(2) NOT NULL,
+  `peminatan` varchar(3) NOT NULL,
+  `jumlah_sks_proses` varchar(3) NOT NULL,
+  `jumlah_sks_lulus` varchar(3) NOT NULL,
+  `ipk` varchar(5) NOT NULL,
+  `jumlah_nilai_D` varchar(2) NOT NULL,
+  `jumlah_nilai_E` varchar(2) NOT NULL,
+  `judul_skripsi` varchar(50) NOT NULL,
+  `pembimbing_1` varchar(3) NOT NULL,
+  `pembimbing_2` varchar(3) NOT NULL,
+  `jml_bimbingan1` varchar(2) NOT NULL,
+  `jml_bimbingan2` varchar(2) NOT NULL,
+  `pelunasan` varchar(15) NOT NULL,
+  `bukti_lunas` varchar(200) NOT NULL,
+  `matkul_sedang_diambil` varchar(255) NOT NULL,
+  `draft_laporan` varchar(255) NOT NULL,
+  `khs` varchar(255) NOT NULL,
+  `sertifikat` varchar(255) NOT NULL,
+  `status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_verifikasi_seminar`
+--
+
+INSERT INTO `tbl_verifikasi_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `jml_bimbingan1`, `jml_bimbingan2`, `pelunasan`, `bukti_lunas`, `matkul_sedang_diambil`, `draft_laporan`, `khs`, `sertifikat`, `status`) VALUES
+(2, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'ssssssss', 'ADK', 'ECD', '23', '2', 'Lunas', '13.pdf', 'ECD', '13.pdf', '13.pdf', '13.pdf', ''),
+(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'jkdksjd', 'AIH', 'HAY', '23', '2', 'Lunas', '83.pdf', 'HAY', '83.pdf', '83.pdf', '83.pdf', ''),
+(4, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'llllll', 'ECD', 'FZR', '2', '2', 'Belum Lunas', '3_Benchmarking_Database4.pdf', 'FZR', '3_Benchmarking_Database4.pdf', '3_Benchmarking_Database4.pdf', '3_Benchmarking_Database4.pdf', ''),
+(5, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'kkkkkkk', 'FKI', 'FRU', '23', '2', 'Belum Lunas', '62-Article_Text-164-1-10-20190426.pdf', 'FRU', '62-Article_Text-164-1-10-20190426.pdf', '62-Article_Text-164-1-10-20190426.pdf', '62-Article_Text-164-1-10-20190426.pdf', '');
 
 -- --------------------------------------------------------
 
@@ -286,13 +299,12 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
 (1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605341525, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
-(5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605339162, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605365660, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
-(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605365325, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
-(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605364690, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
-(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605365311, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468'),
-(12, '::1', NULL, '$2y$10$BdY0ofLbtHdEIUgArnYxT.VhUoOcUODU5NTIDH2.JJO1GSbz.nPLK', 'arjiabi@yahoo.co.id', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605339247, 1605339267, 1, 'Arji', 'Abiyoga', 'Unjani', '085156152078');
+(2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
+(5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605336174, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605259299, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
+(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605371045, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
+(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605259633, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
 
@@ -317,8 +329,7 @@ INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (18, 8, 4),
 (24, 9, 6),
 (26, 10, 7),
-(28, 11, 8),
-(30, 12, 4);
+(28, 11, 8);
 
 --
 -- Indexes for dumped tables
@@ -355,27 +366,27 @@ ALTER TABLE `tbl_data_mhsw`
   ADD PRIMARY KEY (`nim`);
 
 --
--- Indexes for table `tbl_data_pembimbing`
---
-ALTER TABLE `tbl_data_pembimbing`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `tbl_data_penguji`
 --
 ALTER TABLE `tbl_data_penguji`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`kd_penguji`);
 
 --
 -- Indexes for table `tbl_seminar`
 --
 ALTER TABLE `tbl_seminar`
-  ADD PRIMARY KEY (`kd_seminar`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_verifikasi_daftarta2`
 --
 ALTER TABLE `tbl_verifikasi_daftarta2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_verifikasi_seminar`
+--
+ALTER TABLE `tbl_verifikasi_seminar`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -411,7 +422,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `tbl_data_akademik`
@@ -426,34 +437,34 @@ ALTER TABLE `tbl_data_koordinator`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_data_pembimbing`
+-- AUTO_INCREMENT for table `tbl_seminar`
 --
-ALTER TABLE `tbl_data_pembimbing`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `tbl_data_penguji`
---
-ALTER TABLE `tbl_data_penguji`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `tbl_seminar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_verifikasi_daftarta2`
 --
 ALTER TABLE `tbl_verifikasi_daftarta2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `tbl_verifikasi_seminar`
+--
+ALTER TABLE `tbl_verifikasi_seminar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users_groups`
 --
 ALTER TABLE `users_groups`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
