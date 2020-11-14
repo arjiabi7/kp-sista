@@ -33,6 +33,19 @@ class penguji extends CI_Controller
 			$this->load->view('penguji/menu_nilaiSeminar');
 		}
     }
+
+    function penilaian_sidang(){
+        if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('penguji/menu_nilaiSidang');
+		}
     }
+}
 
 ?>

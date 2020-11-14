@@ -1016,6 +1016,24 @@ class Ion_auth_model extends CI_Model
 							return $query;
 	}
 
+	function gabung_tabel_userPembimbing(){
+		$query = $this->db->select('*')
+							->from('tbl_data_pembimbing')
+							->join('users','tbl_data_pembimbing.email = users.email')
+							->where('tbl_data_pembimbing.email',$_SESSION['email'])
+							->get();
+							return $query;
+	}
+
+	function gabung_tabel_userPenguji(){
+		$query = $this->db->select('*')
+							->from('tbl_data_penguji')
+							->join('users','tbl_data_penguji.email = users.email')
+							->where('tbl_data_penguji.email',$_SESSION['email'])
+							->get();
+							return $query;
+	}
+
 	function gabung_tabel_userAkademik(){
 			$query = $this->db->select('*')
 								->from('tbl_data_akademik')

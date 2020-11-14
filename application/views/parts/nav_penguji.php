@@ -29,20 +29,17 @@
   <a class="navbar-brand" href="javascript:void(0)">
     <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">       
   </a> 
-  <a href="<?php echo base_url();?>index.php/koordinator/koordinator/daftar_TA2">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data TA2</span></button>
+  <a href="<?php echo base_url();?>index.php/penguji/penguji/penilaian_seminar">
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">Penilaian Seminar</span></button>
   </a>
-  <a href="<?php echo base_url();?>index.php/koordinator/koordinator/daftar_seminar_koordinator">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data Seminar</span></button>
-  </a>
-  <a href="<?php echo base_url();?>index.php/koordinator/koordinator/daftar_sidang_koordinator">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Data Sidang</span></button>
+  <a href="<?php echo base_url();?>index.php/penguji/penguji/penilaian_sidang">
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">Penilaian Sidang</span></button>
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     </ul>
     <div class="dropdown">
-      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=$this->ion_auth->gabung_tabel_userKoordinator()->row()->nama_koordinator;?> </span></button>        
+      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=$this->ion_auth->gabung_tabel_userPenguji()->row()->nama_penguji;?></span></button>        
       <div class="dropdown-menu">
         <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i> Logout</a>
       </div>

@@ -26,7 +26,7 @@
     <div class="container p-5 mt-5 mb-5">
         <div class="card" style="border-radius: 10px;">
         <div class="card-header">
-            <center><img src="<?php echo base_url();?>assets/img/if.png" class="mt-3"><h3 class="mt-3">FORM PENILAIAN SEMINAR</h3></center>
+            <center><img src="<?php echo base_url();?>assets/img/if.png" class="mt-3"><h3 class="mt-3">FORM PENILAIAN SIDANG</h3></center>
         </div>
         <form class="p-5">
             <div class="row">
@@ -99,54 +99,85 @@
             </div>
             <div class="row mt-5">
                 <div class="col-lg-12 text-center mb-4">
-                    <h4>Penilaian Seminar</h4>
+                    <h4>Penilaian Sidang</h4>
                     <hr style="border-width: 2px; width: 300px;">
                 </div>
-                <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--Pemahaman Teori, Metode Penelitian, Konsep hingga Pengujian--</option>
-                        <option>Paham</option>
-                        <option>Tidak</option>
-                    </select>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">MATERI PENELITIAN (Max 30 Point) </label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">PEMAHAMAN TEORI (Max 15 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
                 </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--Pemahaman Kebutuhan dan Permasalahan Perancangan Sistem--</option>
-                        <option>Paham</option>
-                        <option>Tidak</option>
-                    </select>
-                </div>
-                <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">PEMAHAMAN PENELITIAN (Max 15 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--Pemahaman Pembuatan Perangkat Lunak--</option>
-                        <option>Paham</option>
-                        <option>Tidak</option>
-                    </select>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">PENCAPAIAN TARGET (Max 20 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">ASPEK KEDISIPLINAN (Max 20 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">TEORI KEILMUAN (Max 20 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--Kelayakan Mahasiswa Maju ke Sidang--</option>
-                        <option>Maju</option>
-                        <option>Tidak</option>
-                    </select>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">METODE PENELITIAN (Max 15 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Pernyataan..."></textarea>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">ANALISIS HASIL PENELITIAN (Max 20 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">TEKNIK PRESENTASI (Max 10 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">TEKNIK PENULISAN (Max 10 Point)</label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="form-control-label" for="materi">PEMAHAMAN SOFTWARE (Max 10 Point) </label>
+                        <input type="text" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <textarea class="form-control form-control-tabel border-top-0 border-right-0 border-left-0" id="exampleFormControlTextarea1" rows="3" placeholder="CATATAN REVISI/SARAN . . ." style="height: 70px;"></textarea>
+                    </div>
                 </div>
             </div>
         </form>
@@ -159,8 +190,16 @@
         </div>
     </div>
     </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>

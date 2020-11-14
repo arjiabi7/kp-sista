@@ -33,6 +33,45 @@ class pembimbing extends CI_Controller
 			$this->load->view('pembimbing/menu_nilaiSeminar');
 		}
     }
+
+    function penilaian_sidang(){
+        if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('pembimbing/menu_nilaiSidang');
+		}
     }
+
+    function pengajuan_seminar(){
+        if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('pembimbing/menu_pengajuanSeminar');
+		}
+    }
+
+    function pengajuan_sidang(){
+        if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('pembimbing/menu_pengajuanSidang');
+		}
+    }
+}
 
 ?>
