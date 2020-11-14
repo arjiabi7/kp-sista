@@ -13,11 +13,11 @@
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row pl-3">
-<<<<<<< HEAD
+
 	                 <h3 class="mb-0 h3">Form DAFTAR TA II</h3>
-=======
+
 	                 <h3 class="mb-0 h3">Tata Cara Daftar TA II</h3>
->>>>>>> dc187572e9df217fd94570803812ea8ea5a013d3
+
 	              </div>
 	            </div>
 	            <div class="card-body">
@@ -325,15 +325,12 @@
 							</thead>
 							<tbody>
 							<tr>
-<<<<<<< HEAD
+
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->nim?></th>
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->nama_lengkap?></th>
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status?></th>
-=======
-								<th>Co : 3411171107</th>
-								<th>Co : Sista</th>
-								<th>Co : </th>
->>>>>>> dc187572e9df217fd94570803812ea8ea5a013d3
+
+							
 							</tr>
 							</tbody>
 						</table>
