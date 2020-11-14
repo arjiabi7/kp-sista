@@ -6,7 +6,7 @@ class upload_daftarTA2 extends CI_Model
 {
 	public function upload(){
     $config['upload_path'] = './upload_daftarTA2/';
-    $config['allowed_types'] = 'jpg|png|jpeg';
+    $config['allowed_types'] = 'jpg|png|jpeg|pdf';
     $config['max_size']  = '2048';
     $config['remove_space'] = TRUE;
   

@@ -13,7 +13,7 @@
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row pl-3">
-	                 <h3 class="mb-0 h3">Form Penilaian Seminar</h3>
+	                 <h3 class="mb-0 h3">Tata Cara Daftar TA II</h3>
 	              </div>
 	            </div>
 	            <div class="card-body">
@@ -292,13 +292,13 @@
 					            </div>
 					            <div class="modal-footer">
 					                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <input type="submit"  name="submit" value="Simpan">
+					                <input type="submit" class=" btn btn-warning"  name="submit" value="Kirim">
 					            </div>
 					            </div>
 					       
 					        </div>
 					        </div>
-					   <?php echo form_close(); ?>
+					   		<?php echo form_close(); ?>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -323,7 +323,7 @@
 							<tr>
 								<th>Co : 3411171107</th>
 								<th>Co : Sista</th>
-								<th>Co : Disetujui</th>
+								<th>Co : </th>
 							</tr>
 							</tbody>
 						</table>
