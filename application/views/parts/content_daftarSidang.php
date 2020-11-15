@@ -1,4 +1,13 @@
 <body class="mt-5" style="margin-bottom: 100px;">
+	<?php 
+        if(isset($error))
+        {
+            echo "ERROR UPLOAD : <br/>";
+            print_r($error);
+            echo "<hr/>";
+        }
+        ?>
+         <?php echo form_open("mahasiswa/sidang/daftarSidang", array('enctype'=>'multipart/form-data')); ?>
 <div class="container-fluid pt-5 pb-5">
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">
@@ -119,7 +128,7 @@
 							            	<div class="col-lg-12">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="judul_ta">Judul Tugas Akhir</label>
-												    <textarea class="form-control text-center" id="judul_ta" required></textarea>
+												    <textarea class="form-control text-center" id="judul_skripsi" name="judul_skripsi" required></textarea>
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -127,7 +136,7 @@
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_pem1">Kode Pembimbing 1</label>
-					                       	 		<select class="form-control" name="kd_pem1" id="kd_pem1" required>
+					                       	 		<select class="form-control" name="kd_pembimbing1" id="kd_pembimbing1" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -153,7 +162,7 @@
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_pem2">Kode Pembimbing 2</label>
-					                       	 		<select class="form-control" name="kd_pem2" id="kd_pem2" required>
+					                       	 		<select class="form-control" name="kd_pembimbing2" id="kd_pembimbing2" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -181,7 +190,7 @@
 							                <div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_peng1">Kode Penguji 1</label>
-					                       	 		<select class="form-control" name="kd_peng1" id="kd_peng1" required>
+					                       	 		<select class="form-control" name="kd_penguji1" id="kd_penguji1" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -207,7 +216,7 @@
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="kd_peng2">Kode Penguji 2</label>
-					                       	 		<select class="form-control" name="kd_peng2" id="kd_peng2" required>
+					                       	 		<select class="form-control" name="kd_penguji2" id="kd_penguji2" required>
 											    		<option>-</option>
 											      		<option>AGK</option>
 													    <option>AIH</option>
@@ -235,7 +244,7 @@
 							                <div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="izin_sidang_p1">Izin Maju Sidang (P1)</label>
-					                       	 		<select class="form-control" name="izin_sidang_p1" id="izin_sidang_p1" required>
+					                       	 		<select class="form-control" name="izin_maju_p1" id="izin_maju_p1" required>
 											    		<option>-</option>
 											      		<option>Ya</option>
 													    <option>Tidak</option>
@@ -245,7 +254,7 @@
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_izin_sidang_p1">Bukti Izin (P1)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_p1">
+				                       	 			<input type="file" class="form-control-file" id="bukti_izin_p1" name="bukti_izin_p1">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -253,7 +262,7 @@
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="izin_sidang_p2">Izin Maju Sidang (P2)</label>
-					                       	 		<select class="form-control" name="izin_sidang_p2" id="izin_sidang_p2" required>
+					                       	 		<select class="form-control" name="izin_maju_p2" id="izin_maju_p2" required>
 											    		<option>-</option>
 											      		<option>Ya</option>
 													    <option>Tidak</option>
@@ -263,7 +272,7 @@
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_izin_sidang_p2">Bukti Izin (P2)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_p2">
+				                       	 			<input type="file" class="form-control-file" id="bukti_izin_p2" name="bukti_izin_p2">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -271,7 +280,7 @@
 							                <div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="izin_sidang_r1">Izin Maju Sidang (R1)</label>
-					                       	 		<select class="form-control" name="izin_sidang_r1" id="izin_sidang_r1" required>
+					                       	 		<select class="form-control" name="izin_maju_r1" id="izin_maju_r1" required>
 											    		<option>-</option>
 											      		<option>Ya</option>
 													    <option>Tidak</option>
@@ -281,7 +290,7 @@
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_izin_sidang_r1">Bukti Izin (R1)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_r1">
+				                       	 			<input type="file" class="form-control-file" id="bukti_izin_r1" name="bukti_izin_r1">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -289,7 +298,7 @@
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="izin_sidang_r2">Izin Maju Sidang (R2)</label>
-					                       	 		<select class="form-control" name="izin_sidang_r2" id="izin_sidang_r2" required>
+					                       	 		<select class="form-control" id="izin_maju_r2" name="izin_maju_r2" required>
 											    		<option>-</option>
 											      		<option>Ya</option>
 													    <option>Tidak</option>
@@ -299,7 +308,7 @@
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_izin_sidang_r2">Bukti Izin (R2)</label>
-				                       	 			<input type="file" class="form-control-file" id="input_izin_sidang_r2">
+				                       	 			<input type="file" class="form-control-file" id="bukti_izin_r2" name="bukti_izin_r2">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -315,13 +324,13 @@
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="surat_perpus">Bebas Pinjam Perpus</label>
-					                       	 		<input type="file" class="form-control-file" id="surat_perpus">
+					                       	 		<input type="file" class="form-control-file" id="pinjam_perpus" name="pinjam_perpus">
 					                      		</div>
 					                      	</div>
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_khs">KHS</label>
-				                       	 			<input type="file" class="form-control-file" id="input_khs">
+				                       	 			<input type="file" class="form-control-file" id="khs" name="khs">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -329,7 +338,7 @@
 				                   		  	<div class="col-lg-12">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="keterangan_nilai_kosong">Keterangan Nilai Masih Kosong</label>
-					                       	 		<textarea class="form-control text-center" id="keterangan_nilai_kosong" required></textarea>
+					                       	 		<textarea class="form-control text-center" id="nilai_kosong" name="nilai_kosong" required></textarea>
 					                      		</div>
 					                      	</div>
 				                   		</div>
@@ -337,13 +346,13 @@
 							                <div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan TA (pdf)</label>
-					                       	 		<input type="file" class="form-control-file" id="input_laporan">
+					                       	 		<input type="file" class="form-control-file" id="draft_laporan" name="draft_laporan">
 					                      		</div>
 					                      	</div>
 					                      	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
-				                       	 			<input type="file" class="form-control-file" id="input_sertifikat">
+				                       	 			<input type="file" class="form-control-file" id="sertifikat" name="sertifikat">
 					                      		</div>
 					                   		</div>
 				                   		</div>
@@ -351,9 +360,10 @@
 					            </div>
 					            <div class="modal-footer">
 					                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <button type="button" class="btn btn-warning">Kirim</button>
+					                 <input type="submit" class=" btn btn-warning"  name="submit" value="Kirim">
 					            </div>
 					            </div>
+					              <?php echo form_close(); ?>
 					        </div>
 					        </div>
 	                      </div>

@@ -42,9 +42,8 @@ class upload_daftarTA2 extends CI_Model
 			'jumlah_nilai_E' => $this->input->post('jumlah_nilai_E'),
 			'judul_skripsi' => $this->input->post('judul_skripsi'),
 			'pembimbing_1' => $this->input->post('pembimbing_1'),
-			'pembimbing_2' => $this->input->post('pembimbing_2'),
-			'khs' => $this->upload->data("file_name"),
-			'krs' => $this->upload->data("file_name")
+			'pembimbing_2' => $this->input->post('pembimbing_2')
+
     );
     
     $this->db->insert('tbl_verifikasi_daftarta2', $data);

@@ -10,7 +10,7 @@ class sidang extends CI_Controller
         parent::__construct();
         
         $this->load->helper('form');
-      $this->load->model('upload_pengajuanSidang');
+      $this->load->model('upload_daftarSidang');
        
 		$this->load->database();
 		$this->load->library(['ion_auth', 'form_validation']);
@@ -56,6 +56,7 @@ class sidang extends CI_Controller
     }
 
 	function daftarSidang(){
+		$data['berkas'] = $this->db->get('tbl_verifikasi_sidang');
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -66,7 +67,24 @@ class sidang extends CI_Controller
 		{
 			$this->load->view('mahasiswa/menu_daftarSidang');
 		}
-    }
+		 $data = array();
+		  if($this->input->post('submit')){ // Jika user menekan tombol Submit (Simpan) pada form
+	      // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+	      $upload = $this->upload_daftarSidang->upload();
+	      
+	      if($upload['result'] == "success"){ // Jika proses upload sukses
+	         // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
+	        $this->upload_daftarSidang->save($upload);
+	        
+	        
+	        redirect('mahasiswa/sidang/daftarSidang'); // Redirect kembali ke halaman awal / halaman view data
+	      }else{ // Jika proses upload gagal
+	      	redirect('mahasiswa/Home');
+	        $data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+	      }
+	    }
+	    }
+    
 
      function jadwal(){
         
