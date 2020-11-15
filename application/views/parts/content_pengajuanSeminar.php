@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <body class="mt-5" style="margin-bottom: 100px;">
 	<?php 
         if(isset($error))
@@ -8,14 +8,14 @@
             echo "<hr/>";
         }
         ?>
-         <?php echo form_open("mahasiswa/seminar/daftarSeminar", array('enctype'=>'multipart/form-data')); ?>
+         <?php echo form_open("mahasiswa/seminar/pengajuanSeminar", array('enctype'=>'multipart/form-data')); ?>
 <div class="container-fluid pb-5 pt-5">
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">Seminar</li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Daftar Seminar</a></li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Step 1</a></li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Pengajuan Seminar</a></li>
+				
 			</ol>
 		</nav>
 	          <div class="card">
@@ -52,19 +52,13 @@
 	            </div>
 	            <div class="card-body">
 	              <form>
-	                <h6 class="heading-small text-muted mb-4">Syarat Pendaftaran Seminar</h6>
+	                <h6 class="heading-small text-muted mb-4">Syarat Pengajuan Seminar</h6>
 	                <div class="pl-lg-4">
 	                  <div class="row">
 	                    <div class="col-lg-7">
 	                      <div class="form-group">
 	                        <ul>
-	                        	<li class="text-muted mb-4">Minimal jumlah bimbingan Tugas Akhir II mencapai 8 x bimbingan, untuk masing-masing pembimbing.</li>
-	                        	<li class="text-muted mb-4">Telah menyelesaikan naskah skripsi dengan presentasi 100%</li>
-	                        	<li class="text-muted mb-4">Perangkat lunak harus selesai 100 %</li>
-	                        	<li class="text-muted mb-4">Mendapat persetujuan dari Pembimbing I dan Pembimbing II</li>
-	                        	<li class="text-muted mb-4">Mengajukan seminar Tugas Akhir II dengan menyerahkan formulir pendaftaran Seminar Tugas Akhir II kepada Jurusan</li>
-	                        	<li class="text-muted mb-4">Melampirkan formulir bebas tunggakan</li>
-	                        	<li class="text-muted mb-4">Melampirkan sertifikat kepesertaan Seminar Nasional</li>
+	                        	<li class="text-muted mb-4">Mahasiswa berhak mengikut Seminar jika mendapatkan persetujuan dari pembimbing berdasarkan form ini.</li>
 
 	                        </ul>
 	                      </div>
@@ -75,13 +69,12 @@
 	                </div>
 	                <hr class="my-4" />
 	                <!-- Address -->
-	                <h6 class="heading-small text-muted mb-4">Form Daftar Daftar Seminar</h6>
 	                	
 	                <div class="pl-lg-4">
 	                  <div class="row">
 	                    <div class="col-md-12">
 	                      <div class="form-group">
-	                      	<label class="text-muted mb-4">Sebelum mengisi form ini, pendaftar diharapkan membaca persyaratan yang telah dicantumkan pada Poin "Syarat Pendaftaran Seminar", dan jika progres pendaftar telah sesuai dengan persyaratan, maka pendaftar berhak mengikuti seminar.<br></label>
+	                      	
 	                      	<center><label class="form-control-label" for="input-city">UNTUK MENGISI FORM, SILAHKAN KLIK TOMBOL DIBAWAH INI.</label> <br>
 	                       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-single-copy-04"></i><span class="nav-link-text">ISI FORM</span></button></center>
 					        <!-- Modal -->
@@ -120,34 +113,7 @@
 											</div>
 				                   		 </div>
 				                   		</div>
-				                   		<div class="row">
-				                   		 <div class="col-lg-6">
-				                      		<div class="form-group">
-				                       	 		<label class="form-control-label" for="no_hp">No. HP</label>
-				                       	 		<input type="text" id="no_hp" name="no_hp" value="<?=$this->ion_auth->gabung_tabel()->row()->no_hp;?>" class="form-control" required readonly>
-				                      		</div>
-				                   		 </div>
-				                   		 <div class="col-lg-6">
-		                     				 <div class="form-group">
-				                       	 		<label class="form-control-label" for="semester">Semester</label>
-				                       	 		<input type="text" id="semester" name="semester" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>" class="form-control" required readonly>
-				                      		</div>
-				                   		 </div>
-				                   		</div>
-				                   		<div class="row">
-						                <div class="col-lg-6">
-		                     				 <div class="form-group">
-				                       	 		<label class="form-control-label" for="jenis_kelamin">Jenis Kelamin</label>
-				                       	 		<input type="text" id="jk" name="jk" value="<?=$this->ion_auth->gabung_tabel()->row()->jk;?>" class="form-control" required readonly>
-				                      		</div>
-				                      	</div>
-				                      	<div class="col-lg-6">
-		                     				 <div class="form-group">
-				                       	 		<label class="form-control-label" for="peminatan">Peminatan</label>
-				                       	 		<input type="text" id="peminatan" name="peminatan" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>" class="form-control" required readonly>
-				                      		</div>
-				                   		 </div>
-				                   		</div>
+				                   		
 			                   		</div>
 			                   		<div class="data-akademik text-center">
 					            		<br><h5>Data Akademik</h5>
@@ -201,122 +167,7 @@
 					                      		</div>
 					                   		</div>
 				                   		</div>
-				                   		<div class="row">
-					                   		<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="kd_pem1">Kode Pembimbing 1</label>
-					                       	 		<select class="form-control" name="pembimbing_1" id="pembimbing_1" required>
-											    		<option>-</option>
-											      		<option>AGK</option>
-													    <option>AIH</option>
-													    <option>FKI</option>
-													    <option>FRU</option>
-													    <option>HAY</option>
-													    <option>ISR</option>
-													    <option>PNS</option>
-													    <option>RDI</option>
-													    <option>RZK</option>
-													    <option>SGO</option>
-													    <option>WNI</option>
-													    <option>YHC</option>
-													    <option>THP</option>
-													    <option>FZR</option>
-													    <option>ECD</option>
-													    <option>ADK</option>
-													    <option>EKP</option>
-													    <option>GNA</option>
-													</select>
-					                      		</div>
-					                   		 </div>
-					                   		<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="kd_pem2">Kode Pembimbing 2</label>
-					                       	 		<select class="form-control" name="pembimbing_2" id="pembimbing_2" required>
-											    		<option>-</option>
-											      		<option>AGK</option>
-													    <option>AIH</option>
-													    <option>FKI</option>
-													    <option>FRU</option>
-													    <option>HAY</option>
-													    <option>ISR</option>
-													    <option>PNS</option>
-													    <option>RDI</option>
-													    <option>RZK</option>
-													    <option>SGO</option>
-													    <option>WNI</option>
-													    <option>YHC</option>
-													    <option>THP</option>
-													    <option>FZR</option>
-													    <option>ECD</option>
-													    <option>ADK</option>
-													    <option>EKP</option>
-													    <option>GNA</option>
-													</select>
-					                      		</div>
-					                   		</div>
-				                   		</div>
-				                   		<div class="row">
-				                   		 	<div class="col-lg-6">
-				                      			<div class="form-group">
-				                       	 			<label class="form-control-label" for="jml_bimbi1">Jumlah Bimbingan (P1)</label>
-				                       	 			<input type="text" id="jml_bimbingan1" name="jml_bimbingan1" class="form-control" required>
-				                      			</div>
-				                   			</div>
-				                   			<div class="col-lg-6">
-		                     					<div class="form-group">
-				                       	 			<label class="form-control-label" for="jml_bimbi2">Jumlah Bimbingan (P2)</label>
-				                       	 			<input type="text" id="jml_bimbingan2" name="jml_bimbingan2" class="form-control" required>
-				                      			</div>
-				                   			</div>
-				                   		</div>
-				                   		<div class="row">
-				                   		  	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="pembayaran">Pelunasan Pembayaran Kuliah</label>
-					                       	 		<select class="form-control" name="pelunasan" id="pelunasan" required>
-											    		<option>-</option>
-											      		<option>Lunas</option>
-													    <option>Belum Lunas</option>
-													</select>
-					                      		</div>
-					                      	</div>
-					                      	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="input_lunas">Bukti Pelunasan</label>
-				                       	 			<input type="file" class="form-control-file" name="bukti_lunas" id="bukti_lunas" value="Bukti_lunas">
-					                      		</div>
-					                   		</div>
-				                   		</div>
-				                   		<div class="row">
-							            	<div class="col-lg-12">
-			                     				 <div class="form-group">
-			                     				 	<label class="form-control-label" for="isi_matkul">Tulis Mata Kuliah Yang diambil Selain TA2</label>
-												    <textarea class="form-control text-center" id="matkul_sedang_diambil" name="matkul_sedang_diambil" required></textarea>
-					                      		</div>
-					                   		</div>
-				                   		</div>
-				                   		<div class="row">
-				                   		  	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="input_laporan">Draft Laporan TA (pdf)</label>
-				                       	 			<input type="file" class="form-control-file" name="draft_laporan" id="draft_laporan" value="Draft_Laporan">
-					                      		</div>
-					                      	</div>
-					                      	<div class="col-lg-6">
-			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="input_khs">Scan KHS</label>
-				                       	 			<input type="file" class="form-control-file" name="khs" id="khs">
-					                      		</div>
-					                   		</div>
-				                   		</div>
-				                   		<div class="row">
-							            	<div class="col-lg-6">
-			                     				 <div class="form-group">
-			                     				 	<center><label class="form-control-label" for="input_sertifikat">Sertifikat Seminar</label>
-				                       	 			<input type="file" class="form-control-file" name="sertifikat" id="sertifikat"></center>
-					                      		</div>
-					                   		</div>
-				                   		</div>
+				                   		
 			                   		</div>
 					            </div>
 					            <div class="modal-footer">
@@ -337,23 +188,9 @@
 	                <div class="pl-lg-4">
 	                  <div class="form-group">
 	                   
-	                    <table class="table table-bordered table-striped">
-							<thead>
-								<tr style="background-color: #fad96e">
-									<th>NIM</th>
-									<th>Nama</th>
-									<th>Status Persetujuan</th>
-												
-								</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<th>Co : 3411171107</th>
-								<th>Co : Sista</th>
-								<th>Co : Disetujui</th>
-							</tr>
-							</tbody>
-						</table>
+	                   <center><a href="<?php echo base_url();?>index.php/mahasiswa/seminar/status_persetujuan_pengajuan">
+    <button type="button" class="btn btn-dark"><i class="ni ni-cloud-upload-96"></i><span class="nav-link-text"> Status Persetujuan</span></button>
+  </a></center>
 	                  </div>
 	                </div>
 	              </form>
@@ -362,7 +199,7 @@
 	        </div>
 </div>
 </body>
-=======
+<!-- =======
 W<html> 
 <head> 
     <meta charset="utf-8"> 
@@ -408,6 +245,6 @@ W<html>
     </table>
     </div>
 </div>
-</body> 
+</body>  -->
 </html>
->>>>>>> dc187572e9df217fd94570803812ea8ea5a013d3
+

@@ -1056,6 +1056,39 @@ class Ion_auth_model extends CI_Model
 
 	}
 
+	function gabung_tabel_userVerifikasiSeminar(){
+			$query = $this->db->select('*')
+								->from('tbl_verifikasi_seminar')
+								->join('users','tbl_verifikasi_seminar.email = users.email')
+								->where('tbl_verifikasi_seminar.email',$_SESSION['email'])
+								->get();
+								return $query;
+
+
+	}
+
+	function gabung_tabel_userPengajuanSeminar(){
+			$query = $this->db->select('*')
+								->from('tbl_pengajuan_seminar')
+								->join('users','tbl_pengajuan_seminar.email = users.email')
+								->where('tbl_pengajuan_seminar.email',$_SESSION['email'])
+								->get();
+								return $query;
+
+
+	}
+
+		function gabung_tabel_userPengajuanSidang(){
+			$query = $this->db->select('*')
+								->from('tbl_pengajuan_sidang')
+								->join('users','tbl_pengajuan_sidang.email = users.email')
+								->where('tbl_pengajuan_sidang.email',$_SESSION['email'])
+								->get();
+								return $query;
+
+
+	}
+
 	/**
 	 * Verifies if the session should be rechecked according to the configuration item recheck_timer. If it does, then
 	 * it will check if the user is still active

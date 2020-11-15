@@ -11,6 +11,7 @@ class seminar extends CI_Controller
         
          $this->load->helper('form');
        $this->load->model('upload_daftarSeminar');
+       $this->load->model('upload_pengajuanSeminar');
        
 		$this->load->database();
 		$this->load->library(['ion_auth', 'form_validation']);
@@ -32,7 +33,42 @@ class seminar extends CI_Controller
 		{
 			$this->load->view('mahasiswa/menu_pengajuanSeminar');
 		}
+
+		  if($this->input->post('submit')){ // Jika user menekan tombol Submit (Simpan) pada form
+ 
+        $this->upload_pengajuanSeminar->save();
+         redirect('mahasiswa/seminar/status_persetujuan_pengajuan');
+        
+        // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+      }
     }
+
+        function status_persetujuan_pengajuan(){
+    	 if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('menu_persetujuan_pengajuan_seminar');
+		}
+    }
+
+    function status_persetujuan_seminar(){
+    	 if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('menu_persetujuan_seminar');
+		}
+    }
+    
 
 	function daftarSeminar(){
         $data['berkas'] = $this->db->get('tbl_verifikasi_daftarta2');

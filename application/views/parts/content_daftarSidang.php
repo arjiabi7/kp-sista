@@ -4,8 +4,8 @@
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">Sidang</li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Daftar Sidang</a></li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Step 1</a></li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/mahasiswa/sidang/daftarSidang">Daftar Sidang</a></li>
+			
 			</ol>
 		</nav>
 	          <div class="card">
@@ -92,15 +92,23 @@
 				                   		  	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="nama_mhs">Nama Lengkap</label>
-					                       	 		<input type="text" id="nama_mhs" class="form-control" required readonly>
+					                       	 		<input type="text" id="nama_lengkap" name="nama_lengkap" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>" class="form-control" required readonly>
 					                      		</div>
 				                   		 	</div>
 				                   		 	<div class="col-lg-6">
 			                     				<div class="form-group">
 					                       	 		<label class="form-control-label" for="nim">NIM</label>
-				                       	 			<input type="text" name="NIM" id="nim" class="form-control" required readonly>
+				                       	 			<input type="text" name="nim" id="nim" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>" class="form-control" required readonly>
 					                      		</div>
 				                   		 	</div>
+				                   		</div>
+				                   		<div class="row">
+				                   			<div class="col-lg-12">
+				                      		<div class="form-group">
+				                       	 		<label class="form-control-label" for="email">Email</label>
+				                       	 		<input type="email" name="email" id="email" value="<?=$this->ion_auth->gabung_tabel()->row()->email;?>" class="form-control" required readonly>
+				                      		</div>
+				                   		 </div>
 				                   		</div>
 			                   		</div>
 			                   		

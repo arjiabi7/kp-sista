@@ -37,7 +37,7 @@
   <div class="dropdown">
     <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SEMINAR</span></button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/jadwal"><i class="ni ni-send text-warning"></i> Pengajuan Seminar</a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/pengajuanSeminar"><i class="ni ni-send text-warning"></i> Pengajuan Seminar</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/daftarSeminar"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Seminar</span></a>
       <div class="dropdown-divider"></div>
@@ -49,7 +49,7 @@
   <div class="dropdown">
     <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SIDANG</span></button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/menu_daftarSeminar/jadwal"><i class="ni ni-send text-warning"></i> Pengajuan Sidang</a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/pengajuanSidang"><i class="ni ni-send text-warning"></i> Pengajuan Sidang</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/daftarSidang"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Sidang</span></a>
       <div class="dropdown-divider"></div>

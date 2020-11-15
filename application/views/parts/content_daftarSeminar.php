@@ -13,8 +13,8 @@
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">Seminar</li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Daftar Seminar</a></li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/daftarSeminar">Step 1</a></li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/mahasiswa/seminar/daftarSeminar">Daftar Seminar</a></li>
+				
 			</ol>
 		</nav>
 	          <div class="card">
@@ -336,23 +336,9 @@
 	                <div class="pl-lg-4">
 	                  <div class="form-group">
 	                   
-	                    <table class="table table-bordered table-striped">
-							<thead>
-								<tr style="background-color: #fad96e">
-									<th>NIM</th>
-									<th>Nama</th>
-									<th>Status Persetujuan</th>
-												
-								</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<th>Co : 3411171107</th>
-								<th>Co : Sista</th>
-								<th>Co : Disetujui</th>
-							</tr>
-							</tbody>
-						</table>
+	                   <center><a href="<?php echo base_url();?>index.php/mahasiswa/seminar/status_persetujuan_seminar">
+    <button type="button" class="btn btn-dark"><i class="ni ni-cloud-upload-96"></i><span class="nav-link-text"> Status Persetujuan</span></button>
+  </a></center>
 	                  </div>
 	                </div>
 	              </form>

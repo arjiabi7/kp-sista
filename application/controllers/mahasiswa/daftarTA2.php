@@ -37,6 +37,19 @@ class daftarTA2 extends CI_Controller
 		}
     }
 
+    function status_persetujuan(){
+    	 if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('menu_persetujuan_daftarTA');
+		}
+    }
+
      public function tambah(){
     $data = array();
     
@@ -49,7 +62,7 @@ class daftarTA2 extends CI_Controller
         $this->upload_daftarTA2->save($upload);
         
         
-        redirect('mahasiswa/daftarTA2'); // Redirect kembali ke halaman awal / halaman view data
+        redirect('mahasiswa/daftarTA2/status_persetujuan'); // Redirect kembali ke halaman awal / halaman view data
       }else{ // Jika proses upload gagal
       	redirect('mahasiswa/Home');
         $data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2020 at 06:47 PM
+-- Generation Time: Nov 15, 2020 at 12:03 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -134,21 +134,99 @@ INSERT INTO `tbl_data_mhsw` (`nim`, `nama_lengkap`, `email`, `no_hp`, `semester`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_data_pembimbing`
+--
+
+CREATE TABLE `tbl_data_pembimbing` (
+  `id` int(11) NOT NULL,
+  `kd_pembimbing` varchar(3) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `nama_pembimbing` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_data_pembimbing`
+--
+
+INSERT INTO `tbl_data_pembimbing` (`id`, `kd_pembimbing`, `email`, `nama_pembimbing`) VALUES
+(1, 'AHY', 'pembimbing@sista.com', 'AHAHAHAY');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_data_penguji`
 --
 
 CREATE TABLE `tbl_data_penguji` (
+  `id` int(11) NOT NULL,
   `kd_penguji` varchar(3) NOT NULL,
-  `nim` varchar(14) NOT NULL,
-  `password` varchar(14) NOT NULL
+  `email` varchar(30) NOT NULL,
+  `nama_penguji` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_data_penguji`
 --
 
-INSERT INTO `tbl_data_penguji` (`kd_penguji`, `nim`, `password`) VALUES
-('HAY', '3411171134', '123123123');
+INSERT INTO `tbl_data_penguji` (`id`, `kd_penguji`, `email`, `nama_penguji`) VALUES
+(1, 'UNC', 'penguji@sista.com', 'UNchhhhh');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pengajuan_seminar`
+--
+
+CREATE TABLE `tbl_pengajuan_seminar` (
+  `id` int(11) NOT NULL,
+  `nama_lengkap` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `nim` varchar(10) NOT NULL,
+  `jumlah_sks_proses` varchar(3) NOT NULL,
+  `jumlah_sks_lulus` varchar(3) NOT NULL,
+  `jumlah_nilai_D` varchar(2) NOT NULL,
+  `jumlah_nilai_E` varchar(2) NOT NULL,
+  `ipk` varchar(5) NOT NULL,
+  `judul_skripsi` varchar(255) NOT NULL,
+  `status` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_pengajuan_seminar`
+--
+
+INSERT INTO `tbl_pengajuan_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`) VALUES
+(8, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sdsdsdsds', NULL),
+(9, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sdsdsdsds', NULL),
+(10, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sdsdsdsds', NULL),
+(11, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sadsad', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pengajuan_sidang`
+--
+
+CREATE TABLE `tbl_pengajuan_sidang` (
+  `id` int(11) NOT NULL,
+  `nama_lengkap` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `nim` varchar(10) NOT NULL,
+  `jumlah_sks_proses` varchar(3) NOT NULL,
+  `jumlah_sks_lulus` varchar(3) NOT NULL,
+  `jumlah_nilai_D` varchar(3) NOT NULL,
+  `jumlah_nilai_E` varchar(2) NOT NULL,
+  `ipk` varchar(5) NOT NULL,
+  `judul_skripsi` varchar(255) NOT NULL,
+  `status` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_pengajuan_sidang`
+--
+
+INSERT INTO `tbl_pengajuan_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`) VALUES
+(1, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'aaaaaaaaaaa', 'Disetujui');
 
 -- --------------------------------------------------------
 
@@ -162,13 +240,9 @@ CREATE TABLE `tbl_seminar` (
   `email` varchar(30) NOT NULL,
   `peminatan` varchar(3) NOT NULL,
   `ta_aktif` varchar(10) NOT NULL,
-  `no_sk_ta_pembimbing` varchar(10) NOT NULL,
   `nid_r1` varchar(10) NOT NULL,
   `nid_r2` varchar(10) NOT NULL,
   `judul_skripsi` varchar(50) NOT NULL,
-  `hari_ajuan_seminar` varchar(10) NOT NULL,
-  `tgl_ajuan_seminar` varchar(10) NOT NULL,
-  `jam_ajuan_seminar` varchar(10) NOT NULL,
   `hari_seminar` varchar(10) NOT NULL,
   `tgl_seminar` varchar(10) NOT NULL,
   `jam_seminar` varchar(10) NOT NULL,
@@ -181,9 +255,9 @@ CREATE TABLE `tbl_seminar` (
 -- Dumping data for table `tbl_seminar`
 --
 
-INSERT INTO `tbl_seminar` (`id`, `nim`, `email`, `peminatan`, `ta_aktif`, `no_sk_ta_pembimbing`, `nid_r1`, `nid_r2`, `judul_skripsi`, `hari_ajuan_seminar`, `tgl_ajuan_seminar`, `jam_ajuan_seminar`, `hari_seminar`, `tgl_seminar`, `jam_seminar`, `tempat_seminar`, `status_seminar`, `lulus_review`) VALUES
-(1, '3411171100', 'sista@unjani.com', 'DSE', '2020', 'gdfgfd', '435453', '34535', 'Masi kala jao', 'senin', '27', '1900', 'selasa', '28', '1800', 'r29', 'lulus', '2020'),
-(2, '3411171133', 'arjiabiyoga99@gmail.com', 'DSE', 'genap 2020', 'sdsd', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
+INSERT INTO `tbl_seminar` (`id`, `nim`, `email`, `peminatan`, `ta_aktif`, `nid_r1`, `nid_r2`, `judul_skripsi`, `hari_seminar`, `tgl_seminar`, `jam_seminar`, `tempat_seminar`, `status_seminar`, `lulus_review`) VALUES
+(1, '3411171100', 'sista@unjani.com', 'DSE', '2020', '435453', '34535', 'Masi kala jao', 'selasa', '28', '1800', 'r29', 'lulus', '2020'),
+(2, '3411171133', 'arjiabiyoga99@gmail.com', 'DSE', 'genap 2020', '343434', '3434343', 'coba aja dulu', 'senin', '23 nov 202', '19.00', 'r.1-3', 'lulus', '2019');
 
 -- --------------------------------------------------------
 
@@ -210,7 +284,7 @@ CREATE TABLE `tbl_verifikasi_daftarta2` (
   `pembimbing_2` varchar(10) NOT NULL,
   `khs` varchar(10) NOT NULL,
   `krs` varchar(10) NOT NULL,
-  `status` varchar(10) NOT NULL
+  `status` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -218,8 +292,9 @@ CREATE TABLE `tbl_verifikasi_daftarta2` (
 --
 
 INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`) VALUES
-(11, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'tester', 'ECD', 'FZR', '18380426_1', '18380426_1', 'Lulus'),
-(12, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'coba pdf', 'FZR', 'ECD', 'Panduan_Pe', 'Panduan_Pe', '');
+(14, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'tester', 'ADK', 'ECD', 'status1.PN', 'status1.PN', NULL),
+(15, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'sadsa', 'ECD', 'ECD', 'konten.PNG', 'konten.PNG', NULL),
+(16, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'sadsa', 'ECD', 'ECD', 'konten1.PN', 'konten1.PN', NULL);
 
 -- --------------------------------------------------------
 
@@ -252,7 +327,7 @@ CREATE TABLE `tbl_verifikasi_seminar` (
   `draft_laporan` varchar(255) NOT NULL,
   `khs` varchar(255) NOT NULL,
   `sertifikat` varchar(255) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -260,10 +335,7 @@ CREATE TABLE `tbl_verifikasi_seminar` (
 --
 
 INSERT INTO `tbl_verifikasi_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `jml_bimbingan1`, `jml_bimbingan2`, `pelunasan`, `bukti_lunas`, `matkul_sedang_diambil`, `draft_laporan`, `khs`, `sertifikat`, `status`) VALUES
-(2, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'ssssssss', 'ADK', 'ECD', '23', '2', 'Lunas', '13.pdf', 'ECD', '13.pdf', '13.pdf', '13.pdf', ''),
-(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'jkdksjd', 'AIH', 'HAY', '23', '2', 'Lunas', '83.pdf', 'HAY', '83.pdf', '83.pdf', '83.pdf', ''),
-(4, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'llllll', 'ECD', 'FZR', '2', '2', 'Belum Lunas', '3_Benchmarking_Database4.pdf', 'FZR', '3_Benchmarking_Database4.pdf', '3_Benchmarking_Database4.pdf', '3_Benchmarking_Database4.pdf', ''),
-(5, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'kkkkkkk', 'FKI', 'FRU', '23', '2', 'Belum Lunas', '62-Article_Text-164-1-10-20190426.pdf', 'FRU', '62-Article_Text-164-1-10-20190426.pdf', '62-Article_Text-164-1-10-20190426.pdf', '62-Article_Text-164-1-10-20190426.pdf', '');
+(2, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'ssssssss', 'ADK', 'ECD', '23', '2', 'Lunas', '13.pdf', 'ECD', '13.pdf', '13.pdf', '13.pdf', '');
 
 -- --------------------------------------------------------
 
@@ -301,10 +373,10 @@ INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activ
 (1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
 (5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605336174, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
-(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605259299, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
-(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605371045, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
-(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605259633, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605438126, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605437821, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
+(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605438099, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
+(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605377532, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
 
@@ -366,10 +438,28 @@ ALTER TABLE `tbl_data_mhsw`
   ADD PRIMARY KEY (`nim`);
 
 --
+-- Indexes for table `tbl_data_pembimbing`
+--
+ALTER TABLE `tbl_data_pembimbing`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_data_penguji`
 --
 ALTER TABLE `tbl_data_penguji`
-  ADD PRIMARY KEY (`kd_penguji`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_pengajuan_seminar`
+--
+ALTER TABLE `tbl_pengajuan_seminar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_pengajuan_sidang`
+--
+ALTER TABLE `tbl_pengajuan_sidang`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_seminar`
@@ -437,6 +527,30 @@ ALTER TABLE `tbl_data_koordinator`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `tbl_data_pembimbing`
+--
+ALTER TABLE `tbl_data_pembimbing`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_data_penguji`
+--
+ALTER TABLE `tbl_data_penguji`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_pengajuan_seminar`
+--
+ALTER TABLE `tbl_pengajuan_seminar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `tbl_pengajuan_sidang`
+--
+ALTER TABLE `tbl_pengajuan_sidang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `tbl_seminar`
 --
 ALTER TABLE `tbl_seminar`
@@ -446,13 +560,13 @@ ALTER TABLE `tbl_seminar`
 -- AUTO_INCREMENT for table `tbl_verifikasi_daftarta2`
 --
 ALTER TABLE `tbl_verifikasi_daftarta2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_verifikasi_seminar`
 --
 ALTER TABLE `tbl_verifikasi_seminar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

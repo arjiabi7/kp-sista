@@ -10,13 +10,20 @@
          <?php echo form_open("mahasiswa/daftarTA2/tambah", array('enctype'=>'multipart/form-data')); ?>
 <div class="container-fluid pb-5 pt-5">
 	<div class="col-xl">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">Daftar TA II</li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/mahasiswa/daftarTA2">Form Daftar</a></li>
+				
+			</ol>
+		</nav>
 	          <div class="card">
 	            <div class="card-header">
 	              <div class="row pl-3">
 
 	                 <h3 class="mb-0 h3">Form DAFTAR TA II</h3>
 
-	                 <h3 class="mb-0 h3">Tata Cara Daftar TA II</h3>
+	          
 
 	              </div>
 	            </div>
@@ -49,7 +56,7 @@
 	                      	<center><label class="form-control-label" for="input-city">UNTUK MENGISI FORM, SILAHKAN KLIK TOMBOL DIBAWAH INI.</label> <br>
 	                       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-single-copy-04"></i><span class="nav-link-text">ISI FORM</span></button></center>
 					        <!-- Modal -->
-					        
+					        	 
 					        	
 					        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 					        <div class="modal-dialog" role="document">
@@ -296,7 +303,7 @@
 					            </div>
 					            <div class="modal-footer">
 					                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <input type="submit" class=" btn btn-warning"  name="submit" value="Kirim">
+					                <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
 					            </div>
 					            </div>
 					       
@@ -309,31 +316,17 @@
 	               
 	                </div>
 	                <hr class="my-4" />
+
 	                <!-- Description -->
 	                <h6 class="heading-small text-muted mb-4">Status Persetujuan</h6>
+	                
 	                <div class="pl-lg-4">
+
 	                  <div class="form-group">
+	                 <center><a href="<?php echo base_url();?>index.php/mahasiswa/daftarTA2/status_persetujuan">
+    <button type="button" class="btn btn-dark"><i class="ni ni-cloud-upload-96"></i><span class="nav-link-text"> Status Persetujuan</span></button>
+  </a></center>
 	                   
-	                    <table class="table table-bordered table-striped">
-							<thead>
-								<tr style="background-color: #fad96e">
-									<th>NIM</th>
-									<th>Nama</th>
-									<th>Status Persetujuan</th>
-												
-								</tr>
-							</thead>
-							<tbody>
-							<tr>
-
-								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->nim?></th>
-								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->nama_lengkap?></th>
-								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status?></th>
-
-							
-							</tr>
-							</tbody>
-						</table>
 	                  </div>
 	                </div>
 	              </form>
