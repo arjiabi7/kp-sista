@@ -172,7 +172,7 @@
 					            </div>
 					            <div class="modal-footer">
 					                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <input type="submit"  name="submit" value="Simpan">
+					                <input type="submit" class=" btn btn-warning"  name="submit" value="Simpan">
 					            </div>
 					            </div>
 					        </div>

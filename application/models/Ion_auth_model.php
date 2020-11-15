@@ -1066,6 +1066,16 @@ class Ion_auth_model extends CI_Model
 
 
 	}
+	function gabung_tabel_userVerifikasiSidang(){
+			$query = $this->db->select('*')
+								->from('tbl_verifikasi_sidang')
+								->join('users','tbl_verifikasi_sidang.email = users.email')
+								->where('tbl_verifikasi_sidang.email',$_SESSION['email'])
+								->get();
+								return $query;
+
+
+	}
 
 	function gabung_tabel_userPengajuanSeminar(){
 			$query = $this->db->select('*')

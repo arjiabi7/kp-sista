@@ -93,7 +93,7 @@ class seminar extends CI_Controller
         $this->upload_daftarSeminar->save($upload);
         
         
-        redirect('mahasiswa/seminar/daftarSeminar'); // Redirect kembali ke halaman awal / halaman view data
+        redirect('mahasiswa/seminar/status_persetujuan_seminar'); // Redirect kembali ke halaman awal / halaman view data
       }else{ // Jika proses upload gagal
       	redirect('mahasiswa/Home');
         $data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan

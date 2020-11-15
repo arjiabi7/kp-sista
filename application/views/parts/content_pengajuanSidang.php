@@ -13,7 +13,7 @@
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item">Seminar</li>
+				<li class="breadcrumb-item">Sidang</li>
 				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/mahasiswa/sidang/pengajuanSidang">Pengajuan Sidang</a></li>
 				
 			</ol>
@@ -172,7 +172,7 @@
 					            </div>
 					            <div class="modal-footer">
 					                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-					                <input type="submit"  name="submit" value="Simpan">
+					                <input type="submit" class=" btn btn-warning"  name="submit" value="Simpan">
 					            </div>
 					            </div>
 					        </div>

@@ -11,7 +11,7 @@ class sidang extends CI_Controller
         
         $this->load->helper('form');
       $this->load->model('upload_daftarSidang');
-       
+       $this->load->model('upload_pengajuanSidang');
 		$this->load->database();
 		$this->load->library(['ion_auth', 'form_validation']);
 		$this->load->helper(['url', 'language']);
@@ -36,7 +36,7 @@ class sidang extends CI_Controller
 		  if($this->input->post('submit')){ // Jika user menekan tombol Submit (Simpan) pada form
  
         $this->upload_pengajuanSidang->save();
-        
+         redirect('mahasiswa/sidang/status_persetujuan_pengajuan');
         
         // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
       }
@@ -52,6 +52,18 @@ class sidang extends CI_Controller
 		else
 		{
 			$this->load->view('menu_persetujuan_pengajuan_sidang');
+		}
+    }
+    function status_persetujuan_sidang(){
+    	 if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('menu_persetujuan_sidang');
 		}
     }
 
@@ -77,7 +89,7 @@ class sidang extends CI_Controller
 	        $this->upload_daftarSidang->save($upload);
 	        
 	        
-	        redirect('mahasiswa/sidang/daftarSidang'); // Redirect kembali ke halaman awal / halaman view data
+	        redirect('mahasiswa/sidang/status_persetujuan_sidang'); // Redirect kembali ke halaman awal / halaman view data
 	      }else{ // Jika proses upload gagal
 	      	redirect('mahasiswa/Home');
 	        $data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
