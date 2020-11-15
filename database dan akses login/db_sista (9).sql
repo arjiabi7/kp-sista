@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 01:19 PM
+-- Generation Time: Nov 15, 2020 at 03:07 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -196,10 +196,7 @@ CREATE TABLE `tbl_pengajuan_seminar` (
 --
 
 INSERT INTO `tbl_pengajuan_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`) VALUES
-(8, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sdsdsdsds', NULL),
-(9, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sdsdsdsds', NULL),
-(10, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sdsdsdsds', NULL),
-(11, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'sadsad', NULL);
+(13, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'nyoba pengajuan seminar', NULL);
 
 -- --------------------------------------------------------
 
@@ -226,7 +223,7 @@ CREATE TABLE `tbl_pengajuan_sidang` (
 --
 
 INSERT INTO `tbl_pengajuan_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`) VALUES
-(1, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'aaaaaaaaaaa', 'Disetujui');
+(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'nyoba pengajuan sidang', NULL);
 
 -- --------------------------------------------------------
 
@@ -292,10 +289,7 @@ CREATE TABLE `tbl_verifikasi_daftarta2` (
 --
 
 INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`) VALUES
-(14, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'tester', 'ADK', 'ECD', 'status1.PN', 'status1.PN', NULL),
-(15, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'sadsa', 'ECD', 'ECD', 'konten.PNG', 'konten.PNG', NULL),
-(16, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'sadsa', 'ECD', 'ECD', 'konten1.PN', 'konten1.PN', NULL),
-(17, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'nyoba default', 'ADK', 'ADK', 'khs', 'krs', NULL);
+(18, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'Mencoba daftar TA', 'THP', 'ECD', 'khs', 'krs', NULL);
 
 -- --------------------------------------------------------
 
@@ -336,7 +330,7 @@ CREATE TABLE `tbl_verifikasi_seminar` (
 --
 
 INSERT INTO `tbl_verifikasi_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `jml_bimbingan1`, `jml_bimbingan2`, `pelunasan`, `bukti_lunas`, `matkul_sedang_diambil`, `draft_laporan`, `khs`, `sertifikat`, `status`) VALUES
-(2, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'ssssssss', 'ADK', 'ECD', '23', '2', 'Lunas', '13.pdf', 'ECD', '13.pdf', '13.pdf', '13.pdf', '');
+(8, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'nyoba persetujuan seminar', 'ADK', 'ECD', '23', '2', 'Lunas', 'KRS1.PNG', 'ECD', 'KRS1.PNG', 'KRS1.PNG', 'KRS1.PNG', NULL);
 
 -- --------------------------------------------------------
 
@@ -376,7 +370,7 @@ CREATE TABLE `tbl_verifikasi_sidang` (
 --
 
 INSERT INTO `tbl_verifikasi_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `judul_skripsi`, `kd_pembimbing1`, `kd_pembimbing2`, `kd_penguji1`, `kd_penguji2`, `izin_maju_p1`, `bukti_izin_p1`, `izin_maju_p2`, `bukti_izin_p2`, `izin_maju_r1`, `bukti_izin_r1`, `izin_maju_r2`, `bukti_izin_r2`, `link_seminar`, `pinjam_perpus`, `khs`, `nilai_kosong`, `draft_laporan`, `sertifikat`, `status`) VALUES
-(1, 'P Mahardika', 'sista@unjani.com', '3411171100', 'asdasd', 'ECD', 'ADK', 'FZR', 'ECD', 'Ya', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'Ya', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'Ya', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'Ya', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'adsadsad', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'asdsad', 'MODUL_TEKNOLOGI_WEB_20202.pdf', 'MODUL_TEKNOLOGI_WEB_20202.pdf', NULL);
+(3, 'P Mahardika', 'sista@unjani.com', '3411171100', 'nyoba persetujuan tugas akhir', 'FZR', 'EKP', 'FZR', 'FZR', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'asdasdsad', 'status.PNG', 'status.PNG', 'asdads', 'status.PNG', 'status.PNG', NULL);
 
 -- --------------------------------------------------------
 
@@ -589,13 +583,13 @@ ALTER TABLE `tbl_data_penguji`
 -- AUTO_INCREMENT for table `tbl_pengajuan_seminar`
 --
 ALTER TABLE `tbl_pengajuan_seminar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_pengajuan_sidang`
 --
 ALTER TABLE `tbl_pengajuan_sidang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_seminar`
@@ -607,19 +601,19 @@ ALTER TABLE `tbl_seminar`
 -- AUTO_INCREMENT for table `tbl_verifikasi_daftarta2`
 --
 ALTER TABLE `tbl_verifikasi_daftarta2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tbl_verifikasi_seminar`
 --
 ALTER TABLE `tbl_verifikasi_seminar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_verifikasi_sidang`
 --
 ALTER TABLE `tbl_verifikasi_sidang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

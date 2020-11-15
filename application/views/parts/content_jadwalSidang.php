@@ -11,41 +11,98 @@
 </head>
 <body class="mt-3" style="margin-bottom: 100px;">
 	<center>
-	<div class="container-fluid pt-5 pb-5">
+	<div class="container-fluid pb-5 pt-5">
 		<br>
 		<div class="col-md-8 col-md-offset-2">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">Sidang</li>
-				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/menu_daftarSeminar/jadwal">Pengumuman Jadwal & Ploting Penguji</a></li>
+				<li class="breadcrumb-item active" aria-current="page"><a href="<?php echo base_url();?>index.php/mahasiswa/sidang/jadwal">Pengumuman Jadwal & Ploting Penguji</a></li>
 			</ol>
 		</nav>
 			<div class="jumbotron jumbotron-fluid">
 			  <div class="container">
-			    <h1 class="display-4">Tabel Sidang </h1>
-		<table class="table table-bordered table-striped table-hover">
-			<thead>
-				<tr style="background-color: #fad96e">
-					<th>No</th>
-					<th>NIM</th>
-					<th>Nama</th>
-					<th>Jadwal Seminar</th>
-					<th>Penguji 1</th>
-					<th>Penguji 2</th>
-				</tr>
-			</thead>
-			<tbody>
+			    <h1 class="display-4">Sidang </h1>
+			     <hr class="my-4">
+			    <h6> Data Mahasiswa </h6>
+		<table class="table table-striped table-hover">
+			
+		
 				<tr>
-					<td>1</td>
-					<td>3411171107</td>
-					<td>Dika Arji</td>
-					<td>9 Nov 2020</td>
-					<td>HAY</td>
-					<td>FZR</td>
+					<th>NIM</th>
+					
+					<th style="width: 10px">:</th>
+					<th> <?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nim;?></th>
+			
 				</tr>
 			
-			</tbody>
-		</table>
+			
+				<tr>
+					<td style="width: 200px">NAMA</td>
+					<td>:</td>
+					<td> <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?></td>
+					
+				</tr>
+				<tr>
+					<td>PEMINATAN</td>
+					<td>:</td>
+					                        <td> <?=$this->ion_auth->gabung_tabel()->row()->peminatan;?></td>
+
+				</tr>
+				<tr>
+					<td>JUDUL</td>
+					<td>:</td>
+					                        <td> <?=$this->ion_auth->gabung_tabel_userSeminar()->row()->judul_skripsi;?></td>
+
+				</tr>
+			</table>
+			 <hr class="my-4">
+			 <h6>Jadwal Sidang </h6>
+			 <table  class="table table-striped table-hover">
+				<tr>
+					<td style="width: 200px">HARI</td>
+					<td style="width: 10px">:</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->hari_seminar;?></td></td>
+
+				</tr>
+				<tr>
+					<td style="width: 200px">TANGGAL</td>
+					<td style="width: 10px">:</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->tgl_seminar;?></td></td>
+
+				</tr>
+				<tr>
+					<td style="width: 200px">JAM</td>
+					<td style="width: 10px">:</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->jam_seminar;?></td>
+
+				</tr>
+				<tr>
+					<td style="width: 200px">TEMPAT</td>
+					<td style="width: 10px">:</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->tempat_seminar;?></td>
+
+				</tr>
+				</table>
+ <hr class="my-4">
+				<h6>Reviewer </h6>
+			 <table  class="table table-striped table-hover">
+				<tr>
+					<td style="width: 200px">REVIEWER 1</td>
+					<td style="width: 10px">:</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nid_r1;?></td>
+
+				</tr>
+				<tr>
+					<td style="width: 200px">REVIEWER 2</td>
+					<td style="width: 10px">:</td>
+					<td><?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nid_r2;?></td>
+
+				</tr>
+				
+				</table>
+				
+		
 			    <hr class="my-4">
 			    <p>&copy;2020 SISTA</p>
 			  </div>
