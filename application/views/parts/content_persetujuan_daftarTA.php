@@ -23,7 +23,7 @@
 									<th>NIM</th>
 									<th>Nama</th>
 									<th>Status Persetujuan</th>
-												
+									<th>Komentar dari koordinator</th>			
 								</tr>
 							</thead>
 							<tbody>
@@ -37,8 +37,16 @@
 									}else{
 										echo $this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status;
 									}?></th>
-
-							
+								<th>
+									<?php
+								
+								 	if($this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->komentar_ta2 == NULL){
+										echo "-";
+									}else{
+										echo $this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->komentar_ta2;
+									}
+									?>
+								</th>
 							</tr>
 							</tbody>
 						</table>

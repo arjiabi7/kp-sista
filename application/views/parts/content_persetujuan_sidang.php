@@ -24,7 +24,7 @@
 									<th>NIM</th>
 									<th>Nama</th>
 									<th>Status Persetujuan</th>
-												
+									<th>Komentar dari koordinator</th>		
 								</tr>
 							</thead>
 							<tbody>
@@ -38,6 +38,16 @@
 										echo $this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->status;
 									}
 								?></th>
+								<th>
+									<?php
+								
+								 	if($this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->komentar_sidang == NULL){
+										echo "-";
+									}else{
+										echo $this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->komentar_sidang;
+									}
+									?>
+								</th>
 							</tr>
 							</tbody>
 						</table>

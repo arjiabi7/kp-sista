@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2020 at 02:50 AM
+-- Generation Time: Nov 16, 2020 at 06:13 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -187,15 +187,16 @@ CREATE TABLE `tbl_pengajuan_seminar` (
   `jumlah_nilai_E` varchar(2) NOT NULL,
   `ipk` varchar(5) NOT NULL,
   `judul_skripsi` varchar(255) NOT NULL,
-  `status` varchar(15) DEFAULT NULL
+  `status` varchar(15) DEFAULT NULL,
+  `komentar_pengajuan_seminar` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_pengajuan_seminar`
 --
 
-INSERT INTO `tbl_pengajuan_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`) VALUES
-(13, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'nyoba pengajuan seminar', NULL);
+INSERT INTO `tbl_pengajuan_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`, `komentar_pengajuan_seminar`) VALUES
+(13, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'nyoba pengajuan seminar', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -214,15 +215,16 @@ CREATE TABLE `tbl_pengajuan_sidang` (
   `jumlah_nilai_E` varchar(2) NOT NULL,
   `ipk` varchar(5) NOT NULL,
   `judul_skripsi` varchar(255) NOT NULL,
-  `status` varchar(15) DEFAULT NULL
+  `status` varchar(15) DEFAULT NULL,
+  `komentar_pengajuan_sidang` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_pengajuan_sidang`
 --
 
-INSERT INTO `tbl_pengajuan_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`) VALUES
-(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'nyoba pengajuan sidang', NULL);
+INSERT INTO `tbl_pengajuan_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `jumlah_nilai_D`, `jumlah_nilai_E`, `ipk`, `judul_skripsi`, `status`, `komentar_pengajuan_sidang`) VALUES
+(3, 'P Mahardika', 'sista@unjani.com', '3411171100', '16', '130', '2', '0', '3.3', 'nyoba pengajuan sidang', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -322,15 +324,16 @@ CREATE TABLE `tbl_verifikasi_daftarta2` (
   `pembimbing_2` varchar(10) NOT NULL,
   `khs` varchar(10) NOT NULL DEFAULT 'khs',
   `krs` varchar(10) NOT NULL DEFAULT 'krs',
-  `status` varchar(10) DEFAULT NULL
+  `status` varchar(10) DEFAULT NULL,
+  `komentar_ta2` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_verifikasi_daftarta2`
 --
 
-INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`) VALUES
-(18, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'Mencoba daftar TA', 'THP', 'ECD', 'khs', 'krs', NULL);
+INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`, `komentar_ta2`) VALUES
+(18, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'Mencoba daftar TA', 'THP', 'ECD', 'khs', 'krs', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -363,15 +366,16 @@ CREATE TABLE `tbl_verifikasi_seminar` (
   `draft_laporan` varchar(255) NOT NULL,
   `khs` varchar(255) NOT NULL,
   `sertifikat` varchar(255) NOT NULL,
-  `status` varchar(20) DEFAULT NULL
+  `status` varchar(20) DEFAULT NULL,
+  `komentar_seminar` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_verifikasi_seminar`
 --
 
-INSERT INTO `tbl_verifikasi_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `jml_bimbingan1`, `jml_bimbingan2`, `pelunasan`, `bukti_lunas`, `matkul_sedang_diambil`, `draft_laporan`, `khs`, `sertifikat`, `status`) VALUES
-(8, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'nyoba persetujuan seminar', 'ADK', 'ECD', '23', '2', 'Lunas', 'KRS1.PNG', 'ECD', 'KRS1.PNG', 'KRS1.PNG', 'KRS1.PNG', NULL);
+INSERT INTO `tbl_verifikasi_seminar` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `jml_bimbingan1`, `jml_bimbingan2`, `pelunasan`, `bukti_lunas`, `matkul_sedang_diambil`, `draft_laporan`, `khs`, `sertifikat`, `status`, `komentar_seminar`) VALUES
+(8, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'nyoba persetujuan seminar', 'ADK', 'ECD', '23', '2', 'Lunas', 'KRS1.PNG', 'ECD', 'KRS1.PNG', 'KRS1.PNG', 'KRS1.PNG', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -403,15 +407,16 @@ CREATE TABLE `tbl_verifikasi_sidang` (
   `nilai_kosong` varchar(255) NOT NULL,
   `draft_laporan` varchar(255) NOT NULL,
   `sertifikat` varchar(255) NOT NULL,
-  `status` int(11) DEFAULT NULL
+  `status` int(11) DEFAULT NULL,
+  `komentar_sidang` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_verifikasi_sidang`
 --
 
-INSERT INTO `tbl_verifikasi_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `judul_skripsi`, `kd_pembimbing1`, `kd_pembimbing2`, `kd_penguji1`, `kd_penguji2`, `izin_maju_p1`, `bukti_izin_p1`, `izin_maju_p2`, `bukti_izin_p2`, `izin_maju_r1`, `bukti_izin_r1`, `izin_maju_r2`, `bukti_izin_r2`, `link_seminar`, `pinjam_perpus`, `khs`, `nilai_kosong`, `draft_laporan`, `sertifikat`, `status`) VALUES
-(3, 'P Mahardika', 'sista@unjani.com', '3411171100', 'nyoba persetujuan tugas akhir', 'FZR', 'EKP', 'FZR', 'FZR', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'asdasdsad', 'status.PNG', 'status.PNG', 'asdads', 'status.PNG', 'status.PNG', NULL);
+INSERT INTO `tbl_verifikasi_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `judul_skripsi`, `kd_pembimbing1`, `kd_pembimbing2`, `kd_penguji1`, `kd_penguji2`, `izin_maju_p1`, `bukti_izin_p1`, `izin_maju_p2`, `bukti_izin_p2`, `izin_maju_r1`, `bukti_izin_r1`, `izin_maju_r2`, `bukti_izin_r2`, `link_seminar`, `pinjam_perpus`, `khs`, `nilai_kosong`, `draft_laporan`, `sertifikat`, `status`, `komentar_sidang`) VALUES
+(3, 'P Mahardika', 'sista@unjani.com', '3411171100', 'nyoba persetujuan tugas akhir', 'FZR', 'EKP', 'FZR', 'FZR', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'Ya', 'status.PNG', 'asdasdsad', 'status.PNG', 'status.PNG', 'asdads', 'status.PNG', 'status.PNG', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -449,10 +454,10 @@ INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activ
 (1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
 (5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605489888, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
-(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605488108, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
-(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605438099, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
-(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605455648, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605494805, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605492636, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
+(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605493841, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
+(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605492676, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
 

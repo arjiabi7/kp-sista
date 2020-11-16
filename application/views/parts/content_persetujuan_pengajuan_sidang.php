@@ -23,7 +23,7 @@
 									<th>NIM</th>
 									<th>Nama</th>
 									<th>Status Persetujuan</th>
-												
+									<th>Komentar dari pembimbing</th>			
 								</tr>
 							</thead>
 							<tbody>
@@ -34,12 +34,23 @@
 									
 									<?php
 								
-								 if($this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status == NULL){
+								 	if($this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status == NULL){
 										echo "Diproses";
 									}else{
 										echo $this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status;
 									}
-								?></th>
+								?>
+								</th>
+								<th>
+									<?php
+								
+								 	if($this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->komentar_pengajuan_sidang == NULL){
+										echo "-";
+									}else{
+										echo $this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->komentar_pengajuan_sidang;
+									}
+									?>
+								</th>
 							</tr>
 							</tbody>
 						</table>

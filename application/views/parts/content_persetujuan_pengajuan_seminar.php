@@ -23,7 +23,7 @@
 									<th>NIM</th>
 									<th>Nama</th>
 									<th>Status Persetujuan</th>
-												
+									<th>Komentar dari pembimbing</th>			
 								</tr>
 							</thead>
 							<tbody>
@@ -38,7 +38,16 @@
 										echo $this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->status;
 									}?></th>
 
-							
+								<th>
+									<?php
+								
+								 	if($this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->komentar_pengajuan_seminar == NULL){
+										echo "-";
+									}else{
+										echo $this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->komentar_pengajuan_seminar;
+									}
+									?>
+								</th>
 							</tr>
 							</tbody>
 						</table>
