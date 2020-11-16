@@ -27,25 +27,25 @@
         <div class="row">
           <div class="form-group col-lg-5">
             <label for="nama">Nama Lengkap</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>" >
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>" readonly>
           </div>
           <div class="form-group col-lg-3">
             <label>NIM</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>" readonly>
           </div>
           <div class="form-group col-lg-2">
             <label>Semester</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>" readonly>
           </div>
           <div class="form-group col-lg-2">
             <label>Peminatan</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>" readonly>
           </div>
         </div>
         <div class="row mt-3">
           <div class="form-group col-lg-12 text-center">
             <label>Judul Penelitian Tugas Akhir</label>
-            <textarea style="height: 100px;" class="form-control text-center border-top-0 border-right-0 border-left-0"><?=$this->ion_auth->gabung_tabel_userVerifikasiSeminar()->row()->judul_skripsi;?></textarea>
+            <textarea style="height: 100px;" class="form-control text-center border-top-0 border-right-0 border-left-0" readonly><?=$this->ion_auth->gabung_tabel_userVerifikasiSeminar()->row()->judul_skripsi;?></textarea>
           </div>
         </div>
         
@@ -55,29 +55,29 @@
         <div class="row">
           <div class="form-group col-lg-12 text-center">
             <label>Pemahaman Teori, Metode Penelitian, Konsep hingga Pengujian</label>
-            <input type="text" class="form-control text-center border-top-0 border-right-0 border-left-0">
-            <textarea style="height: 150px;" class="form-control"></textarea>
+            <input type="text" class="form-control text-center border-top-0 border-right-0 border-left-0" readonly>
+            <textarea style="height: 150px;" class="form-control" readonly></textarea>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-lg-12 text-center">
             <label>Pemahaman Kebutuhan dan Permasalahan Perancangan</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0">
-            <textarea style="height: 150px;" class="form-control"></textarea>
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" readonly>
+            <textarea style="height: 150px;" class="form-control" readonly></textarea>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-lg-12 text-center">
             <label>Pemahaman Pembuatan Perangkat Lunak</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0">
-            <textarea style="height: 150px;" class="form-control"></textarea>
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" readonly>
+            <textarea style="height: 150px;" class="form-control" readonly></textarea>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-lg-12 text-center">
             <label>Kelayakan Mahasiswa Maju ke Sidang</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0">
-            <textarea style="height: 150px;" class="form-control"></textarea>
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" readonly>
+            <textarea style="height: 150px;" class="form-control" readonly></textarea>
           </div>
         </div>
       </form>

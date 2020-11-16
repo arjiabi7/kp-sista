@@ -27,25 +27,25 @@
         <div class="row">
           <div class="form-group col-lg-5">
             <label for="nama">Nama Lengkap</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?>" readonly>
           </div>
           <div class="form-group col-lg-3">
             <label>NIM</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->nim;?>" readonly>
           </div>
           <div class="form-group col-lg-2">
             <label>Semester</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->semester;?>" readonly>
           </div>
           <div class="form-group col-lg-2">
             <label>Peminatan</label>
-            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>">
+            <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel()->row()->peminatan;?>" readonly>
           </div>
         </div>
         <div class="row mt-3">
           <div class="form-group col-lg-12 text-center">
             <label>Judul Penelitian Tugas Akhir</label>
-            <textarea style="height: 100px;" class="form-control text-center border-top-0 border-right-0 border-left-0"><?=$this->ion_auth->gabung_tabel_userVerifikasiSeminar()->row()->judul_skripsi;?></textarea>
+            <textarea style="height: 100px;" class="form-control text-center border-top-0 border-right-0 border-left-0" readonly><?=$this->ion_auth->gabung_tabel_userVerifikasiSeminar()->row()->judul_skripsi;?></textarea>
           </div>
         </div>
         <div class="form-group text-center mt-3 pb-3 pt-2">
@@ -56,7 +56,7 @@
             <label>MATERI (ISI) PENELITIAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai1" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai1" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -64,7 +64,7 @@
             <label>PEMAHAMAN TERHADAP TEORI PENUNJANG & PENELITIAN YANG DIKERJAKAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai2" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai2" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -72,7 +72,7 @@
             <label>PENCAPAIAN TARGET</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai3" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai3" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -80,7 +80,7 @@
             <label>ASPEK KEDISIPLINAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai4" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai4" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-group text-center mt-3 pb-3 pt-2">
@@ -91,7 +91,7 @@
             <label>PEMAHAMAN PENELITIAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai5" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai5" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -99,7 +99,7 @@
             <label>KEDALAMAN TEORI KEILMUAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai6" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai6" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -107,7 +107,7 @@
             <label>METODE PENELITIAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai7" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai7" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -115,7 +115,7 @@
             <label>ANALISIS HASIL PENELITIAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai8" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai8" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -123,7 +123,7 @@
             <label for="nilai9">TEKNIK PRESENTASI</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai9" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai9" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -131,7 +131,7 @@
             <label for="nilai10">TEKNIK PENULISAN</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai10" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai10" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-row">
@@ -139,12 +139,12 @@
             <label for="nilai11">PEMAHAMAN PENGEMBANGAN PERANGKAT LUNAK</label>
           </div>
           <div class="form-group col-md-2">
-            <input type="text" class="form-control text-center" id="nilai11" maxlength="2" onkeypress="return Angkasaja(event)" required>
+            <input type="text" class="form-control text-center" id="nilai11" maxlength="2" onkeypress="return Angkasaja(event)" readonly>
           </div>
         </div>
         <div class="form-group text-center">
           <label><b>CATATAN DAN SARAN</b></label>
-          <textarea class="form-control text-center" style="height: 200px;"></textarea>
+          <textarea class="form-control text-center" style="height: 200px;" readonly></textarea>
         </div>
       </form>
       </div>
