@@ -36,7 +36,7 @@
         <tbody>
             <?php 
                 $no = 1;
-                foreach($pengajuan_sidang as $row)
+                foreach($pengajuan_seminar as $row)
                 {
                     ?>
                     <tr>

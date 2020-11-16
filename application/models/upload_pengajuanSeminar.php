@@ -22,6 +22,11 @@ class upload_pengajuanSeminar extends CI_Model
     
     $this->db->insert('tbl_pengajuan_seminar', $data);
   }
+private $table = "tbl_pengajuan_seminar";
+  public function tampilpengajuanseminar()
+    {
+        return $this->db->get($this->table)->result();
+    }
 }
 
 ?>

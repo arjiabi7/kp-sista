@@ -23,6 +23,15 @@
 
   </head>
   <body class="mt-3">
+    <?php 
+        if(isset($error))
+        {
+            echo "ERROR UPLOAD : <br/>";
+            print_r($error);
+            echo "<hr/>";
+        }
+        ?>
+         <?php echo form_open("penguji/penguji/penilaian_seminar", array('enctype'=>'multipart/form-data')); ?>
     <div class="container p-5 mt-5 mb-5">
         <div class="card" style="border-radius: 10px;">
         <div class="card-header">
@@ -35,10 +44,10 @@
                     <hr style="border-width: 2px; width: 300px;">
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->userPenilaian_penguji()->row()->kd_penguji;?>" readonly>
+                    <input type="text" name="kd_penguji" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->userPenilaian_penguji()->row()->kd_penguji;?>" readonly>
                 </div>
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
+                    <select id="inputState" name="peran_dosen" class="form-control border-top-0 border-right-0 border-left-0">
                         <option selected>--Peran Dosen--</option>
                         <option>Pembimbing 1</option>
                         <option>Pembimbing 2</option>
@@ -53,72 +62,76 @@
             </div>
             <div class="row mt-4">
                 <div class="col-lg-6">
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi nama mahasiswa . . .">
+                    <input type="text" name="nama_lengkap" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi nama mahasiswa . . .">
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi NIM mahasiswa . . .">
+                    <input type="text" name="nim" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi NIM mahasiswa . . .">
                 </div>
+                
             </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <input type="email" name="email" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi e-mail . . .">
+                </div>
+                </div>
             <div class="row mt-5">
                 <div class="col-lg-12 text-center mb-4">
                     <h4>Penilaian Seminar</h4>
                     <hr style="border-width: 2px; width: 300px;">
                 </div>
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
+                    <select id="inputState" name="pemahaman_teori" class="form-control border-top-0 border-right-0 border-left-0">
                         <option selected>--Pemahaman Teori, Metode Penelitian, Konsep hingga Pengujian--</option>
                         <option>Paham</option>
                         <option>Tidak</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
+                    <textarea class="form-control" name="komentar_pemahaman_teori" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
+                    <select id="inputState" name="pemahaman_kebutuhan" class="form-control border-top-0 border-right-0 border-left-0">
                         <option selected>--Pemahaman Kebutuhan dan Permasalahan Perancangan Sistem--</option>
                         <option>Paham</option>
                         <option>Tidak</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
+                    <textarea class="form-control" name="komentar_pemahaman_kebutuhan" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
+                    <select id="inputState" name="pemahaman_pl" class="form-control border-top-0 border-right-0 border-left-0">
                         <option selected>--Pemahaman Pembuatan Perangkat Lunak--</option>
                         <option>Paham</option>
                         <option>Tidak</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
+                    <textarea class="form-control" name="komentar_pemahaman_pl" id="exampleFormControlTextarea1" rows="3" placeholder="Komentar..."></textarea>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
+                    <select id="inputState" name="maju_sidang" class="form-control border-top-0 border-right-0 border-left-0">
                         <option selected>--Kelayakan Mahasiswa Maju ke Sidang--</option>
                         <option>Maju</option>
                         <option>Tidak</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Pernyataan..."></textarea>
+                    <textarea class="form-control" name="komentar_maju_sidang" id="exampleFormControlTextarea1" rows="3" placeholder="Pernyataan..."></textarea>
                 </div>
             </div>
         </form>
         <div class="card-footer text-right">
-            <button class="btn btn-icon btn-warning" type="button">
-                <span class="btn-inner--icon"><i class="ni ni-send"></i></span>
-                <span class="btn-inner--text">Kirim</span>
-            </button>
+            <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
         </div>
         </div>
+        <?php echo form_close(); ?>
     </div>
     </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

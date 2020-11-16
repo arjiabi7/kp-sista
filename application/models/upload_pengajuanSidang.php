@@ -22,6 +22,12 @@ class upload_pengajuanSidang extends CI_Model
     
     $this->db->insert('tbl_pengajuan_sidang', $data);
   }
+
+  private $table = "tbl_pengajuan_sidang";
+  public function tampilpengajuansidang()
+    {
+        return $this->db->get($this->table)->result();
+    }
 }
 
 ?>
