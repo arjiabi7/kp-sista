@@ -9,7 +9,12 @@
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
 	<title>Jadwal Seminar & Plot Penguji</title> 
 </head>
-<body class="mt-3" style="margin-bottom: 100px;">
+<style type="text/css">
+	.body_content{
+		background-image: url('<?php echo base_url();?>assets/img/carousel/background.jpg');
+	}
+</style>
+<body class="mt-3 body_content" style="margin-bottom: 100px;">
 	<center>
 	<div class="container-fluid pb-5 pt-5">
 		<br>

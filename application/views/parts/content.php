@@ -9,7 +9,13 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
 	<title>Tutorial Membuat Carousel Dengan Bootstrap 4 - www.malasngoding.com</title> 
 </head> 
-<body class="mt-5" style="margin-bottom: 100px;"> 
+<style type="text/css">
+	.body_content{
+		background-image: url('<?php echo base_url();?>assets/img/carousel/background.jpg');
+	}
+</style>
+
+<body class="mt-5 body_content" style="margin-bottom: 100px;"> 
  	<div class="container-fluid pb-5">
  	<br><center>
 	<div class="col-md-8 col-md-offset-2">

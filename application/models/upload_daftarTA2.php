@@ -9,6 +9,7 @@ class upload_daftarTA2 extends CI_Model
     $config['allowed_types'] = 'jpg|png|jpeg|pdf';
     $config['max_size']  = '2048';
     $config['remove_space'] = TRUE;
+    // $config['file_name'] =  ('krs_',$_SESSION['email']);
   
     $this->load->library('upload', $config); // Load konfigurasi uploadnya
     if($this->upload->do_upload('khs') && $this->upload->do_upload('krs')){ // Lakukan upload dan Cek jika proses upload berhasil
@@ -21,6 +22,19 @@ class upload_daftarTA2 extends CI_Model
       $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
       return $return;
     }
+  }
+
+  private $table = "tbl_verifikasi_daftarta2";
+ 
+    public function tampilta2()
+    {
+        return $this->db->get($this->table)->result();
+    }
+
+     function download($id)
+  {
+    $data = $this->db->get_where('tbl_verifikasi_daftarta2',['khs'=>$id])->row();
+    force_download('upload_daftarTA2/'.$data->khs,NULL);
   }
 
  
@@ -43,7 +57,8 @@ class upload_daftarTA2 extends CI_Model
 			'judul_skripsi' => $this->input->post('judul_skripsi'),
 			'pembimbing_1' => $this->input->post('pembimbing_1'),
 			'pembimbing_2' => $this->input->post('pembimbing_2')
-
+     
+  
     );
     
     $this->db->insert('tbl_verifikasi_daftarta2', $data);

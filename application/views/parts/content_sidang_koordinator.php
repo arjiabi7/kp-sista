@@ -16,8 +16,10 @@
     <table id="example" class="table table-striped table-bordered text-center" style="width:100%">
         <thead>
             <tr>
+                <th>No.</th>
 			 	<th>Nama</th>
 			 	<th>NIM</th>
+                <th>JUDUL</th>
 			 	<th>Pembimbing 1</th>
 			 	<th>Pembimbing 2</th>
 			 	<th>Penguji 1</th>
@@ -35,30 +37,78 @@
  			</tr>
         </thead>
         <tbody>
-            <tr>
- 				<td>Arji Abiyoga</td>
- 				<td>3411171133</td>
- 				<td>WNI</td>
- 				<td>ADK</td>
- 				<td>WNI</td>
- 				<td>ADK</td>
- 				<td><a href="#">Izin.txt</a></td>
- 				<td><a href="">http://</a></td>
- 				<td><a href="#">Pelunasan.txt</a></td>
- 				<td><a href="#">Bebas.txt</a></td>
- 				<td><a href="#">KHS.txt</a></td>
- 				<td>Belum ambil</td>
- 				<td><a href="#">Laporan.txt</a></td>
- 				<td><a href="#">Sertifikat.txt</a></td>
- 				<td>
-                <button type="button" class="btn btn-success btn-sm" data-toggle="button" aria-pressed="false">
-                <i class="ni ni-check-bold"></i></button>
+             <?php 
+                $no = 1;
+                foreach($daftar_sidang as $row)
+                {
+                    ?>
+                    <tr>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo$row->nama_lengkap;?></td>
+                        <td><?php echo$row->nim;?></td>
+                        <td><?php echo$row->judul_skripsi;?></td>
+                         <td><?php echo$row->kd_pembimbing1;?></td>
+                        <td><?php echo$row->kd_pembimbing2;?></td>
+                         <td><?php echo$row->kd_penguji1;?></td>
+                        <td><?php echo$row->kd_penguji2;?></td>
+                        <td><a href="<?php echo base_url();?>upload_daftarSidang">Bukti Izin.jpg</a></td>
+                        <td><?php echo$row->link_seminar;?></td>
+                        <td><a href="<?php echo base_url();?>upload_daftarSidang">Bukti Lunas.jpg</a></td>
+                        <td><a href="<?php echo base_url();?>upload_daftarSidang">Surat Pinjam Perpus.jpg</a></td>
+                         <td><a href="<?php echo base_url();?>upload_daftarSidang">KHS.pdf</a></td>
+                        <td><?php echo$row->nilai_kosong;?></td>
+                        <td><a href="<?php echo base_url();?>upload_daftarSidang">Laporan TA.pdf</a></td>
+                        <td><a href="<?php echo base_url();?>upload_daftarTA2">Sertifikat.pdf</a></td>
+                         <td>
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-check-bold"></i><span class="nav-link-text"></span></button>
+                             
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                                    
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Komentar untuk mahasiswa</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tuliskan komentar..."></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </td>
                 <td>
-                <button type="button" class="btn btn-danger btn-sm" data-toggle="button" aria-pressed="false">
-                <i class="ni ni-fat-remove"></i></button>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-fat-remove"></i><span class="nav-link-text"></span></button>
+                           
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                                    
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Komentar untuk mahasiswa</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tuliskan komentar..."></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </td>
- 			</tr>
+                    </tr>
+                <?php }  ?>
         </tbody>
     </table>
     </div>

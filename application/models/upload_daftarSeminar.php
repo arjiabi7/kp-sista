@@ -25,7 +25,12 @@ class upload_daftarSeminar extends CI_Model
   }
 
  
-
+ private $table = "tbl_verifikasi_seminar";
+ 
+    public function tampilseminar()
+    {
+        return $this->db->get($this->table)->result();
+    }
 
   public function save($upload){
     $data = array(

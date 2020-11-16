@@ -10,8 +10,9 @@ class koordinator extends CI_Controller
         parent::__construct();
         
         $this->load->helper('form');
-      
-       
+       $this->load->model('upload_daftarTA2');
+       $this->load->model('upload_daftarSeminar');
+       $this->load->model('upload_daftarSidang');
 		$this->load->database();
 		$this->load->library(['ion_auth', 'form_validation']);
 		$this->load->helper(['url', 'language']);
@@ -22,6 +23,9 @@ class koordinator extends CI_Controller
     }
 
 	function daftar_TA2(){
+		$data['daftar_TA2']='data';
+		$data['daftar_TA2'] = $this->upload_daftarTA2->tampilta2();
+
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -30,11 +34,14 @@ class koordinator extends CI_Controller
 		
 		else
 		{
-			$this->load->view('koordinator/home_koordinator');
+			$this->load->view('koordinator/home_koordinator',$data);
+
 		}
     }
 
     function daftar_seminar_koordinator(){
+    	$data['daftar_seminar']='data';
+		$data['daftar_seminar'] = $this->upload_daftarSeminar->tampilseminar();
     	   if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -43,11 +50,13 @@ class koordinator extends CI_Controller
 		
 		else
 		{
-			$this->load->view('koordinator/menu_daftarSeminar_koordinator');
+			$this->load->view('koordinator/menu_daftarSeminar_koordinator',$data);
 		}
     }
 
     function daftar_sidang_koordinator(){
+    	$data['daftar_sidang']='data';
+		$data['daftar_sidang'] = $this->upload_daftarSidang->tampilsidang();
     	 if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -56,9 +65,11 @@ class koordinator extends CI_Controller
 		
 		else
 		{
-			$this->load->view('koordinator/menu_daftarSidang_koordinator');
+			$this->load->view('koordinator/menu_daftarSidang_koordinator',$data);
 		}
     }
+
+   
 
     
 }

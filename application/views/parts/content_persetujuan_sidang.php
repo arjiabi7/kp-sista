@@ -1,4 +1,9 @@
-<body class="mt-5" style="margin-bottom: 100px;">
+<style type="text/css">
+	.body_content{
+		background-image: url('<?php echo base_url();?>assets/img/carousel/background.jpg');
+	}
+</style>
+<body class="mt-5 body_content" style="margin-bottom: 100px;">
 <div class="container-fluid pb-5 pt-5">
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">

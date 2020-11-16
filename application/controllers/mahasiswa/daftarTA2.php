@@ -24,7 +24,7 @@ class daftarTA2 extends CI_Controller
 
 	function index(){
        // $data['daftar_ta2'] = $this->m_data->tampil_data()->result();
-		$data['berkas'] = $this->db->get('tbl_verifikasi_daftarta2');
+		$data['khs'] = $this->db->get('tbl_verifikasi_daftarta2');
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2020 at 06:13 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Generation Time: Nov 16, 2020 at 11:41 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -333,7 +334,10 @@ CREATE TABLE `tbl_verifikasi_daftarta2` (
 --
 
 INSERT INTO `tbl_verifikasi_daftarta2` (`id`, `nama_lengkap`, `email`, `nim`, `no_hp`, `semester`, `jk`, `peminatan`, `jumlah_sks_proses`, `jumlah_sks_lulus`, `ipk`, `jumlah_nilai_D`, `jumlah_nilai_E`, `judul_skripsi`, `pembimbing_1`, `pembimbing_2`, `khs`, `krs`, `status`, `komentar_ta2`) VALUES
-(18, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'Mencoba daftar TA', 'THP', 'ECD', 'khs', 'krs', NULL, '');
+(18, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'Mencoba daftar TA', 'THP', 'ECD', 'khs', 'krs', NULL, ''),
+(19, 'Arji wakwaw', 'arjiabiyoga99@gmail.com', '3411171133', '08928932', '7', 'L', 'DSE', '16', '130', '3.5', '2', '0', 'MEMBUAT ODADING', 'YHC', 'FZR', 'khs', 'krs', NULL, NULL),
+(20, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'asdsadsad', 'ADK', 'ECD', 'krs_this-i', 'krs', NULL, NULL),
+(21, 'P Mahardika', 'sista@unjani.com', '3411171100', '089698762991', '7', 'L', 'DSE', '16', '130', '3.3', '2', '0', 'asdsad', 'ADK', 'ADK', 'krs__this-', 'krs', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -454,9 +458,9 @@ INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activ
 (1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
 (5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605494805, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605521144, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
 (9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605492636, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
-(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605493841, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
+(10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605521816, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
 (11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605492676, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
@@ -671,7 +675,7 @@ ALTER TABLE `tbl_seminar`
 -- AUTO_INCREMENT for table `tbl_verifikasi_daftarta2`
 --
 ALTER TABLE `tbl_verifikasi_daftarta2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_verifikasi_seminar`

@@ -24,7 +24,12 @@ class upload_daftarSidang extends CI_Model
     }
   }
 
+ private $table = "tbl_verifikasi_sidang";
  
+    public function tampilsidang()
+    {
+        return $this->db->get($this->table)->result();
+    }
 
 
   public function save($upload){

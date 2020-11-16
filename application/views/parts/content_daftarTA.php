@@ -8,7 +8,12 @@
         }
         ?>
          <?php echo form_open("mahasiswa/daftarTA2/tambah", array('enctype'=>'multipart/form-data')); ?>
-<div class="container-fluid pb-5 pt-5">
+         <style type="text/css">
+	.body_content{
+		background-image: url('<?php echo base_url();?>assets/img/carousel/background.jpg');
+	}
+</style>
+<div class="container-fluid pb-5 pt-5 body_content">
 	<div class="col-xl">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
