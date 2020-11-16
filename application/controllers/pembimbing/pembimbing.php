@@ -27,6 +27,7 @@ class pembimbing extends CI_Controller
     function pengajuan_seminar(){
     	
 		$data['pengajuan_seminar'] = $this->upload_pengajuanSeminar->tampilpengajuanseminar();
+		$data['data']=$this->upload_pengajuanSeminar->show_barang();
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -39,8 +40,19 @@ class pembimbing extends CI_Controller
 		}
     }
 
+     function edit_pengajuan_seminar(){
+		$id=$this->input->post('id');
+        $status=$this->input->post('status');
+        $komentar_pengajuan_seminar=$this->input->post('komentar_pengajuan_seminar');
+       
+        $this->upload_pengajuanSeminar->edit_barang($id,$status,$komentar_pengajuan_seminar);
+        redirect('pembimbing/pembimbing/pengajuan_seminar');
+
+    }
+
     function pengajuan_sidang(){
     	$data['pengajuan_sidang'] = $this->upload_pengajuanSidang->tampilpengajuansidang();
+    	$data['data']=$this->upload_pengajuanSidang->show_barang();
         if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -51,6 +63,16 @@ class pembimbing extends CI_Controller
 		{
 			$this->load->view('pembimbing/menu_pengajuanSidang',$data);
 		}
+    }
+
+     function edit_pengajuan_sidang(){
+		$id=$this->input->post('id');
+        $status=$this->input->post('status');
+        $komentar_pengajuan_sidang=$this->input->post('komentar_pengajuan_sidang');
+       
+        $this->upload_pengajuanSidang->edit_barang($id,$status,$komentar_pengajuan_sidang);
+        redirect('pembimbing/pembimbing/pengajuan_sidang');
+
     }
 
 	function penilaian_seminar(){

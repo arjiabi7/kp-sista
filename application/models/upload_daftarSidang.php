@@ -31,6 +31,15 @@ class upload_daftarSidang extends CI_Model
         return $this->db->get($this->table)->result();
     }
 
+     function show_barang(){
+        $hasil=$this->db->query("SELECT * FROM tbl_verifikasi_sidang");
+        return $hasil;
+    }
+ function edit_barang($id,$status,$komentar_sidang){
+        $hasil=$this->db->query("UPDATE tbl_verifikasi_sidang SET status='$status',komentar_sidang='$komentar_sidang' WHERE id='$id'");
+        return $hsl;
+    }
+
 
   public function save($upload){
     $data = array(

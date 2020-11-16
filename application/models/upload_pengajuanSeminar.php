@@ -6,6 +6,14 @@ class upload_pengajuanSeminar extends CI_Model
 {
 	
 
+     function show_barang(){
+        $hasil=$this->db->query("SELECT * FROM tbl_pengajuan_seminar");
+        return $hasil;
+    }
+ function edit_barang($id,$status,$komentar_pengajuan_seminar){
+        $hasil=$this->db->query("UPDATE tbl_pengajuan_seminar SET status='$status',komentar_pengajuan_seminar='$komentar_pengajuan_seminar' WHERE id='$id'");
+        return $hsl;
+    }
 
 	 public function save(){
     $data = array(

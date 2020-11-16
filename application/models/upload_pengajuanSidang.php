@@ -6,6 +6,14 @@ class upload_pengajuanSidang extends CI_Model
 {
 	
 
+function show_barang(){
+        $hasil=$this->db->query("SELECT * FROM tbl_pengajuan_sidang");
+        return $hasil;
+    }
+ function edit_barang($id,$status,$komentar_pengajuan_sidang){
+        $hasil=$this->db->query("UPDATE tbl_pengajuan_sidang SET status='$status',komentar_pengajuan_sidang='$komentar_pengajuan_sidang' WHERE id='$id'");
+        return $hsl;
+    }
 
 	 public function save(){
     $data = array(

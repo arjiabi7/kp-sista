@@ -32,6 +32,15 @@ class upload_daftarSeminar extends CI_Model
         return $this->db->get($this->table)->result();
     }
 
+     function show_barang(){
+        $hasil=$this->db->query("SELECT * FROM tbl_verifikasi_seminar");
+        return $hasil;
+    }
+ function edit_barang($id,$status,$komentar_seminar){
+        $hasil=$this->db->query("UPDATE tbl_verifikasi_seminar SET status='$status',komentar_seminar='$komentar_seminar' WHERE id='$id'");
+        return $hsl;
+    }
+
   public function save($upload){
     $data = array(
       'nama_lengkap' => $this->input->post('nama_lengkap'),

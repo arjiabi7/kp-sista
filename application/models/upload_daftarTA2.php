@@ -37,8 +37,14 @@ class upload_daftarTA2 extends CI_Model
     force_download('upload_daftarTA2/'.$data->khs,NULL);
   }
 
- 
-
+ function show_barang(){
+        $hasil=$this->db->query("SELECT * FROM tbl_verifikasi_daftarta2");
+        return $hasil;
+    }
+ function edit_barang($id,$status,$komentar_ta2){
+        $hasil=$this->db->query("UPDATE tbl_verifikasi_daftarta2 SET status='$status',komentar_ta2='$komentar_ta2' WHERE id='$id'");
+        return $hsl;
+    }
 
   public function save($upload){
     $data = array(

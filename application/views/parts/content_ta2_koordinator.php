@@ -20,6 +20,7 @@
         <thead>
             <tr>
                 <th>No.</th>
+                <th>id.</th>
                 <th>Nama</th>
                 <th>NIM</th>
                 <th>Jumlah SKS</th>
@@ -34,83 +35,94 @@
                 <th>KHS</th>
                 <th>KRS</th>
                 <th>Lanjut TA</th>
-                <th>Tidak Lanjut</th>
+          
             </tr>
         </thead>
         <tbody>
-            <?php 
+             <?php 
                 $no = 1;
-                foreach($daftar_TA2 as $row)
-                {
+                foreach($data->result_array() as $row)
+                :
+            $id=$row['id'];
+            $nama_lengkap=$row['nama_lengkap'];
+            $nim=$row['nim'];
+            $jumlah_sks_lulus=$row['jumlah_sks_lulus'];
+            $ipk=$row['ipk'];
+            $jumlah_nilai_D=$row['jumlah_nilai_D'];
+            $jumlah_nilai_E=$row['jumlah_nilai_E'];
+            $judul_skripsi=$row['judul_skripsi'];
+            $pembimbing_1=$row['pembimbing_1'];
+            $pembimbing_2=$row['pembimbing_2'];
                     ?>
                     <tr>
                         <td><?php echo $no++; ?></td>
-                        <td><?php echo$row->nama_lengkap;?></td>
-                        <td><?php echo$row->nim;?></td>
-                        <td><?php echo$row->jumlah_sks_lulus;?></td>
-                        <td><?php echo$row->ipk;?></td>
-                        <td><?php echo$row->jumlah_nilai_D;?></td>
-                        <td><?php echo$row->jumlah_nilai_E;?></td>
-                        <td><?php echo$row->judul_skripsi;?></td>
-                        <td><?php echo$row->pembimbing_1;?></td>
-                        <td><?php echo$row->pembimbing_2;?></td>
+                        <td><?php echo $id;?></td>
+                        <td><?php echo $nama_lengkap;?></td>
+                        <td><?php echo $nim;?></td>
+                        <td><?php echo$jumlah_sks_lulus;?></td>
+                        <td><?php echo$ipk;?></td>
+                        <td><?php echo$jumlah_nilai_D;?></td>
+                        <td><?php echo$jumlah_nilai_E;?></td>
+                        <td><?php echo$judul_skripsi;?></td>
+                        <td><?php echo$pembimbing_1;?></td>
+                        <td><?php echo$pembimbing_2;?></td>
                         <td><a href="<?php echo base_url();?>upload_daftarTA2">KHS</a></td>
                         <td><a href="<?php echo base_url();?>upload_daftarTA2">KRS</a></td>
-                        <td>
-                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-check-bold"></i><span class="nav-link-text"></span></button>
-                             
-                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                                    
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Komentar untuk mahasiswa</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tuliskan komentar..."></textarea>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                    <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalLong"><i class="ni ni-fat-remove"></i><span class="nav-link-text"></span></button>
-                           
-                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                                    
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Komentar untuk mahasiswa</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tuliskan komentar..."></textarea>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                    <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
+                                <td>
+                <a class="btn btn-xs btn-warning" data-toggle="modal" data-target="#modal_edit<?php echo $id;?>"> Verifikasi</a></td>
                     </tr>
-                    <?php
-                }
-            ?>
-            </tr>
-        </tbody>
+                <?php
+               endforeach;
+                ?>
+            </tbody>
     </table>
+          
+                <?php
+        foreach($data->result_array() as $row):
+           
+            $id=$row['id'];
+          
+            $status=$row['status'];
+            $komentar_ta2=$row['komentar_ta2'];
+          
+        ?>
+                    <div class="modal fade" id="modal_edit<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                         <form class="form-horizontal" method="post" action="<?php echo base_url().'index.php/koordinator/koordinator/edit_daftarTA2'?>">           
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Form Persetujuan & Komentar</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="ipk" name="id" value="<?php echo $id?>" class="form-control" required readonly>
+
+                                    <label class="form-control-label" for="kd_pem1">Persetujuan</label>
+                                                    <select class="form-control" name="status" id="status" value="<?php echo $status; ?>" required>
+                                                        <option>-</option>
+                                                        <option>SETUJU</option>
+                                                        <option>TIDAK</option>
+                                                       
+                                                    </select>
+                                                    <label class="form-control-label" for="kd_pem1">Komentar</label>
+                                    <textarea class="form-control" name="komentar_ta2" id="komentar_ta2" id="exampleFormControlTextarea1" value="<?php echo $komentar_ta2;?>" rows="3" placeholder="Tuliskan komentar..."></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </td>
+                 <?php endforeach;?>
+                    </tr>
+                    
+         
+      
     </div>
 </div>
 
