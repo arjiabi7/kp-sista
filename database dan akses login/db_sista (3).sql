@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 03:07 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Generation Time: Nov 16, 2020 at 02:50 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -228,6 +227,48 @@ INSERT INTO `tbl_pengajuan_sidang` (`id`, `nama_lengkap`, `email`, `nim`, `jumla
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_penilaian_seminar`
+--
+
+CREATE TABLE `tbl_penilaian_seminar` (
+  `id` int(11) NOT NULL,
+  `peran_dosen` varchar(15) NOT NULL,
+  `pemahaman_teori` varchar(500) NOT NULL,
+  `komentar_pemahaman_teori` varchar(500) NOT NULL,
+  `pemahaman_kebutuhan` varchar(500) NOT NULL,
+  `komentar_pemahaman_kebutuhan` varchar(500) NOT NULL,
+  `pemahaman_pl` varchar(500) NOT NULL,
+  `komentar_pemahaman_pl` varchar(500) NOT NULL,
+  `maju_sidang` varchar(500) NOT NULL,
+  `komentar_maju_sidang` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_penilaian_sidang`
+--
+
+CREATE TABLE `tbl_penilaian_sidang` (
+  `id` int(11) NOT NULL,
+  `peran_dosen` varchar(15) NOT NULL,
+  `materi_penilaian` varchar(2) NOT NULL,
+  `pemahaman_teori` varchar(2) NOT NULL,
+  `pemahaman_penelitian` varchar(2) NOT NULL,
+  `pencapaian_target` varchar(2) NOT NULL,
+  `aspek_kedisiplinan` varchar(2) NOT NULL,
+  `teori_keilmuan` varchar(2) NOT NULL,
+  `metode_penelitian` varchar(2) NOT NULL,
+  `analisis_penelitian` varchar(2) NOT NULL,
+  `teknik_presentasi` varchar(2) NOT NULL,
+  `teknik_penulisan` varchar(2) NOT NULL,
+  `pemahaman_software` varchar(2) NOT NULL,
+  `revisi_saran` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_seminar`
 --
 
@@ -408,10 +449,10 @@ INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activ
 (1, '127.0.0.1', 'administrator', '123123123', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1603263180, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'administrator', '$2y$12$XqhuVu4SxsKfewLgezJTBOpx.2cT5MxLTZV2cNebwJDkMvH8AUsQ6', 'dikaarji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1602832500, 1605259330, 1, 'Dika', 'Arji', 'Unjani', '081902060468'),
 (5, '::1', NULL, '$2y$10$vKeCuVJO9coW1vCw5eDm7eZUWXwWDGlLD8GvUDDKFeinZoBFUlC3q', 'arjiabiyoga99@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604304557, 1605247466, 1, 'arji', 'abiyoga', 'Unjani', '085176548790'),
-(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605438126, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
-(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605437821, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
+(8, '::1', NULL, '$2y$10$DzMaSJmMtvGfZj2jpbHhMu5tRUo/dztOQPVOoNWYwmzjGMlAr5ycy', 'sista@unjani.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1604851430, 1605489888, 1, 'Muhammad P', 'Mahardika', 'Unjani', '123123123123'),
+(9, '::1', NULL, '$2y$10$wEcGeZFZNbTvKDHfWg46L.cqQSM00mMIUHfuEDyFyybfdy6DmOGOu', 'pembimbing@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258309, 1605488108, 1, 'nyoba', 'pembimbing', 'Unjani', '081902060468'),
 (10, '::1', NULL, '$2y$10$DE5ondXLd7jxLeWTVI7kOelYMExvfx.roeX8ph7Lu89KirU2n81xG', 'koordinator@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605258973, 1605438099, 1, 'nyoba', 'koordinator', 'Unjani', '081902060468'),
-(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605377532, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
+(11, '::1', NULL, '$2y$10$KUvHyV/secTLbp4iqPts4ue5GOijMGrBbAta28BqrIaYH.LX5dysW', 'penguji@sista.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1605259370, 1605455648, 1, 'nyoba', 'Penguji', 'Unjani', '081902060468');
 
 -- --------------------------------------------------------
 
@@ -494,6 +535,18 @@ ALTER TABLE `tbl_pengajuan_seminar`
 -- Indexes for table `tbl_pengajuan_sidang`
 --
 ALTER TABLE `tbl_pengajuan_sidang`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_penilaian_seminar`
+--
+ALTER TABLE `tbl_penilaian_seminar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_penilaian_sidang`
+--
+ALTER TABLE `tbl_penilaian_sidang`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -590,6 +643,18 @@ ALTER TABLE `tbl_pengajuan_seminar`
 --
 ALTER TABLE `tbl_pengajuan_sidang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_penilaian_seminar`
+--
+ALTER TABLE `tbl_penilaian_seminar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_penilaian_sidang`
+--
+ALTER TABLE `tbl_penilaian_sidang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_seminar`

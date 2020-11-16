@@ -30,7 +30,7 @@ class pembimbing extends CI_Controller
 		
 		else
 		{
-			$this->load->view('pembimbing/menu_nilaiSeminar');
+			$this->load->view('pembimbing/menu_nilaiSeminar_pembimbing');
 		}
     }
 
@@ -43,7 +43,7 @@ class pembimbing extends CI_Controller
 		
 		else
 		{
-			$this->load->view('pembimbing/menu_nilaiSidang');
+			$this->load->view('pembimbing/menu_nilaiSidang_pembimbing');
 		}
     }
 

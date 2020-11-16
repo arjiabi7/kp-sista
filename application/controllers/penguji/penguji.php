@@ -30,7 +30,7 @@ class penguji extends CI_Controller
 		
 		else
 		{
-			$this->load->view('penguji/menu_nilaiSeminar');
+			$this->load->view('penguji/menu_nilaiSeminar_penguji');
 		}
     }
 
@@ -43,7 +43,7 @@ class penguji extends CI_Controller
 		
 		else
 		{
-			$this->load->view('penguji/menu_nilaiSidang');
+			$this->load->view('penguji/menu_nilaiSidang_penguji');
 		}
     }
 }

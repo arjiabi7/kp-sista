@@ -128,6 +128,19 @@ class seminar extends CI_Controller
 		}
     }
     
+    function cetak_seminar(){
+        if (!$this->ion_auth->logged_in())
+		{
+			// redirect them to the login page
+			redirect('auth/login', 'refresh');
+		}
+		
+		else
+		{
+			$this->load->view('form/form_penilaian_seminar');
+		}
+    }
+
 }
 
 ?>

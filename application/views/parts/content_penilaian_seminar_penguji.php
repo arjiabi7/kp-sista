@@ -35,27 +35,7 @@
                     <hr style="border-width: 2px; width: 300px;">
                 </div>
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--Identitas Dosen--</option>
-                        <option>AGK (412175878) Agus Komarudin, S.Kom., M.T.</option>
-                        <option>AIH (412180078) Asep Id Hadiana, S.Si., M.Kom.</option>
-                        <option>FKI (412100992) Fatan Kasyidi, S.Kom., M.T.</option>
-                        <option>FRU (412185888) Fajri Rakhmat Umbara, S.T., M.T.</option>
-                        <option>HAY (412198688) Herdi Ashaury, S.Kom., M.T.</option>
-                        <option>ISR (412196490) Irma Santikarama, S.Kom., M.T.</option>
-                        <option>PNS (412190585) Puspita Nurul Sabrina, S.Kom., M.T.</option>
-                        <option>RDI (412182990) Ridwan Ilyas, S.Kom., M.T.</option>
-                        <option>RZK (412174182) Rezki Yuniarti, S.Si., M.T.</option>
-                        <option>SGO (412103969) Sigit Anggoro, S.T., M.T.</option>
-                        <option>WNI (412176273) Wina Witanti, S.T., M.T.</option>
-                        <option>YHC (412166863) Yulison Herry C., S.T., M.T.</option>
-                        <option>THP (412166969) Tacbir Hendro Pudjiantoro, S.Si., M.T.</option>
-                        <option>FZR (412167079) Faiza Renaldi, S.T., M.Sc.</option>
-                        <option>ECD (412127670) Dr. Esmeralda C. Djamal, ST., MT.</option>
-                        <option>ADK (412116459) Dra. Ade Kania Ningsih, M.Stat.</option>
-                        <option>EKP (4122110561) Dr. Eddie Krishna Putra, Drs., M.T.</option>
-                        <option>GNA (412157175) Gunawan Abdillah, S.Si., M.Cs.</option>
-                    </select>
+                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->userPenilaian_penguji()->row()->kd_penguji;?>" readonly>
                 </div>
                 <div class="col-lg-6">
                     <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
@@ -73,28 +53,10 @@
             </div>
             <div class="row mt-4">
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--Nama Mahasiswa--</option>
-                        <option>FACHRY MUHAMMAD</option>
-                        <option>FAZRIN MULYAWAN</option>
-                        <option>MUHAMMAD FACHRY RAMADHAN</option>
-                        <option>MUHAMMAD RIVALDI IRAWAN</option>
-                        <option>ARI GUNAWAN</option>
-                        <option>REZA DWI PUTRA</option>
-                        <option>FAJAR TRESNAWIGUNA</option>
-                    </select>
+                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi nama mahasiswa . . .">
                 </div>
                 <div class="col-lg-6">
-                    <select id="inputState" class="form-control border-top-0 border-right-0 border-left-0">
-                        <option selected>--NIM--</option>
-                        <option>3411161092</option>
-                        <option>3411151100</option>
-                        <option>3411161094</option>
-                        <option>3411141011</option>
-                        <option>3411161067</option>
-                        <option>3411141139</option>
-                        <option>3411151137</option>
-                    </select>
+                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Isi NIM mahasiswa . . .">
                 </div>
             </div>
             <div class="row mt-5">

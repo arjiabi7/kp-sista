@@ -43,7 +43,7 @@
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/rekap_nilai_seminar"><i class="ni ni-archive-2 text-warning"></i> Unduh Hasil Seminar</a>
+      <a class="dropdown-item" href="<?php echo base_url().'index.php/mahasiswa/seminar/cetak_seminar' ?>"><i class="ni ni-archive-2 text-warning"></i> Cetak Hasil Seminar</a>
     </div>
   </div>
   <div class="dropdown">
@@ -55,7 +55,7 @@
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="https://www.malasngoding.com/category/codeigniter"><i class="ni ni-archive-2 text-warning"></i> Unduh Hasil Sidang</a>
+      <a class="dropdown-item" href="<?php echo base_url().'index.php/mahasiswa/sidang/cetak_sidang' ?>"><i class="ni ni-archive-2 text-warning"></i> Cetak Hasil Sidang</a>
     </div>
   </div>
 
