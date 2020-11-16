@@ -57,7 +57,7 @@
 				<tr>
 					<td>JUDUL</td>
 					<td>:</td>
-					                        <td> <?=$this->ion_auth->gabung_tabel_userSeminar()->row()->judul_skripsi;?></td>
+					                        <td> <?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->judul_skripsi;?></td>
 
 				</tr>
 			</table>

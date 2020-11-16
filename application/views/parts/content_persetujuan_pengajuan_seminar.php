@@ -37,8 +37,10 @@
 								<th><?=$this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->nim?></th>
 								<th><?=$this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->nama_lengkap?></th>
 								<th><?php
-								if($this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->status == NULL){
+									if($this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->status == NULL && $this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->komentar_pengajuan_seminar == NULL){
 										echo "Diproses";
+									}else if($this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->status == NULL && $this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->komentar_pengajuan_seminar != NULL){
+										echo "Disetujui";
 									}else{
 										echo $this->ion_auth->gabung_tabel_userPengajuanSeminar()->row()->status;
 									}?></th>

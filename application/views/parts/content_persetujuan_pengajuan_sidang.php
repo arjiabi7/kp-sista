@@ -39,8 +39,10 @@
 									
 									<?php
 								
-								 	if($this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status == NULL){
+								 	if($this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status == NULL && $this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->komentar_pengajuan_sidang == NULL){
 										echo "Diproses";
+									}else if($this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status == NULL && $this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->komentar_pengajuan_sidang != NULL){
+										echo "Disetujui";
 									}else{
 										echo $this->ion_auth->gabung_tabel_userPengajuanSidang()->row()->status;
 									}

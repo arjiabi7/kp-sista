@@ -133,61 +133,21 @@
 							            	<div class="col-lg-12">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="judul_ta">Judul Tugas Akhir</label>
-												    <textarea class="form-control text-center" id="judul_skripsi" name="judul_skripsi" required></textarea>
+												    <textarea class="form-control text-center" id="judul_skripsi" name="judul_skripsi" required readonly><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->judul_skripsi;?></textarea>
 					                      		</div>
 					                   		</div>
 				                   		</div>
 				                   		<div class="row">
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="kd_pem1">Kode Pembimbing 1</label>
-					                       	 		<select class="form-control" name="kd_pembimbing1" id="kd_pembimbing1" required>
-											    		<option>-</option>
-											      		<option>AGK</option>
-													    <option>AIH</option>
-													    <option>FKI</option>
-													    <option>FRU</option>
-													    <option>HAY</option>
-													    <option>ISR</option>
-													    <option>PNS</option>
-													    <option>RDI</option>
-													    <option>RZK</option>
-													    <option>SGO</option>
-													    <option>WNI</option>
-													    <option>YHC</option>
-													    <option>THP</option>
-													    <option>FZR</option>
-													    <option>ECD</option>
-													    <option>ADK</option>
-													    <option>EKP</option>
-													    <option>GNA</option>
-													</select>
+					                       	 		<label class="form-control-label" for="pembimbing_1">Kode Pembimbing 1</label>
+					                       	 		<input type="text" name="kd_pembimbing1" id="pembimbing_1" value="<?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->pembimbing_1;?>" class="form-control" required readonly>
 					                      		</div>
 					                   		 </div>
 					                   		<div class="col-lg-6">
 			                     				<div class="form-group">
-					                       	 		<label class="form-control-label" for="kd_pem2">Kode Pembimbing 2</label>
-					                       	 		<select class="form-control" name="kd_pembimbing2" id="kd_pembimbing2" required>
-											    		<option>-</option>
-											      		<option>AGK</option>
-													    <option>AIH</option>
-													    <option>FKI</option>
-													    <option>FRU</option>
-													    <option>HAY</option>
-													    <option>ISR</option>
-													    <option>PNS</option>
-													    <option>RDI</option>
-													    <option>RZK</option>
-													    <option>SGO</option>
-													    <option>WNI</option>
-													    <option>YHC</option>
-													    <option>THP</option>
-													    <option>FZR</option>
-													    <option>ECD</option>
-													    <option>ADK</option>
-													    <option>EKP</option>
-													    <option>GNA</option>
-													</select>
+					                       	 		<label class="form-control-label" for="pembimbing_2">Kode Pembimbing 2</label>
+					                       	 		<input type="text" name="kd_pembimbing2" id="pembimbing_2" value="<?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->pembimbing_2;?>" class="form-control" required readonly>
 					                      		</div>
 					                   		</div>
 				                   		</div>

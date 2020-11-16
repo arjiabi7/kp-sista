@@ -37,8 +37,10 @@
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->nim?></th>
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->nim?></th>
 								<th><?php 
-									if ($this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->status == NULL) {
+									if ($this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->status == NULL && $this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->komentar_sidang == NULL) {
 										echo "Diproses";
+									}if ($this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->status == NULL && $this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->komentar_sidang != NULL) {
+										echo "Disetujui";
 									}else{
 										echo $this->ion_auth->gabung_tabel_userVerifikasiSidang()->row()->status;
 									}

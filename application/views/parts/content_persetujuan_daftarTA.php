@@ -37,11 +37,15 @@
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->nim?></th>
 								<th><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->nama_lengkap?></th>
 								<th><?php
-								if($this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status == NULL){
+									if($this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status == NULL && $this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->komentar_ta2 == NULL ){
 										echo "Diproses";
+									}else if($this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status == NULL && $this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->komentar_ta2 != NULL){
+										echo "Disetujui";
 									}else{
 										echo $this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->status;
-									}?></th>
+									}
+
+									?></th>
 								<th>
 									<?php
 								
