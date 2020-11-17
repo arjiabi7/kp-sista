@@ -16,7 +16,46 @@
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../../assets/css/argon.css?v=1.2.0" type="text/css">
 </head>
-<body class="bg-default">
+<style type="text/css">
+      .wrapper{
+          background: #59284e;
+          height: 20vh;
+          border-radius: 5px;
+          position: relative;
+        }
+        .text{
+          flex: 0 0 100%;
+          font-size: 4rem;
+          font-weight: 200;
+          color: #00000000;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-bottom: 1px solid #d4d7ff;
+          border-top: 1px solid #d4d7ff;
+          background: url(https://media1.giphy.com/media/kLMfRZwHtzr7a/source.gif);
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+
+         .text:after{
+           content: attr(data-text);
+           -webkit-text-stroke: 1.5px #d4d7ff;
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%, -49%);
+           background: url(https://media1.giphy.com/media/kLMfRZwHtzr7a/source.gif);
+           background-clip: text;
+           -webkit-background-clip: text;
+           background-size: 43%;
+
+        }
+</style>
+<body class="bg-gradient-dark polygon_coba">
   
   <!-- Main content -->
   <div class="main-content">
@@ -25,16 +64,18 @@
       <div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-              <h1 class="text-white">SISTA</h1>
-              <p class="text-lead text-white">Sistem Informasi Tugas Akhir</p>
+            <div class="col-xl-5 col-lg-2 col-md-4 px-5">
+
+              <div class= "wrapdper">
+            <div class= "text" data-text= "SISTA">Labkom99</div>
+        </div>
             </div>
           </div>
         </div>
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+          <polygon class="fill-dark"  points="2560 0 2560 100 0 100"></polygon>
         </svg>
       </div>
     </div>

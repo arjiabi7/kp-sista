@@ -97,7 +97,7 @@
 						        	<tr>
 						        		<td>Jumlah SKS</td>
 						        		<td>:</td>
-						        		<td>18</td>
+						        		<td><?=$this->ion_auth->gabung_tabel_userAkademik()->row()->jumlah_sks_proses;?></td>
 						        	</tr>
 		        				</table>
 	        				</form>
