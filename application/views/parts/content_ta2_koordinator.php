@@ -8,9 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
+      <link rel="icon" href="<?php echo base_url();?>assets/img/brand/favicon.png" type="image/png">
+      <!-- Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+      <!-- Icons -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/nucleo/css/nucleo.css" type="text/css">
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+      <!-- Argon CSS -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/css/argon.css?v=1.2.0" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title></title> 
-</head> 
-<body class="mt-5">
+</head> <style type="text/css">
+    .body_content{
+        background-image: url('<?php echo base_url();?>assets/img/carousel/background.jpg');
+    }</style>
+<body class="mt-3 " style="margin-bottom: 100px;">
+<br>
 <div class="container-fluid p-5 mb-5">
     <h3>Data TA2</h3>
     <div class="row">
@@ -76,6 +90,7 @@
                 ?>
             </tbody>
     </table>
+
           
                 <?php
         foreach($data->result_array() as $row):
@@ -121,8 +136,7 @@
                  <?php endforeach;?>
                     </tr>
                     
-         
-      
+    
     </div>
 </div>
 

@@ -77,6 +77,20 @@ class koordinator extends CI_Controller
 
     }
 
+       function edit_jadwal_seminar(){
+		$id=$this->input->post('id');
+        $hari_seminar=$this->input->post('hari_seminar');
+        $tgl_seminar=$this->input->post('tgl_seminar');
+        $jam_seminar=$this->input->post('jam_seminar');
+        $tempat_seminar=$this->input->post('tempat_seminar');
+        $kd_penguji1=$this->input->post('kd_penguji1');
+        $kd_penguji2=$this->input->post('kd_penguji2');
+       
+        $this->upload_daftarSeminar->edit_jadwal($id,$hari_seminar,$tgl_seminar,$jam_seminar,$tempat_seminar,$kd_penguji1,$kd_penguji2);
+        redirect('koordinator/koordinator/daftar_seminar_koordinator');
+
+    }
+
     function daftar_sidang_koordinator(){
     	$data['daftar_sidang']='data';
 		$data['daftar_sidang'] = $this->upload_daftarSidang->tampilsidang();
@@ -99,6 +113,19 @@ class koordinator extends CI_Controller
         $komentar_sidang=$this->input->post('komentar_sidang');
        
         $this->upload_daftarSidang->edit_barang($id,$status,$komentar_sidang);
+        redirect('koordinator/koordinator/daftar_sidang_koordinator');
+
+    }
+
+      function edit_jadwal_sidang(){
+		$id=$this->input->post('id');
+        $hari_sidang=$this->input->post('hari_sidang');
+        $tgl_sidang=$this->input->post('tgl_sidang');
+        $jam_sidang=$this->input->post('jam_sidang');
+        $tempat_sidang=$this->input->post('tempat_sidang');
+
+       
+        $this->upload_daftarSidang->edit_jadwal($id,$hari_sidang,$tgl_sidang,$jam_sidang,$tempat_sidang);
         redirect('koordinator/koordinator/daftar_sidang_koordinator');
 
     }

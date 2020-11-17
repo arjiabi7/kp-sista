@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
+      <link rel="icon" href="<?php echo base_url();?>assets/img/brand/favicon.png" type="image/png">
+      <!-- Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+      <!-- Icons -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/nucleo/css/nucleo.css" type="text/css">
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+      <!-- Argon CSS -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/css/argon.css?v=1.2.0" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title></title> 
 </head> 
 <body class="mt-5">
@@ -34,6 +44,7 @@
 			 	<th>Laporan TA</th>
 			 	<th>Sertifikat</th>
 			 	<th>Lanjut Sidang</th>
+                <th>Penjadwalan</th>
 
  			</tr>
         </thead>
@@ -73,6 +84,8 @@
                         <td><a href="<?php echo base_url();?>upload_daftarTA2">Sertifikat.pdf</a></td>
                          <td>
                 <a class="btn btn-xs btn-warning" data-toggle="modal" data-target="#modal_edit<?php echo $id;?>"> Verifikasi</a></td>
+                <td>
+                <a class="btn btn-xs btn-warning" data-toggle="modal" data-target="#exampleModalLong<?php echo $id;?>"> Tentukan Jadwal</a></td>
                              </tr>
                              <?php
                             endforeach;
@@ -122,6 +135,84 @@
                </td>
              <?php endforeach;?>
                     </tr>
+
+                    <?php
+        foreach($data->result_array() as $row):
+           
+            $id=$row['id'];
+          
+            $hari_sidang=$row['hari_sidang'];
+            $tgl_sidang=$row['tgl_sidang'];
+            $jam_sidang=$row['jam_sidang'];
+            $tempat_sidang=$row['tempat_sidang'];
+
+          
+        ?>
+                    <div class="modal fade" id="exampleModalLong<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <form class="form-horizontal" method="post" action="<?php echo base_url().'index.php/koordinator/koordinator/edit_jadwal_sidang'?>">  
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Silahkan isi dengan benar</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    
+                                <input type="text" id="ipk" name="id" value="<?php echo $id?>" class="form-control" required readonly>
+                                    <div class="data-akademik text-center">
+                                        <br><h5>Jadwal Sidang</h5>
+                                        <hr style="width: 140px;">
+                                        <div class="row">
+                                        <div class="col-lg-6">
+                                             <div class="form-group">
+                                                <label class="form-control-label" for="jenis_kelamin">Hari Sidang</label>
+                                                <input type="text" id="hari_sidang" name="hari_sidang"  class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                             <div class="form-group">
+                                                <label class="form-control-label" for="peminatan">Tgl sidang</label>
+                                                <input type="date" id="tgl_sidang" name="tgl_sidang"  class="form-control" required>
+                                            </div>
+                                         </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-lg-6">
+                                             <div class="form-group">
+                                                <label class="form-control-label" for="jenis_kelamin">Jam sidang</label>
+                                                <input type="text" id="jam_sidang" name="jam_sidang"  class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                             <div class="form-group">
+                                                <label class="form-control-label" for="peminatan">Tempat sidang</label>
+                                                <input type="text" id="tempat_sidang" name="tempat_sidang"  class="form-control" required>
+                                            </div>
+                                         </div>
+                                        </div>
+                                    </div>
+                                 
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <input type="submit" class=" btn btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2"  name="submit" value="Kirim">
+                                </div>
+                                </div>
+                           </form>
+                            </div>
+                            </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                   
+                    </div>
+                    <hr class="my-4" />
+                     <?php endforeach;?>
      
     </div>
 </div>

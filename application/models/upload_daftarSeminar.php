@@ -41,6 +41,11 @@ class upload_daftarSeminar extends CI_Model
         return $hsl;
     }
 
+     function edit_jadwal($id,$hari_seminar,$tgl_seminar,$jam_seminar,$tempat_seminar,$kd_penguji1,$kd_penguji2){
+        $hasil=$this->db->query("UPDATE tbl_verifikasi_seminar SET hari_seminar='$hari_seminar',tgl_seminar='$tgl_seminar',jam_seminar='$jam_seminar',tempat_seminar='$tempat_seminar',kd_penguji1='$kd_penguji1',kd_penguji2='$kd_penguji2' WHERE id='$id'");
+        return $hsl;
+    }
+
   public function save($upload){
     $data = array(
       'nama_lengkap' => $this->input->post('nama_lengkap'),

@@ -40,6 +40,11 @@ class upload_daftarSidang extends CI_Model
         return $hsl;
     }
 
+     function edit_jadwal($id,$hari_sidang,$tgl_sidang,$jam_sidang,$tempat_sidang){
+        $hasil=$this->db->query("UPDATE tbl_verifikasi_sidang SET hari_sidang='$hari_sidang',tgl_sidang='$tgl_sidang',jam_sidang='$jam_sidang',tempat_sidang='$tempat_sidang' WHERE id='$id'");
+        return $hsl;
+    }
+
 
   public function save($upload){
     $data = array(

@@ -50,6 +50,8 @@ class pembimbing extends CI_Controller
 
     }
 
+ 
+
     function pengajuan_sidang(){
     	$data['pengajuan_sidang'] = $this->upload_pengajuanSidang->tampilpengajuansidang();
     	$data['data']=$this->upload_pengajuanSidang->show_barang();
