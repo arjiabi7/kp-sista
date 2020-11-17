@@ -7,7 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
-	
+	 <link rel="icon" href="<?php echo base_url();?>assets/img/brand/favicon.png" type="image/png">
+      <!-- Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+      <!-- Icons -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/nucleo/css/nucleo.css" type="text/css">
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+      <!-- Argon CSS -->
+      <link rel="stylesheet" href="<?php echo base_url();?>assets/css/argon.css?v=1.2.0" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<title>Tutorial Membuat Carousel Dengan Bootstrap 4 - www.malasngoding.com</title> 
 </head> 
 <style type="text/css">
@@ -46,7 +55,7 @@
 		</div>
 		<div class="jumbotron jumbotron-fluid bg-dark text-white">
   		<div class="container-fluid">
-    		<h1 class="display-4">Hai, <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?> !</h1>
+    		<h1 class="display-4" style="color: white;">Hai, <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?> !</h1>
     		<p class="lead">Selamat datang di SISTA, dengan menggunakan aplikasi ini anda dapat lebih mudah untuk melakukan proses pelaksanaan Tugas Akhir. Selamat Mencoba!</p>
     		<div class="col-xl-12">
     			<button type="button" class="btn btn-icon btn-warning" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
@@ -56,8 +65,9 @@
 				<div class="row">
 	  				<div class="col-lg-12">
 	   					<div class="collapse multi-collapse" id="multiCollapseExample2">
-	     				<div class="card card-body bg-dark border-0">
+	     				
 	        				<form>
+	        					<br>
 		        				<table style="font-family: courier;">
 						        	<tr>
 						        		<td style="width: 130px;">Nama Lengkap</td>
@@ -91,7 +101,7 @@
 						        	</tr>
 		        				</table>
 	        				</form>
-	      				</div>
+	      				
 	    			</div>
 	  				</div>
 				</div>
