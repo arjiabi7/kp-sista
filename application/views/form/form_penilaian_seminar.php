@@ -54,8 +54,8 @@
         <div class="row">
           <div class="form-group col-lg-12 text-center">
             <label>Pemahaman Teori, Metode Penelitian, Konsep hingga Pengujian</label>
-            <input type="text" class="form-control text-center border-top-0 border-right-0 border-left-0" readonly>
-            <textarea style="height: 150px;" class="form-control" readonly></textarea>
+            <input type="text" class="form-control text-center border-top-0 border-right-0 border-left-0" value="<?=$this->ion_auth->gabung_tabel_userPenilaianSeminar()->row()->pemahaman_teori;?>" readonly>
+            <textarea style="height: 150px;" class="form-control text-center" readonly><?=$this->ion_auth->gabung_tabel_userPenilaianSeminar()->row()->komentar_pemahaman_teori;?></textarea>
           </div>
         </div>
         <div class="row">

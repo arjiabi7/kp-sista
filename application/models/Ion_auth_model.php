@@ -986,6 +986,60 @@ class Ion_auth_model extends CI_Model
 
 		return FALSE;
 	}
+	
+	function tampil_nilai_seminar() {
+		$hasil = $this->db->select('*')
+							->from('tbl_penilaian_seminar')
+							->join('users','tbl_penilaian_seminar.email = users.email')
+							->where('tbl_penilaian_seminar.email',$_SESSION['email'])
+							->get();
+							return $hasil->result();
+	}
+
+	function tampil_nilai_sidang() {
+		$hasil3 = $this->db->select('*')
+							->from('tbl_penilaian_sidang')
+							->join('users','tbl_penilaian_sidang.email = users.email')
+							->where('tbl_penilaian_sidang.email',$_SESSION['email'])
+							->get();
+							return $hasil3->result();
+	}
+
+	function tampil_data_verifikasiSeminar(){
+			$hasil1 = $this->db->select('*')
+								->from('tbl_verifikasi_seminar')
+								->join('users','tbl_verifikasi_seminar.email = users.email')
+								->where('tbl_verifikasi_seminar.email',$_SESSION['email'])
+								->get();
+								return $hasil1->result();
+	}
+
+	function tampil_data_verifikasiSidang(){
+			$hasil2 = $this->db->select('*')
+								->from('tbl_verifikasi_sidang')
+								->join('users','tbl_verifikasi_sidang.email = users.email')
+								->where('tbl_verifikasi_sidang.email',$_SESSION['email'])
+								->get();
+								return $hasil2->result();
+	}
+
+	function gabung_tabel_userPenilaianSeminar(){
+			$query = $this->db->select('*')
+								->from('tbl_penilaian_seminar')
+								->join('users','tbl_penilaian_seminar.email = users.email')
+								->where('tbl_penilaian_seminar.email',$_SESSION['email'])
+								->get();
+								return $query;
+	}
+
+	function gabung_tabel_userPenilaianSidang(){
+			$query = $this->db->select('*')
+								->from('tbl_penilaian_sidang')
+								->join('users','tbl_penilaian_sidang.email = users.email')
+								->where('tbl_penilaian_sidang.email',$_SESSION['email'])
+								->get();
+								return $query;
+	}
 
 	function gabung_tabel(){
 			$query = $this->db->select('*')

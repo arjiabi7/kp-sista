@@ -47,7 +47,7 @@
 					<th>NIM</th>
 					
 					<th style="width: 10px">:</th>
-					<th> <?=$this->ion_auth->gabung_tabel_userSeminar()->row()->nim;?></th>
+					<th> <?=$this->ion_auth->gabung_tabel()->row()->nim;?></th>
 			
 				</tr>
 			

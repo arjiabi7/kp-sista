@@ -29,33 +29,35 @@
     <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">
   </a>
   <a href="<?php echo base_url();?>index.php/mahasiswa/Home">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> HOME</span></button>
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">HOME</span></button>
   </a>
   <a href="<?php echo base_url();?>index.php/mahasiswa/daftarTA2">
-    <button type="button" class="btn btn-dark"><i class="ni ni-cloud-upload-96"></i><span class="nav-link-text"> DAFTAR TA II</span></button>
+    <button type="button" class="btn btn-dark"><i class="ni ni-cloud-upload-96"></i><span class="nav-link-text">DAFTAR TA II</span></button>
   </a>
   <div class="dropdown">
-    <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SEMINAR</span></button>
+    <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text">SEMINAR</span></button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/pengajuanSeminar"><i class="ni ni-send text-warning"></i> Pengajuan Seminar</a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/pengajuanSeminar"><i class="ni ni-send text-warning"></i>Pengajuan Seminar</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/daftarSeminar"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Seminar</span></a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/daftarSeminar"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text">Daftar Seminar</span></a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/seminar/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i>Pengumuman Jadwal & Penguji</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url().'index.php/mahasiswa/seminar/cetak_seminar' ?>"><i class="ni ni-archive-2 text-warning"></i> Cetak Hasil Seminar</a>
+      <a class="dropdown-item" href="<?php echo base_url().'index.php/pdf/cetakpdf_evaluasi_seminar' ?>"><i class="ni ni-archive-2 text-warning"></i>Cetak Hasil Seminar</a>
     </div>
   </div>
   <div class="dropdown">
-    <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text"> SIDANG</span></button>
+    <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-bullet-list-67"></i><span class="nav-link-text">SIDANG</span></button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/pengajuanSidang"><i class="ni ni-send text-warning"></i> Pengajuan Sidang</a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/pengajuanSidang"><i class="ni ni-send text-warning"></i>Pengajuan Sidang</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/daftarSidang"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text"> Daftar Sidang</span></a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/daftarSidang"><i class="ni ni-folder-17 text-warning"></i><span class="nav-link-text">Daftar Sidang</span></a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i> Pengumuman Jadwal & Penguji</a>
+      <a class="dropdown-item" href="<?php echo base_url();?>index.php/mahasiswa/sidang/jadwal"><i class="ni ni-calendar-grid-58 text-warning"></i>Pengumuman Jadwal & Penguji</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="<?php echo base_url().'index.php/mahasiswa/sidang/cetak_sidang' ?>"><i class="ni ni-archive-2 text-warning"></i> Cetak Hasil Sidang</a>
+      <a class="dropdown-item" href="<?php echo base_url().'index.php/pdf/cetakpdf_penilaian_bimbingan' ?>"><i class="ni ni-archive-2 text-warning"></i>Cetak Hasil Sidang Pembimbing</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="<?php echo base_url().'index.php/pdf/cetakpdf_penilaian_sidang' ?>"><i class="ni ni-archive-2 text-warning"></i>Cetak Hasil Sidang Penguji</a>
     </div>
   </div>
 
@@ -63,10 +65,10 @@
     <ul class="navbar-nav mr-auto">
     </ul>
     <div class="dropdown">
-      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"> <?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?> </span></button>
+      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-circle-08"></i><span class="nav-link-text"><?=$this->ion_auth->gabung_tabel()->row()->nama_lengkap;?> </span></button>
       <div class="dropdown-menu">
         
-        <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i> Logout</a>
+        <a class="dropdown-item" href="<?php echo base_url();?>index.php/auth/logout"><i class="ni ni-key-25 text-warning"></i>Logout</a>
       </div>
     </div>
   </div>

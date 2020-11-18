@@ -81,19 +81,19 @@
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">MATERI PENELITIAN (Max 30 Point) </label>
-                        <input type="text" name="materi_penilaian" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" name="materi_penilaian" id="materi" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">PEMAHAMAN TEORI (Max 15 Point)</label>
-                        <input type="text" id="materi" name="pemahaman_teori" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="pemahaman_teori" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">PEMAHAMAN PENELITIAN (Max 15 Point)</label>
-                        <input type="text" id="materi" name="pemahaman_penelitian" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="pemahaman_penelitian" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
             </div>
@@ -101,19 +101,19 @@
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">PENCAPAIAN TARGET (Max 20 Point)</label>
-                        <input type="text" id="materi" name="pencapaian_target" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="pencapaian_target" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">ASPEK KEDISIPLINAN (Max 20 Point)</label>
-                        <input type="text" id="materi" name="aspek_kedisiplinan" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="aspek_kedisiplinan" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">TEORI KEILMUAN (Max 20 Point)</label>
-                        <input type="text" id="materi" name="teori_keilmuan" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="teori_keilmuan" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
             </div>
@@ -121,19 +121,19 @@
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">METODE PENELITIAN (Max 15 Point)</label>
-                        <input type="text" id="materi" name="metode_penelitian" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="metode_penelitian" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">ANALISIS HASIL PENELITIAN (Max 20 Point)</label>
-                        <input type="text" id="materi" name="analisis_penelitian" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="analisis_penelitian" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">TEKNIK PRESENTASI (Max 10 Point)</label>
-                        <input type="text" id="materi" name="teknik_presentasi" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="teknik_presentasi" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
             </div>
@@ -141,13 +141,13 @@
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">TEKNIK PENULISAN (Max 10 Point)</label>
-                        <input type="text" id="materi" name="teknik_penulisan" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="teknik_penulisan" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
                         <label class="form-control-label" for="materi">PEMAHAMAN SOFTWARE (Max 10 Point) </label>
-                        <input type="text" id="materi" name="pemahaman_software" class="form-control border-top-0 border-right-0 border-left-0" required>
+                        <input type="text" maxlength="2" id="materi" name="pemahaman_software" class="form-control border-top-0 border-right-0 border-left-0" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -164,16 +164,5 @@
         <?php echo form_close(); ?>
     </div>
     </div>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>

@@ -9,6 +9,11 @@ class cetakpdf_penilaian_bimbingan extends CI_Controller {
     }
 
     function index(){
+        $data = $this->ion_auth_model->tampil_data_verifikasiSidang();
+        $data1 = $this->ion_auth_model->tampil_nilai_sidang();
+        $data2 = $this->ion_auth_model->tampil_data_verifikasiSeminar();
+
+        foreach ($data as $row) {
     	$pdf = new FPDF('P', 'mm','A4');
 
         $pdf->AddPage();
@@ -68,29 +73,32 @@ class cetakpdf_penilaian_bimbingan extends CI_Controller {
         $pdf->Cell(40,7,'WAKTU / TEMPAT',1,0,'C',true);
         $pdf->Cell(66,7,'NOMOR BERITA ACARA',1,1,'C',true);
         $pdf->Cell(25,14,'',0,0);
-        $pdf->Cell(17,7,'',1,0);
-        $pdf->Cell(30,7,'',1,0,'');
-        $pdf->Cell(26,7,'',1,0,'C');
-        $pdf->Cell(14,7,'',1,0,'C');
+        $pdf->Cell(17,7,$row->hari_sidang,1,0);
+        $pdf->Cell(30,7,$row->tgl_sidang,1,0,'');
+        $pdf->Cell(26,7,$row->jam_sidang,1,0,'C');
+        $pdf->Cell(14,7,$row->tempat_sidang,1,0,'C');
         $pdf->Cell(66,7,'',1,1,'C');
         $pdf->Cell(3,3,'',0,1);
 
         $pdf->Cell(25,28,'PESERTA',1,0);
         $pdf->Cell(30,7,'NAMA LENGKAP',1,0,'C',true);
-        $pdf->Cell(75,7,'',1,0,'C');
+        $pdf->Cell(75,7,$row->nama_lengkap,1,0,'C');
         $pdf->Cell(14,7,'NIM',1,0,'C',true);
-        $pdf->Cell(34,7,'',1,1,'C');
+        $pdf->Cell(34,7,$row->nim,1,1,'C');
         $pdf->Cell(25,14,'',0,0);
         $pdf->Cell(30,7,'SEMESTER',1,0,'C',true);
-        $pdf->Cell(17,7,'',1,0,'C');
+        }
+        foreach ($data2 as $row2) {
+        $pdf->Cell(17,7,$row2->semester,1,0,'C');
         $pdf->Cell(35,7,'PEMINATAN',1,0,'C',true);
-        $pdf->Cell(71,7,'',1,1,'C');
+        $pdf->Cell(71,7,$row2->peminatan,1,1,'C');
         $pdf->Cell(25,14,'',0,0);
+        }
         $pdf->Cell(30,14,'JUDUL',1,0,'C',true);
-        $pdf->Cell(123,14,'',1,1,'C');
+        $pdf->Cell(123,14,$row->judul_skripsi,1,1,'C');
 
         $pdf->Cell(3,3,'',0,1);
-
+        foreach ($data1 as $row1) {
         $pdf->Cell(25,7,'PENILAIAN',1,0,'C',true);
         $pdf->Cell(8,7,'NO.',1,0,'C',true);
         $pdf->Cell(97,7,'KOMPONEN YANG DINILAI',1,0,'C',true);
@@ -100,12 +108,12 @@ class cetakpdf_penilaian_bimbingan extends CI_Controller {
         $pdf->Cell(8,7,'1.',1,0,'C');
         $pdf->Cell(97,7,'MATERI (ISI) PENELITIAN',1,0);
         $pdf->Cell(24,7,'30',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->materi_penilaian,1,1,'C');
         $pdf->Cell(25,14,'',0,0);
         $pdf->Cell(8,7,'2.',1,0,'C');
         $pdf->Cell(97,7,'PEMAHAMAN TERHADAP :',1,0);
         $pdf->Cell(24,14,'30',1,0,'C');
-        $pdf->Cell(24,14,'',1,0,'C');
+        $pdf->Cell(24,14,$row1->pemahaman_teori,1,0,'C');
         $pdf->Cell(25,7,'',0,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'',1,0,'C');
@@ -114,59 +122,64 @@ class cetakpdf_penilaian_bimbingan extends CI_Controller {
         $pdf->Cell(8,7,'3.',1,0,'C');
         $pdf->Cell(97,7,'PENCAPAIAN TARGET',1,0);
         $pdf->Cell(24,7,'20',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->pencapaian_target,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'4.',1,0,'C');
         $pdf->Cell(97,7,'ASPEK KEDISIPLINAN',1,0);
         $pdf->Cell(24,7,'20',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->aspek_kedisiplinan,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
+        $jumlah1 = $row1->materi_penilaian + $row1->pemahaman_teori + $row1->pencapaian_target + $row1->aspek_kedisiplinan;
         $pdf->Cell(105,7,'JUMLAH NILAI',1,0,'R');
         $pdf->Cell(24,7,'100',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$jumlah1,1,1,'C');
+        
+
         $pdf->Cell(25,49,'SKRIPSI',1,0,'C');
         $pdf->Cell(8,7,'1.',1,0,'C');
         $pdf->Cell(97,7,'PEMAHAMAN PENELITIAN',1,0);
         $pdf->Cell(24,7,'15',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->pemahaman_penelitian,1,1,'C');
         $pdf->Cell(25,14,'',0,0);
         $pdf->Cell(8,7,'2.',1,0,'C');
         $pdf->Cell(97,7,'KEDALAMAN TEORI KEILMUAN',1,0);
         $pdf->Cell(24,7,'20',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->teori_keilmuan,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'3.',1,0,'C');
         $pdf->Cell(97,7,'METODE PENELITIAN',1,0);
         $pdf->Cell(24,7,'15',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->metode_penelitian,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'4.',1,0,'C');
         $pdf->Cell(97,7,'ANALISIS HASIL PENELITIAN',1,0);
         $pdf->Cell(24,7,'20',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->analisis_penelitian,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'5.',1,0,'C');
         $pdf->Cell(97,7,'TEKNIK PRESENTASI',1,0);
         $pdf->Cell(24,7,'10',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->teknik_presentasi,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'6.',1,0,'C');
         $pdf->Cell(97,7,'TEKNIK PENULISAN',1,0);
         $pdf->Cell(24,7,'10',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->teknik_penulisan,1,1,'C');
         $pdf->Cell(25,7,'',0,0,'C');
         $pdf->Cell(8,7,'7.',1,0,'C');
         $pdf->Cell(97,7,'PEMAHAMAN PENGEMBANGAN PERANGKAT LUNAK',1,0);
         $pdf->Cell(24,7,'10',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$row1->pemahaman_software,1,1,'C');
+        $jumlah = $row1->pemahaman_penelitian + $row1->teori_keilmuan + $row1->metode_penelitian + $row1->analisis_penelitian + $row1->teknik_presentasi + $row1->teknik_penulisan + $row1->pemahaman_software;
+
         $pdf->Cell(130,7,'JUMLAH NILAI',1,0,'R');
         $pdf->Cell(24,7,'100',1,0,'C');
-        $pdf->Cell(24,7,'',1,1,'C');
+        $pdf->Cell(24,7,$jumlah,1,1,'C');
 
         $pdf->Cell(3,3,'',0,1);
 
         $pdf->Cell(25,30,'SARAN',1,0,'C');
-        $pdf->Cell(153,30,'',1,1,'C');
+        $pdf->Cell(153,30,$row1->revisi_saran,1,1,'C');
 
         $pdf->Cell(3,3,'',0,1);
 
@@ -180,8 +193,7 @@ class cetakpdf_penilaian_bimbingan extends CI_Controller {
         $pdf->Cell(38.25,7.5,'',1,0,'C');
         $pdf->Cell(38.25,7.5,'',1,1,'C');
 
-
-
+        }
 
         $pdf->Output('I','evaluasi seminar');
     }

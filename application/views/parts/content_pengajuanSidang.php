@@ -177,7 +177,7 @@
 							            	<div class="col-lg-12">
 			                     				 <div class="form-group">
 			                     				 	<label class="form-control-label" for="judul_ta">Judul Tugas Akhir</label>
-												    <textarea class="form-control text-center" id="judul_skripsi" name="judul_skripsi" required></textarea>
+												    <textarea class="form-control text-center" id="judul_skripsi" name="judul_skripsi" required readonly><?=$this->ion_auth->gabung_tabel_userVerifikasiDaftarTA()->row()->judul_skripsi;?></textarea>
 					                      		</div>
 					                   		</div>
 				                   		</div>

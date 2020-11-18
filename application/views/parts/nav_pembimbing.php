@@ -30,16 +30,16 @@
     <img src="<?php echo base_url();?>assets/img/brand/sista.png" style="width: 100px" class="mb-1">       
   </a> 
   <a href="<?php echo base_url();?>index.php/pembimbing/pembimbing/pengajuan_seminar">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Pengajuan Seminar</span></button>
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">Pengajuan Seminar</span></button>
   </a>
   <a href="<?php echo base_url();?>index.php/pembimbing/pembimbing/pengajuan_sidang">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Pengajuan Sidang</span></button>
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">Pengajuan Sidang</span></button>
   </a>
   <a href="<?php echo base_url();?>index.php/pembimbing/pembimbing/penilaian_seminar">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Penilaian Seminar</span></button>
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">Penilaian Seminar</span></button>
   </a>
   <a href="<?php echo base_url();?>index.php/pembimbing/pembimbing/penilaian_sidang">
-    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text"> Penilaian Sidang</span></button>
+    <button type="button" class="btn btn-dark"><i class="ni ni-tv-2"></i><span class="nav-link-text">Penilaian Sidang</span></button>
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">

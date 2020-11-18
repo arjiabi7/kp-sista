@@ -46,7 +46,7 @@ class upload_daftarTA2 extends CI_Model
         return $hsl;
     }
 
-  public function save($upload){
+  public function save(){
     $data = array(
       'nama_lengkap' => $this->input->post('nama_lengkap'),
 			'email' => $this->input->post('email'),
@@ -63,7 +63,7 @@ class upload_daftarTA2 extends CI_Model
 			'judul_skripsi' => $this->input->post('judul_skripsi'),
 			'pembimbing_1' => $this->input->post('pembimbing_1'),
 			'pembimbing_2' => $this->input->post('pembimbing_2')
-     
+      
   
     );
     
