@@ -67,7 +67,7 @@
             <div class="col-xl-5 col-lg-2 col-md-4 px-5">
 
               <div class= "wrapdper">
-            <div class= "text" data-text= "SISTA">Labkom99</div>
+            <div class= "text" data-text= "SISTA">SISTA</div>
         </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
                 <div class="form-group mb-3">
                   <center><h1><?php echo lang('login_heading');?></h1></center>
                   <p><?php echo lang('login_subheading');?></p>
-                  <div id="infoMessage"><?php echo $message;?></div>
+                  <div id="infoMessage" class="text-danger"><?php echo $message;?></div>
 
                   <?php echo form_open("auth/login");?>
                   Email
@@ -110,12 +110,12 @@
                     <?php echo form_input($password,"",array("class"=>"form-control"));?>
                   </div>
                 </div>
-                <div class="custom-control custom-control-alternative custom-checkbox">
+                <div class="custom-control custom-control-alternative custom-checkbox text-center">
                    <?php echo lang('login_remember_label', 'remember');?>
                     <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
                 </div>
                 <div class="text-center">
-                  <?php echo form_submit('submit', lang('login_submit_btn'));?>
+                  <?php echo form_submit('submit', lang('login_submit_btn'),array("class"=>"btn btn-warning"));?>
                 </div>
               </form>
             </div>
