@@ -98,7 +98,7 @@
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
 
                     </div>
-                    <?php echo form_input($email);?>
+                    <?php echo form_input($email,"",array("class"=>"form-control"));?>
                   </div>
                 </div>
                 <div class="form-group">
@@ -107,7 +107,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <?php echo form_input($password);?>
+                    <?php echo form_input($password,"",array("class"=>"form-control"));?>
                   </div>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">
