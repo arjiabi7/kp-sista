@@ -1,3 +1,11 @@
+<?php
+$this->load->view('parts/nav_admin');
+?>
+<br>
+<br>
+<div class="container-fluid p-5">
+	<div class="card">
+
 <h1><?php echo lang('edit_user_heading');?></h1>
 <p><?php echo lang('edit_user_subheading');?></p>
 

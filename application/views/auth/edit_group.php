@@ -1,3 +1,12 @@
+<?php
+$this->load->view('parts/nav_admin');
+?>
+<!-- <h1><?php echo lang('index_heading'); ?></h1>
+<p><?php echo lang('index_subheading'); ?></p> -->
+<br>
+<br>
+
+<div class="container-fluid p-5">
 <h1><?php echo lang('edit_group_heading');?></h1>
 <p><?php echo lang('edit_group_subheading');?></p>
 
